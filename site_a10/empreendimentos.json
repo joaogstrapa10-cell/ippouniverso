@@ -1,0 +1,87 @@
+{
+  "projeto_lovable": {
+    "id": "8239c145-1e56-4f56-8db3-e2fcc3da863f",
+    "workspace": "Giulliano's Lovable",
+    "editor_url": "https://lovable.dev/projects/8239c145-1e56-4f56-8db3-e2fcc3da863f",
+    "preview_url": "https://id-preview--8239c145-1e56-4f56-8db3-e2fcc3da863f.lovable.app",
+    "stack": "tanstack_start_ts + tailwind + shadcn/ui"
+  },
+  "home_hero": "fotos_web/home-hero.jpg",
+  "empreendimentos": [
+    {
+      "slug": "patio-estaleiro",
+      "nome": "Pátio Estaleiro",
+      "tipologia": "Casas de alto padrão",
+      "destaque": "Casa Mar · Casa Brisa",
+      "localizacao": "Balneário Camboriú",
+      "status": "Lançamento",
+      "parceria": "A10 × R21",
+      "imagem": "fotos_web/patio-estaleiro.jpg",
+      "imagem_secundaria": "fotos_web/patio-estaleiro-2.jpg"
+    },
+    {
+      "slug": "aurora",
+      "nome": "Residencial Aurora",
+      "tipologia": "Torre residencial",
+      "destaque": "Piscina · Rooftop",
+      "localizacao": "A confirmar",
+      "status": "Em obras",
+      "imagem": "fotos_web/aurora.jpg",
+      "imagem_secundaria": "fotos_web/aurora-2.jpg"
+    },
+    {
+      "slug": "hub-240",
+      "nome": "Hub 240",
+      "tipologia": "Torre multiuso",
+      "destaque": "Live · Work · Hub",
+      "localizacao": "A confirmar",
+      "status": "Lançamento",
+      "imagem": "fotos_web/hub-240.jpg"
+    },
+    {
+      "slug": "sunstar-tower",
+      "nome": "Sunstar Tower",
+      "tipologia": "Torre residencial",
+      "destaque": "Rooftop vista mar",
+      "localizacao": "A confirmar",
+      "status": "Em obras",
+      "imagem": "fotos_web/sunstar-tower.jpg"
+    },
+    {
+      "slug": "san-andreas",
+      "nome": "Residencial San Andreas",
+      "tipologia": "Torre residencial",
+      "destaque": "Vertical premium",
+      "localizacao": "A confirmar",
+      "status": "Em obras",
+      "imagem": "fotos_web/san-andreas.jpg"
+    },
+    {
+      "slug": "san-valentin",
+      "nome": "Residencial San Valentin",
+      "tipologia": "Torre residencial",
+      "destaque": "Fachada assinatura",
+      "localizacao": "A confirmar",
+      "status": "Lançamento",
+      "imagem": "fotos_web/san-valentin.jpg"
+    },
+    {
+      "slug": "villa-do-mar",
+      "nome": "Villa do Mar",
+      "tipologia": "Torre residencial",
+      "destaque": "Frente mar",
+      "localizacao": "A confirmar",
+      "status": "Em obras",
+      "imagem": "fotos_web/villa-do-mar.jpg"
+    },
+    {
+      "slug": "casa-colombo",
+      "nome": "Casa Colombo",
+      "tipologia": "Residência exclusiva",
+      "destaque": "Casa de alto padrão",
+      "localizacao": "A confirmar",
+      "status": "Pronto",
+      "imagem": "fotos_web/casa-colombo.jpg"
+    }
+  ]
+}
