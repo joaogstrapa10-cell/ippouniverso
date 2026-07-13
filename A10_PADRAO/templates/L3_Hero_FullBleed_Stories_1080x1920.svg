@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Poppins:wght@400;500;600&amp;display=swap');
+      .serif{font-family:'Cormorant Garamond',serif;}
+      .sans{font-family:'Poppins',sans-serif;}
+    </style>
+    <clipPath id="fullClip"><rect x="0" y="0" width="1080" height="1920"/></clipPath>
+    <linearGradient id="botFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1624" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#0B1624" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#0B1624" stop-opacity="0.97"/>
+    </linearGradient>
+    <linearGradient id="topFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1624" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#0B1624" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== FOTO DE FUNDO (placeholder — cobre a peça inteira) ===== -->
+  <rect width="1080" height="1920" fill="#1B2942"/>
+  <g transform="translate(540,760) scale(4.2)" opacity="0.35">
+    <rect x="-18" y="-14" width="36" height="28" rx="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
+    <circle cx="-8" cy="-6" r="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
+    <path d="M-18 10 L-4 -2 L4 6 L10 -1 L18 10" fill="none" stroke="#C9A86A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+  <text class="sans" x="540" y="960" text-anchor="middle" fill="#C9A86A" opacity="0.55" font-size="19" font-weight="500" letter-spacing="1">FOTO DE FUNDO — {{FOTO_LABEL}}</text>
+  <text class="sans" x="540" y="988" text-anchor="middle" fill="#C9A86A" opacity="0.4" font-size="13">substituir por imagem cheia · 1080×1920 · preencher sem distorcer (slice)</text>
+
+  <rect x="0" y="0" width="1080" height="420" fill="url(#topFade)"/>
+  <rect x="0" y="980" width="1080" height="940" fill="url(#botFade)"/>
+
+  <!-- ===== LOGO (marca dourada sobre a foto) ===== -->
+  <image x="460" y="70" width="160" height="63" preserveAspectRatio="xMidYMid meet" xlink:href="data:image/png;base64,@@A10_GOLD@@"/>
+
+  <!-- ===== HEADLINE (2 linhas — 2ª linha em dourado) ===== -->
+  <text class="serif" x="540" y="1224" text-anchor="middle" fill="#F5F0E6" font-size="92" font-weight="600">{{HEADLINE_L1}}</text>
+  <text class="serif" x="540" y="1326" text-anchor="middle" fill="#C9A86A" font-size="92" font-weight="600">{{HEADLINE_L2}}</text>
+
+  <!-- ===== BODY COPY (2 linhas, palavra-chave em negrito) ===== -->
+  <text class="sans" x="540" y="1378" text-anchor="middle" fill="#F5F0E6" fill-opacity="0.88" font-size="25" font-weight="400">{{BODY_L1}}</text>
+  <text class="sans" x="540" y="1414" text-anchor="middle" fill="#F5F0E6" fill-opacity="0.88" font-size="25" font-weight="400"><tspan font-weight="600" fill-opacity="1">{{BODY_L2_BOLD}}</tspan>{{BODY_L2_REST}}</text>
+
+  <!-- ===== LINHA DIVISÓRIA ===== -->
+  <line x1="188" y1="1454" x2="892" y2="1454" stroke="#C9A86A" stroke-opacity="0.3"/>
+
+  <!-- ===== 3 STATS ===== -->
+  <rect x="424" y="1476" width="1" height="62" fill="#C9A86A" opacity="0.4"/>
+  <rect x="684" y="1476" width="1" height="62" fill="#C9A86A" opacity="0.4"/>
+
+  <text class="serif" x="306" y="1516" text-anchor="middle" fill="#F5F0E6" font-size="38" font-weight="600">{{STAT1_VALOR}}</text>
+  <text class="sans" x="306" y="1542" text-anchor="middle" fill="#C9A86A" fill-opacity="0.85" font-size="12.5" font-weight="500" letter-spacing="1.5">{{STAT1_LABEL}}</text>
+
+  <text class="serif" x="554" y="1516" text-anchor="middle" fill="#F5F0E6" font-size="38" font-weight="600">{{STAT2_VALOR}}</text>
+  <text class="sans" x="554" y="1542" text-anchor="middle" fill="#C9A86A" fill-opacity="0.85" font-size="12.5" font-weight="500" letter-spacing="1.5">{{STAT2_LABEL}}</text>
+
+  <text class="serif" x="798" y="1516" text-anchor="middle" fill="#F5F0E6" font-size="30" font-weight="600">{{STAT3_VALOR}}</text>
+  <text class="sans" x="798" y="1542" text-anchor="middle" fill="#C9A86A" fill-opacity="0.85" font-size="12.5" font-weight="500" letter-spacing="1.5">{{STAT3_LABEL}}</text>
+
+  <!-- ===== CTA (botão sólido dourado) ===== -->
+  <rect x="308" y="1596" width="464" height="72" fill="none" stroke="#C9A86A" stroke-opacity="0.6"/>
+  <rect x="298" y="1586" width="464" height="72" fill="#C9A86A"/>
+  <text class="sans" x="540" y="1630" text-anchor="middle" fill="#0B1624" font-size="19" font-weight="600" letter-spacing="2.5">{{CTA_TEXTO}}</text>
+
+  <!-- ===== KICKER (rodapé) ===== -->
+  <text class="sans" x="540" y="1750" text-anchor="middle" fill="#F5F0E6" fill-opacity="0.66" font-size="18" font-weight="500" letter-spacing="4">{{KICKER}}</text>
+</svg>

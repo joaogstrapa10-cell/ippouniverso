@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Poppins:wght@300;400;500;600&amp;display=swap');
+      .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+      .sans  { font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#F7F2EA"/>
+      <stop offset="0.6" stop-color="#F2EBDE"/>
+      <stop offset="1"   stop-color="#ECE3D3"/>
+    </linearGradient>
+    <linearGradient id="goldT" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#CBA967"/>
+      <stop offset="1"   stop-color="#9A7638"/>
+    </linearGradient>
+    <radialGradient id="pvign" cx="0.5" cy="0.42" r="0.85">
+      <stop offset="0.6" stop-color="#1A130A" stop-opacity="0"/>
+      <stop offset="1"   stop-color="#1A130A" stop-opacity="0.22"/>
+    </radialGradient>
+    <clipPath id="photoclip"><rect x="49" y="49" width="982" height="822" rx="6"/></clipPath>
+    <filter id="phSh" x="-25%" y="-15%" width="150%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="30" flood-color="#2A2014" flood-opacity="0.34"/>
+    </filter>
+    <filter id="pillSh" x="-35%" y="-70%" width="170%" height="260%">
+      <feDropShadow dx="0" dy="9" stdDeviation="15" flood-color="#2A2014" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- clean cream background -->
+  <rect width="1080" height="1920" fill="url(#paper)"/>
+
+  <!-- hero photo at top (editable layer: foto) -->
+  <g filter="url(#phSh)">
+    <g clip-path="url(#photoclip)">
+      <image id="foto" x="49" y="49" width="982" height="822"
+             xlink:href="data:image/jpeg;base64,__BC__" preserveAspectRatio="xMidYMid slice"/>
+      <rect x="49" y="49" width="982" height="822" fill="url(#pvign)"/>
+    </g>
+  </g>
+  <rect x="49" y="49" width="982" height="822" rx="6" fill="none" stroke="#C9A86A" stroke-width="1.4" stroke-opacity="0.6"/>
+
+  <!-- outer keyline + corner diamonds -->
+  <rect x="40" y="40" width="1000" height="1840" fill="none" stroke="#C9A86A" stroke-width="1.4" stroke-opacity="0.55"/>
+  <g fill="#C9A86A">
+    <rect x="-6" y="-6" width="12" height="12" transform="translate(40,40) rotate(45)"/>
+    <rect x="-6" y="-6" width="12" height="12" transform="translate(1040,40) rotate(45)"/>
+    <rect x="-6" y="-6" width="12" height="12" transform="translate(40,1880) rotate(45)"/>
+    <rect x="-6" y="-6" width="12" height="12" transform="translate(1040,1880) rotate(45)"/>
+  </g>
+
+  <!-- eyebrow -->
+  <g stroke="#A9885E" stroke-opacity="0.9" stroke-width="1.2">
+    <line x1="430" y1="932" x2="487" y2="932"/>
+    <line x1="593" y1="932" x2="650" y2="932"/>
+  </g>
+  <rect x="-4.5" y="-4.5" width="9" height="9" transform="translate(540,932) rotate(45)" fill="#A9885E"/>
+  <text class="sans" x="540" y="974" text-anchor="middle" fill="#A9885E"
+        font-size="22" font-weight="400" letter-spacing="8">OPORTUNIDADE EM</text>
+
+  <!-- headline: full city name, together, one line -->
+  <text class="serif" x="540" y="1062" text-anchor="middle" fill="#2A2620"
+        font-size="84" font-weight="600" letter-spacing="1">Balne&#225;rio Cambori&#250;</text>
+
+  <!-- proof stat (replaces price block) -->
+  <line x1="455" y1="1108" x2="625" y2="1108" stroke="#C9A86A" stroke-width="1.2" stroke-opacity="0.55"/>
+  <text class="serif" x="540" y="1244" text-anchor="middle" fill="url(#goldT)"
+        font-size="132" font-weight="600" letter-spacing="1">20%</text>
+  <text class="sans" x="540" y="1294" text-anchor="middle" fill="#2A2620"
+        font-size="25" font-weight="500" letter-spacing="6">DE RESULTADO COMPROVADO</text>
+  <text class="sans" x="540" y="1334" text-anchor="middle" fill="#8C8273"
+        font-size="21" font-weight="300" letter-spacing="1">m&#233;dia hist&#243;rica de valoriza&#231;&#227;o do m&#178;</text>
+  <text class="sans" x="540" y="1372" text-anchor="middle" fill="#A89E8E"
+        font-size="15" font-weight="300" letter-spacing="0.5">Rentabilidade passada n&#227;o &#233; garantia de rentabilidade futura.</text>
+
+  <!-- CTA pill -->
+  <g filter="url(#pillSh)">
+    <rect x="300" y="1436" width="480" height="80" rx="40" fill="#2A2620"/>
+  </g>
+  <text class="sans" x="552" y="1485" text-anchor="middle" fill="#F4EFE7"
+        font-size="24" font-weight="500" letter-spacing="3">FALAR COM ESPECIALISTA</text>
+  <text class="sans" x="730" y="1484" text-anchor="middle" fill="#C9A86A"
+        font-size="30" font-weight="400">&#8250;</text>
+
+  <!-- A10 logo sign-off + contact -->
+  <image x="435" y="1600" width="210" height="82"
+         xlink:href="data:image/png;base64,__A10__" preserveAspectRatio="xMidYMid meet"/>
+  <text class="sans" x="540" y="1748" text-anchor="middle" fill="#8C8273"
+        font-size="20" font-weight="400" letter-spacing="4">A10EMPREENDIMENTOS.COM.BR</text>
+</svg>

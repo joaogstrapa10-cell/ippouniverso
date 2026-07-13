@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;display=swap');
+      .serif{font-family:'Cormorant Garamond',serif;}
+    </style>
+    <clipPath id="clipCardA"><rect x="64" y="500" width="464" height="520" rx="18"/></clipPath>
+    <clipPath id="clipCardB"><rect x="552" y="500" width="464" height="520" rx="18"/></clipPath>
+    <linearGradient id="capFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14120E" stop-opacity="0"/>
+      <stop offset="1" stop-color="#14120E" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+
+  <!-- base cream -->
+  <rect x="0" y="0" width="1080" height="1920" fill="#F5F0E8"/>
+
+  <!-- decorative arcs -->
+  <circle cx="1080" cy="130" r="230" fill="none" stroke="#B0894C" stroke-width="1.1" opacity="0.14"/>
+  <circle cx="1080" cy="130" r="258" fill="none" stroke="#B0894C" stroke-width="0.7" opacity="0.10"/>
+
+  <!-- HEADLINE -->
+  <text class="serif" x="540" y="166" text-anchor="middle" fill="#B0894C" font-size="62" font-weight="600" font-style="italic">Praia do Estaleiro</text>
+  <text class="serif" x="540" y="240" text-anchor="middle" fill="#2C2A24" font-size="42" font-weight="600">Pare de comprar na planta.</text>
+  <text class="serif" x="540" y="348" text-anchor="middle" fill="#2C2A24" font-size="94" font-weight="600" font-style="italic">Financie sua casa</text>
+  <text class="serif" x="540" y="448" text-anchor="middle" fill="#2C2A24" font-size="94" font-weight="600" font-style="italic">pronta, a 90 m do mar.</text>
+
+  <!-- CARD A : CASA MAR -->
+  <g clip-path="url(#clipCardA)">
+    <image x="64" y="500" width="464" height="520" preserveAspectRatio="xMidYMid slice" xlink:href="data:image/jpeg;base64,@@MAR@@"/>
+    <rect x="64" y="870" width="464" height="150" fill="url(#capFade)"/>
+  </g>
+  <rect x="64" y="500" width="464" height="520" rx="18" fill="none" stroke="#B0894C" stroke-width="1" opacity="0.5"/>
+  <text class="serif" x="92" y="960" fill="#FFFFFF" font-size="42" font-weight="500" font-style="italic">Casa Mar</text>
+  <text class="serif" x="94" y="992" fill="#EDE6D7" font-size="15" font-weight="600" letter-spacing="2">402 M&#178; &#183; 4 SU&#205;TES</text>
+
+  <!-- CARD B : CASA BRISA -->
+  <g clip-path="url(#clipCardB)">
+    <image x="552" y="500" width="464" height="520" preserveAspectRatio="xMidYMid slice" xlink:href="data:image/jpeg;base64,@@BRISA@@"/>
+    <rect x="552" y="870" width="464" height="150" fill="url(#capFade)"/>
+  </g>
+  <rect x="552" y="500" width="464" height="520" rx="18" fill="none" stroke="#B0894C" stroke-width="1" opacity="0.5"/>
+  <text class="serif" x="580" y="960" fill="#FFFFFF" font-size="42" font-weight="500" font-style="italic">Casa Brisa</text>
+  <text class="serif" x="582" y="992" fill="#EDE6D7" font-size="15" font-weight="600" letter-spacing="2">350 M&#178; &#183; 5 SU&#205;TES</text>
+
+  <!-- CTA -->
+  <rect x="270" y="1068" width="540" height="68" rx="34" fill="#B0894C"/>
+  <text class="serif" x="540" y="1112" text-anchor="middle" fill="#2C2A24" font-size="26" font-weight="600" letter-spacing="4">CONHE&#199;A AS CONDI&#199;&#213;ES</text>
+
+  <!-- DARK PANEL -->
+  <rect x="0" y="1160" width="1080" height="760" fill="#26231D"/>
+
+  <!-- OUTER FRAME -->
+  <rect x="24" y="24" width="1032" height="1872" fill="none" stroke="#B0894C" stroke-width="1.3" opacity="0.85"/>
+  <rect x="34" y="34" width="1012" height="1852" fill="none" stroke="#B0894C" stroke-width="0.6" opacity="0.45"/>
+
+  <!-- PANEL HEADER -->
+  <text class="serif" x="540" y="1240" text-anchor="middle" fill="#B0894C" font-size="28" font-weight="600" letter-spacing="6">CONDI&#199;&#195;O ESPECIAL DE PAGAMENTO</text>
+
+  <!-- STAT CARDS -->
+  <rect x="64" y="1278" width="464" height="150" rx="14" fill="none" stroke="#B0894C" stroke-width="1" opacity="0.38"/>
+  <text class="serif" x="100" y="1332" fill="#B0894C" font-size="16" font-weight="600" letter-spacing="3">ENTRADA</text>
+  <text class="serif" x="100" y="1392" fill="#F5F0E8" font-size="48" font-weight="600">60%</text>
+
+  <rect x="552" y="1278" width="464" height="150" rx="14" fill="none" stroke="#B0894C" stroke-width="1" opacity="0.38"/>
+  <text class="serif" x="588" y="1332" fill="#B0894C" font-size="16" font-weight="600" letter-spacing="3">SALDO EM AT&#201;</text>
+  <text class="serif" x="588" y="1392" fill="#F5F0E8" font-size="48" font-weight="600">180 meses</text>
+
+  <rect x="64" y="1458" width="464" height="150" rx="14" fill="none" stroke="#B0894C" stroke-width="1" opacity="0.38"/>
+  <text class="serif" x="100" y="1512" fill="#B0894C" font-size="16" font-weight="600" letter-spacing="3">ENTRADA FLEX&#205;VEL</text>
+  <text class="serif" x="100" y="1572" fill="#F5F0E8" font-size="48" font-weight="600">Dinheiro ou im&#243;vel</text>
+
+  <!-- LOGO CELL -->
+  <image x="691" y="1474" width="186" height="119" preserveAspectRatio="xMidYMid meet" xlink:href="data:image/png;base64,@@LOGO@@"/>
+
+  <!-- BRAND LOGOS -->
+  <image x="372" y="1668" width="160" height="63" preserveAspectRatio="xMidYMid meet" xlink:href="data:image/png;base64,@@A10@@"/>
+  <image x="572" y="1660" width="128" height="79" preserveAspectRatio="xMidYMid meet" xlink:href="data:image/png;base64,@@R21@@"/>
+
+  <!-- FOOTER -->
+  <text class="serif" x="540" y="1800" text-anchor="middle" fill="#8C8273" font-size="14" font-weight="600" letter-spacing="2">EM PARCERIA COM INSTITUI&#199;&#195;O FINANCEIRA &#183; SUJEITO A AN&#193;LISE E APROVA&#199;&#195;O DE CR&#201;DITO</text>
+  <text class="serif" x="540" y="1830" text-anchor="middle" fill="#8C8273" font-size="14" font-weight="600" letter-spacing="3">PRAIA DO ESTALEIRO &#183; BALNE&#193;RIO CAMBORI&#218;/SC</text>
+</svg>

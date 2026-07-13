@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Cormorant+Garamond:wght@500;600;700&amp;display=swap');
+      .sans  { font-family: 'Poppins','Helvetica Neue',Arial,sans-serif; }
+      .serif { font-family: 'Cormorant Garamond','Times New Roman',serif; }
+    </style>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8F3EB"/><stop offset="1" stop-color="#EFE6D6"/>
+    </linearGradient>
+    <clipPath id="cImg"><rect x="556" y="172" width="452" height="980" rx="24"/></clipPath>
+    <filter id="cardSh" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="13" stdDeviation="24" flood-color="#2A2014" flood-opacity="0.22"/>
+    </filter>
+    <filter id="ctaSh" x="-20%" y="-60%" width="140%" height="220%">
+      <feDropShadow dx="0" dy="9" stdDeviation="16" flood-color="#2A2014" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#paper)"/>
+  <rect x="26" y="26" width="1028" height="1298" rx="10" fill="none" stroke="#C6AD6E" stroke-width="1" opacity="0.55"/>
+
+  <image x="72" y="58" width="200" height="79" xlink:href="data:image/png;base64,__A10__" preserveAspectRatio="xMidYMid meet"/>
+
+  <!-- tall city image right -->
+  <g filter="url(#cardSh)">
+    <image clip-path="url(#cImg)" x="556" y="172" width="452" height="980"
+           xlink:href="data:image/jpeg;base64,__IMG__" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+  <rect x="556" y="172" width="452" height="980" rx="24" fill="none" stroke="#C6AD6E" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- left column -->
+  <text class="sans" x="74" y="232" fill="#B5904E" font-size="20" font-weight="600" letter-spacing="3">INVISTA NA INCORPORA&#199;&#195;O</text>
+  <text class="serif" x="70" y="316" fill="#2A2620" font-size="62" font-weight="600">Via <tspan fill="#A9772A">SCP</tspan>,</text>
+  <text class="serif" x="70" y="384" fill="#2A2620" font-size="62" font-weight="600">em Balne&#225;rio</text>
+  <text class="serif" x="70" y="452" fill="#2A2620" font-size="62" font-weight="600">Cambori&#250;</text>
+
+  <g filter="url(#ctaSh)"><rect x="72" y="504" width="424" height="86" rx="43" fill="#2A2620"/></g>
+  <text class="sans" x="284" y="557" text-anchor="middle" fill="#F4EEE2" font-size="22" font-weight="600" letter-spacing="1">FALAR COM ESPECIALISTA<tspan fill="#E2C77E" font-size="25">&#160;&#160;&#8250;</tspan></text>
+
+  <!-- stat 1 -->
+  <text class="serif" x="70" y="700" fill="#2A2620" font-size="50" font-weight="600">S&#243;cio, n&#227;o comprador</text>
+  <text class="sans"  x="74" y="738" fill="#6B6258" font-size="18" font-weight="400">Voc&#234; participa da incorpora&#231;&#227;o como d&#243;no da opera&#231;&#227;o.</text>
+
+  <line x1="74" y1="784" x2="496" y2="784" stroke="#C6AD6E" stroke-width="1" opacity="0.5"/>
+
+  <!-- stat 2 -->
+  <text class="serif" x="70" y="852" fill="#2A2620" font-size="50" font-weight="600">Do terreno ao VGV</text>
+  <text class="sans"  x="74" y="890" fill="#6B6258" font-size="18" font-weight="400">Capital entra no terreno, antes do lan&#231;amento,</text>
+  <text class="sans"  x="74" y="914" fill="#6B6258" font-size="18" font-weight="400">e captura a margem de cada fase do ciclo.</text>
+
+  <line x1="74" y1="960" x2="496" y2="960" stroke="#C6AD6E" stroke-width="1" opacity="0.5"/>
+
+  <text class="sans" x="74" y="1024" fill="#9B7528" font-size="19" font-weight="600" letter-spacing="1">SCP &#183; SOCIEDADE EM</text>
+  <text class="sans" x="74" y="1052" fill="#9B7528" font-size="19" font-weight="600" letter-spacing="1">CONTA DE PARTICIPA&#199;&#195;O</text>
+</svg>

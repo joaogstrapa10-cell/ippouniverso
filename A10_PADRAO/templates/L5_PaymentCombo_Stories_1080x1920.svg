@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Poppins:wght@400;500;600&amp;display=swap');
+      .serif{font-family:'Cormorant Garamond',serif;}
+      .sans{font-family:'Poppins',sans-serif;}
+    </style>
+    <linearGradient id="topFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1624" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#0B1624" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="midFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1624" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0B1624" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="botFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1624" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0B1624" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- fundo navy -->
+  <rect width="1080" height="1920" fill="#0B1624"/>
+
+  <!-- 2 fotos empilhadas (placeholder) -->
+  <rect x="0" y="0" width="1080" height="560" fill="#16233A"/>
+  <rect x="0" y="560" width="1080" height="560" fill="#1C2A44"/>
+  <g transform="translate(540,280) scale(2.6)" opacity="0.4">
+    <rect x="-18" y="-14" width="36" height="28" rx="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
+    <circle cx="-8" cy="-6" r="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
+    <path d="M-18 10 L-4 -2 L4 6 L10 -1 L18 10" fill="none" stroke="#C9A86A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+  <text class="sans" x="540" y="360" text-anchor="middle" fill="#C9A86A" opacity="0.6" font-size="15" font-weight="500">FOTO 1 · 1080×560px</text>
+  <g transform="translate(540,840) scale(2.6)" opacity="0.4">
+    <rect x="-18" y="-14" width="36" height="28" rx="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
+    <circle cx="-8" cy="-6" r="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
+    <path d="M-18 10 L-4 -2 L4 6 L10 -1 L18 10" fill="none" stroke="#C9A86A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+  <text class="sans" x="540" y="920" text-anchor="middle" fill="#C9A86A" opacity="0.6" font-size="15" font-weight="500">FOTO 2 · 1080×560px</text>
+  <rect x="0" y="0" width="1080" height="250" fill="url(#topFade)"/>
+  <rect x="0" y="380" width="1080" height="180" fill="url(#midFade)"/>
+  <rect x="0" y="559" width="1080" height="2" fill="#C9A86A" opacity="0.35"/>
+  <rect x="0" y="900" width="1080" height="220" fill="url(#botFade)"/>
+
+  <!-- logo do empreendimento (marca própria, branca) + kicker -->
+  <image x="56" y="40" width="170" height="110" preserveAspectRatio="xMidYMid meet" xlink:href="data:image/png;base64,@@LOGO_EMPREENDIMENTO@@"/>
+  <text class="sans" x="1012" y="92" text-anchor="end" fill="#F5EFE3" fill-opacity="0.95" font-size="16" font-weight="600" letter-spacing="3">{{KICKER}}</text>
+
+  <!-- nomes/identificação dos 2 imóveis ou ambientes -->
+  <text class="serif" x="52" y="486" fill="#FFFFFF" font-size="52" font-weight="500" font-style="italic">{{CARD1_NOME}}</text>
+  <text class="sans" x="54" y="518" fill="#EDE6D7" font-size="14" font-weight="500" letter-spacing="2">{{CARD1_SPECS}}</text>
+
+  <text class="serif" x="52" y="1046" fill="#FFFFFF" font-size="52" font-weight="500" font-style="italic">{{CARD2_NOME}}</text>
+  <text class="sans" x="54" y="1078" fill="#EDE6D7" font-size="14" font-weight="500" letter-spacing="2">{{CARD2_SPECS}}</text>
+
+  <!-- painel navy: número grande em destaque -->
+  <text class="sans" x="540" y="1204" text-anchor="middle" fill="#C9A86A" font-size="22" font-weight="600" letter-spacing="5">{{PANEL_TITULO}}</text>
+
+  <text class="serif" x="540" y="1286" text-anchor="middle" fill="#D9BC7C" font-size="46" font-weight="500" font-style="italic">{{PANEL_SUBTITULO}}</text>
+
+  <text class="serif" x="540" y="1436" text-anchor="middle" font-weight="600"><tspan font-size="160" fill="#F7F3EA">{{NUMERO_GRANDE}}</tspan><tspan font-size="64" fill="#D9BC7C"> {{NUMERO_SUFIXO}}</tspan></text>
+
+  <line x1="200" y1="1482" x2="880" y2="1482" stroke="#FFFFFF" stroke-opacity="0.14"/>
+
+  <!-- 3 stats -->
+  <rect x="394" y="1512" width="1" height="84" fill="#C9A86A" opacity="0.5"/>
+  <rect x="684" y="1512" width="1" height="84" fill="#C9A86A" opacity="0.5"/>
+
+  <text class="serif" x="248" y="1566" text-anchor="middle" fill="#F7F3EA" font-size="48" font-weight="600">{{STAT1_VALOR}}</text>
+  <text class="sans" x="248" y="1602" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.62" font-size="12.5" font-weight="500" letter-spacing="2.5">{{STAT1_LABEL}}</text>
+
+  <text class="serif" x="540" y="1566" text-anchor="middle" fill="#F7F3EA" font-size="48" font-weight="600">{{STAT2_VALOR}}</text>
+  <text class="sans" x="540" y="1602" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.62" font-size="12.5" font-weight="500" letter-spacing="2.5">{{STAT2_LABEL}}</text>
+
+  <text class="serif" x="832" y="1566" text-anchor="middle" fill="#F7F3EA" font-size="48" font-weight="600">{{STAT3_VALOR}}</text>
+  <text class="sans" x="832" y="1602" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.62" font-size="12.5" font-weight="500" letter-spacing="2.5">{{STAT3_LABEL}}</text>
+
+  <!-- rodapé -->
+  <text class="sans" x="540" y="1668" text-anchor="middle" fill="#F0EBDD" fill-opacity="0.85" font-size="20" font-weight="400">{{RODAPE}}</text>
+
+  <!-- logos: A10 (obrigatório) + parceiro (opcional) -->
+  <image x="368" y="1716" width="160" height="63" preserveAspectRatio="xMidYMid meet" xlink:href="data:image/png;base64,@@A10_GOLD@@"/>
+  <image x="584" y="1708" width="128" height="79" preserveAspectRatio="xMidYMid meet" xlink:href="data:image/png;base64,@@PARCEIRO_GOLD@@"/>
+
+  <!-- moldura -->
+  <rect x="28" y="28" width="1024" height="1864" fill="none" stroke="#C9A86A" stroke-width="1.2" stroke-opacity="0.45"/>
+</svg>

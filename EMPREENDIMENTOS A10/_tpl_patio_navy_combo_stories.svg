@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Poppins:wght@400;500;600&amp;display=swap');
+      .serif{font-family:'Cormorant Garamond',serif;}
+      .sans{font-family:'Poppins',sans-serif;}
+    </style>
+    <linearGradient id="topFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1624" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#0B1624" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="midFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1624" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0B1624" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="botFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1624" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0B1624" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- fundo navy -->
+  <rect width="1080" height="1920" fill="#0B1624"/>
+
+  <!-- fotos empilhadas -->
+  <image x="0" y="0" width="1080" height="560" preserveAspectRatio="xMidYMid slice" xlink:href="data:image/jpeg;base64,@@MAR@@"/>
+  <image x="0" y="560" width="1080" height="560" preserveAspectRatio="xMidYMid slice" xlink:href="data:image/jpeg;base64,@@BRISAR@@"/>
+  <rect x="0" y="0" width="1080" height="250" fill="url(#topFade)"/>
+  <rect x="0" y="380" width="1080" height="180" fill="url(#midFade)"/>
+  <rect x="0" y="559" width="1080" height="2" fill="#C9A86A" opacity="0.35"/>
+  <rect x="0" y="900" width="1080" height="220" fill="url(#botFade)"/>
+
+  <!-- logo + kicker -->
+  <image x="56" y="40" width="170" height="110" preserveAspectRatio="xMidYMid meet" xlink:href="data:image/png;base64,@@LOGO@@"/>
+  <text class="sans" x="1012" y="92" text-anchor="end" fill="#F5EFE3" fill-opacity="0.95" font-size="16" font-weight="600" letter-spacing="3">PRAIA DO ESTALEIRO &#183; BC/SC</text>
+
+  <!-- nomes das casas -->
+  <text class="serif" x="52" y="486" fill="#FFFFFF" font-size="52" font-weight="500" font-style="italic">Casa Mar</text>
+  <text class="sans" x="54" y="518" fill="#EDE6D7" font-size="14" font-weight="500" letter-spacing="2">402 M&#178; &#183; 4 SU&#205;TES &#183; 3 VAGAS &#183; PISCINA + ADEGA</text>
+
+  <text class="serif" x="52" y="1046" fill="#FFFFFF" font-size="52" font-weight="500" font-style="italic">Casa Brisa</text>
+  <text class="sans" x="54" y="1078" fill="#EDE6D7" font-size="14" font-weight="500" letter-spacing="2">350 M&#178; &#183; 5 SU&#205;TES &#183; 3 VAGAS &#183; PISCINA PRIVATIVA</text>
+
+  <!-- painel navy -->
+  <text class="sans" x="540" y="1204" text-anchor="middle" fill="#C9A86A" font-size="22" font-weight="600" letter-spacing="5">CONDI&#199;&#195;O ESPECIAL DE PAGAMENTO</text>
+
+  <text class="serif" x="540" y="1286" text-anchor="middle" fill="#D9BC7C" font-size="46" font-weight="500" font-style="italic">Entrada + Saldo em at&#233;</text>
+
+  <text class="serif" x="540" y="1436" text-anchor="middle" font-weight="600"><tspan font-size="160" fill="#F7F3EA">180</tspan><tspan font-size="64" fill="#D9BC7C"> meses</tspan></text>
+
+  <line x1="200" y1="1482" x2="880" y2="1482" stroke="#FFFFFF" stroke-opacity="0.14"/>
+
+  <!-- stats -->
+  <rect x="394" y="1512" width="1" height="84" fill="#C9A86A" opacity="0.5"/>
+  <rect x="684" y="1512" width="1" height="84" fill="#C9A86A" opacity="0.5"/>
+
+  <text class="serif" x="248" y="1566" text-anchor="middle" fill="#F7F3EA" font-size="48" font-weight="600">R$ 3,9 mm</text>
+  <text class="sans" x="248" y="1602" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.62" font-size="12.5" font-weight="500" letter-spacing="2.5">EXEMPLO DE ENTRADA</text>
+
+  <text class="serif" x="540" y="1566" text-anchor="middle" fill="#F7F3EA" font-size="48" font-weight="600">2</text>
+  <text class="sans" x="540" y="1602" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.62" font-size="12.5" font-weight="500" letter-spacing="2.5">CASAS EXCLUSIVAS</text>
+
+  <text class="serif" x="832" y="1566" text-anchor="middle" fill="#F7F3EA" font-size="48" font-weight="600">90 m</text>
+  <text class="sans" x="832" y="1602" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.62" font-size="12.5" font-weight="500" letter-spacing="2.5">DO MAR</text>
+
+  <!-- rodapé -->
+  <text class="sans" x="540" y="1668" text-anchor="middle" fill="#F0EBDD" fill-opacity="0.85" font-size="20" font-weight="400">Entrada em dinheiro &#183; Im&#243;vel na diferen&#231;a &#183; Outras formas</text>
+
+  <!-- logos A10 + R21 -->
+  <image x="368" y="1716" width="160" height="63" preserveAspectRatio="xMidYMid meet" xlink:href="data:image/png;base64,@@A10@@"/>
+  <image x="584" y="1708" width="128" height="79" preserveAspectRatio="xMidYMid meet" xlink:href="data:image/png;base64,@@R21@@"/>
+
+  <!-- moldura -->
+  <rect x="28" y="28" width="1024" height="1864" fill="none" stroke="#C9A86A" stroke-width="1.2" stroke-opacity="0.45"/>
+</svg>

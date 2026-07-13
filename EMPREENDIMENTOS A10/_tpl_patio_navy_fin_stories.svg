@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Poppins:wght@400;500;600&amp;display=swap');
+      .serif{font-family:'Cormorant Garamond',serif;}
+      .sans{font-family:'Poppins',sans-serif;}
+    </style>
+    <clipPath id="creamClip"><rect x="0" y="0" width="1080" height="1178"/></clipPath>
+    <clipPath id="cardA"><rect x="64" y="506" width="464" height="602" rx="18"/></clipPath>
+    <clipPath id="cardB"><rect x="552" y="506" width="464" height="602" rx="18"/></clipPath>
+    <linearGradient id="capFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1624" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0B1624" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="ctaGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EDD597"/>
+      <stop offset="0.55" stop-color="#CBA65C"/>
+      <stop offset="1" stop-color="#AE883D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- fundos -->
+  <rect width="1080" height="1920" fill="#F0EBDD"/>
+  <rect y="1178" width="1080" height="742" fill="#0B1624"/>
+
+  <!-- arcos decorativos -->
+  <g clip-path="url(#creamClip)">
+    <circle cx="1030" cy="110" r="300" fill="none" stroke="#B3913F" stroke-width="1" opacity="0.14"/>
+    <circle cx="1030" cy="110" r="336" fill="none" stroke="#B3913F" stroke-width="0.7" opacity="0.10"/>
+    <circle cx="40" cy="1000" r="280" fill="none" stroke="#B3913F" stroke-width="1" opacity="0.10"/>
+  </g>
+
+  <!-- logos A10 + R21 -->
+  <image x="368" y="104" width="160" height="63" preserveAspectRatio="xMidYMid meet" xlink:href="data:image/png;base64,@@A10@@"/>
+  <image x="584" y="96" width="128" height="79" preserveAspectRatio="xMidYMid meet" xlink:href="data:image/png;base64,@@R21@@"/>
+
+  <!-- kicker -->
+  <text class="sans" x="540" y="248" text-anchor="middle" fill="#B3913F" font-size="19" font-weight="500" letter-spacing="3.5">PRAIA DO ESTALEIRO &#183; BALNE&#193;RIO CAMBORI&#218; - SC</text>
+
+  <!-- headline -->
+  <text class="serif" x="540" y="352" text-anchor="middle" fill="#1D2C4B" font-size="92" font-weight="600">Condi&#231;&#245;es exclusivas</text>
+  <text class="serif" x="540" y="448" text-anchor="middle" font-size="92" font-weight="600"><tspan fill="#1D2C4B">para morar a </tspan><tspan fill="#AC8A38">90 m do mar.</tspan></text>
+
+  <!-- card foto: Casa Mar -->
+  <g clip-path="url(#cardA)">
+    <image x="64" y="506" width="464" height="602" preserveAspectRatio="xMidYMid slice" xlink:href="data:image/jpeg;base64,@@MAR@@"/>
+    <rect x="64" y="958" width="464" height="150" fill="url(#capFade)"/>
+  </g>
+  <text class="serif" x="92" y="1050" fill="#FFFFFF" font-size="44" font-weight="500" font-style="italic">Casa Mar</text>
+  <text class="sans" x="94" y="1080" fill="#EDE6D7" font-size="13" font-weight="500" letter-spacing="2">402 M&#178; &#183; 4 SU&#205;TES</text>
+
+  <!-- card foto: Casa Brisa -->
+  <g clip-path="url(#cardB)">
+    <image x="552" y="506" width="464" height="602" preserveAspectRatio="xMidYMid slice" xlink:href="data:image/jpeg;base64,@@BRISAF@@"/>
+    <rect x="552" y="958" width="464" height="150" fill="url(#capFade)"/>
+  </g>
+  <text class="serif" x="580" y="1050" fill="#FFFFFF" font-size="44" font-weight="500" font-style="italic">Casa Brisa</text>
+  <text class="sans" x="582" y="1080" fill="#EDE6D7" font-size="13" font-weight="500" letter-spacing="2">350 M&#178; &#183; 5 SU&#205;TES</text>
+
+  <!-- painel navy -->
+  <text class="sans" x="540" y="1258" text-anchor="middle" fill="#C9A86A" font-size="22" font-weight="600" letter-spacing="5">MODELO ESPECIAL DE PAGAMENTO</text>
+
+  <rect x="64" y="1300" width="464" height="148" rx="16" fill="#101B2C" stroke="#C9A86A" stroke-opacity="0.4"/>
+  <text class="sans" x="296" y="1360" text-anchor="middle" fill="#C9A86A" font-size="15" font-weight="500" letter-spacing="3">ENTRADA DE</text>
+  <text class="serif" x="296" y="1432" text-anchor="middle" fill="#F7F3EA" font-size="68" font-weight="600">60%</text>
+
+  <rect x="552" y="1300" width="464" height="148" rx="16" fill="#101B2C" stroke="#C9A86A" stroke-opacity="0.4"/>
+  <text class="sans" x="784" y="1360" text-anchor="middle" fill="#C9A86A" font-size="15" font-weight="500" letter-spacing="3">SALDO EM AT&#201;</text>
+  <text class="serif" x="784" y="1432" text-anchor="middle" fill="#F7F3EA" font-size="68" font-weight="600">180 meses</text>
+
+  <rect x="308" y="1478" width="464" height="124" rx="16" fill="#101B2C" stroke="#C9A86A" stroke-opacity="0.4"/>
+  <text class="sans" x="540" y="1530" text-anchor="middle" fill="#C9A86A" font-size="15" font-weight="500" letter-spacing="3">ENTRADA FLEX&#205;VEL</text>
+  <text class="serif" x="540" y="1586" text-anchor="middle" fill="#F7F3EA" font-size="48" font-weight="600">Dinheiro ou im&#243;vel</text>
+
+  <!-- CTA -->
+  <rect x="300" y="1670" width="500" height="74" fill="none" stroke="#C9A86A" stroke-opacity="0.55"/>
+  <rect x="290" y="1660" width="500" height="74" fill="url(#ctaGold)"/>
+  <text class="sans" x="540" y="1707" text-anchor="middle" fill="#0B1624" font-size="20" font-weight="600" letter-spacing="2.5">CONHE&#199;A AS CONDI&#199;&#213;ES</text>
+
+  <!-- rodapé -->
+  <text class="sans" x="540" y="1810" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.5" font-size="13" font-weight="500" letter-spacing="3">PRAIA DO ESTALEIRO &#183; BALNE&#193;RIO CAMBORI&#218;/SC &#183; A10 &#215; R21</text>
+
+  <!-- moldura -->
+  <rect x="28" y="28" width="1024" height="1864" fill="none" stroke="#C9A86A" stroke-width="1.2" stroke-opacity="0.45"/>
+</svg>

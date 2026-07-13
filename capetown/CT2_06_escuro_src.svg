@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <style type="text/css">
+      @font-face{font-family:'Playfair';src:url(data:font/ttf;base64,__FONT_SERIF__) format('truetype');font-weight:400 900;}
+      @font-face{font-family:'Poppins';font-weight:400;src:url(data:font/ttf;base64,__FONT_REG__) format('truetype');}
+      @font-face{font-family:'Poppins';font-weight:600;src:url(data:font/ttf;base64,__FONT_SEMI__) format('truetype');}
+      .serif{font-family:'Playfair',serif;font-weight:700;}
+      .reg{font-family:'Poppins',sans-serif;font-weight:400;}
+      .semi{font-family:'Poppins',sans-serif;font-weight:600;}
+    </style>
+    <clipPath id="imgClip"><rect x="0" y="430" width="1080" height="920"/></clipPath>
+    <linearGradient id="imgBot" x1="0" y1="0" x2="0" y2="1"><stop offset="0.74" stop-color="#10100F" stop-opacity="0"/><stop offset="1" stop-color="#10100F" stop-opacity="0.55"/></linearGradient>
+  </defs>
+
+  <rect width="1080" height="1350" fill="#F2EDE6"/>
+  <g clip-path="url(#imgClip)">
+    <image x="0" y="425" width="1080" height="930" preserveAspectRatio="xMidYMid slice" xlink:href="data:image/jpeg;base64,__IMG_6__"/>
+    <rect x="0" y="430" width="1080" height="920" fill="url(#imgBot)"/>
+  </g>
+
+  <text class="semi" font-size="15" letter-spacing="2" fill="#A8967F"><tspan x="62" y="62">DRA. FRANCINE ALMEIDA</tspan><tspan class="reg" fill="#B9AB98"> · HARMONIZAÇÃO FACIAL</tspan></text>
+  <rect x="940" y="42" width="80" height="34" rx="17" fill="#DBD3C8"/>
+  <text class="semi" font-size="16" letter-spacing="1" fill="#6E6258" text-anchor="middle"><tspan x="980" y="65">6 / 7</tspan></text>
+
+  <text class="semi" font-size="18" letter-spacing="3" fill="#A8967F"><tspan x="62" y="138">O PRINCÍPIO</tspan></text>
+  <text class="serif" font-size="62" fill="#8A6F5C"><tspan x="58" y="222">PERMANENTE NÃO É</tspan><tspan x="58" y="292">SINÔNIMO DE MELHOR</tspan></text>
+  <text class="reg" font-size="24" fill="#6E6258"><tspan x="62" y="358">Segurança e naturalidade valem</tspan><tspan x="62" y="392">mais do que durar pra sempre.</tspan></text>
+
+  <text class="semi" font-size="20" letter-spacing="1" fill="#FFFFFF" fill-opacity="0.92"><tspan x="62" y="1300">@drafrancinealmeida</tspan></text>
+</svg>

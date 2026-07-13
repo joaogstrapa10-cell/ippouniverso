@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2544" height="1456" viewBox="0 0 2544 1456">
+  <defs>
+    <style type="text/css">
+      @font-face{font-family:'Poppins';font-style:normal;font-weight:400;src:url(data:font/ttf;base64,__FONT_REG__) format('truetype');}
+      @font-face{font-family:'Poppins';font-style:normal;font-weight:600;src:url(data:font/ttf;base64,__FONT_SEMI__) format('truetype');}
+      .ttl{font-family:'Poppins',sans-serif;font-weight:600;fill:#FFFFFF;}
+      .sub{font-family:'Poppins',sans-serif;font-weight:400;fill:#E0C8A6;letter-spacing:0.5px;}
+    </style>
+    <clipPath id="p1"><rect x="1018" y="143" width="360" height="1170" rx="180" ry="132"/></clipPath>
+    <clipPath id="p2"><rect x="1410" y="300" width="360" height="1156" rx="180" ry="132"/></clipPath>
+    <clipPath id="p3"><rect x="1801" y="143" width="360" height="1169" rx="180" ry="132"/></clipPath>
+    <clipPath id="p4"><rect x="2195" y="301" width="360" height="1155" rx="180" ry="132"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect id="bg" width="2544" height="1456" fill="#0F162A"/>
+
+  <!-- Collage pills (each = source-resolution image clipped to a pill shape) -->
+  <g id="pilar-1-solenne" clip-path="url(#p1)"><image x="1014" y="139" width="368" height="1178" xlink:href="data:image/jpeg;base64,__IMG1__"/></g>
+  <g id="pilar-2-quinta-da-neve" clip-path="url(#p2)"><image x="1406" y="296" width="368" height="1160" xlink:href="data:image/jpeg;base64,__IMG2__"/></g>
+  <g id="pilar-3-colline-a" clip-path="url(#p3)"><image x="1797" y="139" width="368" height="1177" xlink:href="data:image/jpeg;base64,__IMG3__"/></g>
+  <g id="pilar-4-colline-b" clip-path="url(#p4)"><image x="2191" y="297" width="353" height="1159" xlink:href="data:image/jpeg;base64,__IMG4__"/></g>
+
+  <!-- Title -->
+  <text class="ttl" font-size="139" letter-spacing="-1">
+    <tspan x="118" y="284">Hist&#243;ria</tspan>
+    <tspan x="118" y="430">que constr&#243;i</tspan>
+    <tspan x="118" y="576">significado</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text class="sub" font-size="64">
+    <tspan x="118" y="1199">Solenne &#8226; Quinta da Neve</tspan>
+    <tspan x="118" y="1280">&#8226; Colline R&#233;sidences</tspan>
+  </text>
+</svg>

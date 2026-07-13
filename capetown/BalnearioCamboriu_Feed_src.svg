@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;family=Cormorant+Garamond:wght@500;600&amp;display=swap');
+      .sans { font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+    <linearGradient id="goldT" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E0C079"/>
+      <stop offset="1" stop-color="#B5904E"/>
+    </linearGradient>
+    <linearGradient id="botgrad" gradientUnits="userSpaceOnUse" x1="0" y1="430" x2="0" y2="1350">
+      <stop offset="0"    stop-color="#0B100F" stop-opacity="0"/>
+      <stop offset="0.4"  stop-color="#0B100F" stop-opacity="0.5"/>
+      <stop offset="0.72" stop-color="#0A0E0D" stop-opacity="0.82"/>
+      <stop offset="1"    stop-color="#070B0A" stop-opacity="0.97"/>
+    </linearGradient>
+    <linearGradient id="topglass" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="170">
+      <stop offset="0" stop-color="#070B0A" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#070B0A" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="barSh" x="-10%" y="-30%" width="120%" height="170%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="txtSh" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- city photo as FULL-BLEED background (no stretch, fills everything) -->
+  <image id="foto" x="0" y="0" width="1080" height="1350"
+         xlink:href="data:image/jpeg;base64,__BC__" preserveAspectRatio="xMidYMid slice"/>
+
+  <!-- contrast scrims over the photo -->
+  <rect width="1080" height="220" fill="url(#topglass)"/>
+  <rect width="1080" height="1350" fill="url(#botgrad)"/>
+
+  <!-- eyebrow -->
+  <text class="sans" x="80" y="726" fill="#E0C079" font-size="24" font-weight="500" letter-spacing="6">OPORTUNIDADE EM</text>
+
+  <!-- BIG highlighted city name (two-tone bars) -->
+  <g filter="url(#barSh)">
+    <rect x="72" y="748" width="430" height="96" fill="#F4EFE7"/>
+    <rect x="72" y="850" width="392" height="96" fill="url(#goldT)"/>
+  </g>
+  <text class="sans" x="96" y="816" fill="#211D17" font-size="66" font-weight="800" letter-spacing="0">BALNE&#193;RIO</text>
+  <text class="sans" x="96" y="918" fill="#211D17" font-size="66" font-weight="800" letter-spacing="0">CAMBORI&#218;</text>
+
+  <!-- proof stat -->
+  <text class="sans" x="80" y="1010" fill="#FFFFFF" font-size="27" font-weight="300" filter="url(#txtSh)"><tspan fill="#E6C77E" font-size="50" font-weight="700">20%</tspan>  de resultado comprovado</text>
+  <text class="sans" x="80" y="1046" fill="#C9C2B6" font-size="19" font-weight="300">m&#233;dia hist&#243;rica de valoriza&#231;&#227;o do m&#178; &#183; rentabilidade passada n&#227;o garante futura</text>
+
+  <!-- CTA -->
+  <rect x="72" y="1086" width="476" height="80" rx="40" fill="url(#goldT)" filter="url(#barSh)"/>
+  <text class="sans" x="312" y="1135" text-anchor="middle" fill="#211D17" font-size="24" font-weight="700" letter-spacing="2">FALAR COM ESPECIALISTA&#160;&#160;&#8250;</text>
+
+  <!-- A10 logo + contact -->
+  <image x="790" y="1232" width="218" height="84"
+         xlink:href="data:image/png;base64,__A10__" preserveAspectRatio="xMidYMid meet"/>
+  <text class="sans" x="80" y="1284" fill="#9FB0AE" font-size="19" font-weight="400" letter-spacing="3">A10EMPREENDIMENTOS.COM.BR</text>
+</svg>

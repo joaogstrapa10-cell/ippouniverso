@@ -1,0 +1,48 @@
+CARROSSEL MOUNJARO — Dra. Francine Almeida
+Slides para o Canva (workflow: trocar as fotos de fundo)
+============================================================
+
+O QUE TEM AQUI
+--------------
+Cada slide vem em 2 formatos (use o que funcionar melhor no Canva):
+
+  MJ_0X_nome.svg          -> overlay VETOR (texto + sombra/scrim), fundo transparente
+  MJ_0X_nome_overlay.png  -> overlay TRANSPARENTE em PNG (visual 100% garantido)
+
+Slide 1 (capa) já vem com a foto do rosto murcho:
+  MJ_01_capa_COM_FOTO.svg / .png  -> pronto pra postar
+  MJ_01_fundo.jpg                 -> a foto recortada 1080x1350 (caso queira montar manual)
+
+Os overlays têm uma "janela" transparente: é só pôr a FOTO atrás e o overlay na frente.
+
+COMO MONTAR NO CANVA
+--------------------
+1) Crie um design 1080 x 1350 px (Instagram retrato 4:5). Uma página por slide.
+2) SLIDE 1: arraste MJ_01_capa_COM_FOTO.png (já está pronto). Fim.
+3) SLIDES 2 a 7:
+   a. Faça upload da FOTO de fundo do slide (gere no Magnific com o prompt
+      do slide — estão no seu guia HTML) e arraste pra página.
+      Clique na foto > Posição/Editar > "Cobrir" pra preencher a página toda.
+   b. Faça upload do overlay do slide (.svg ou _overlay.png), arraste por cima
+      e estique pros 1080x1350 (página inteira). O texto fica sobre a foto.
+4) Baixar: Compartilhar > Baixar > PNG (ou JPG), todas as páginas.
+
+SVG ou PNG?
+-----------
+- .svg  = vetor (dá pra escalar/recolorir). Se o Canva não reconhecer a fonte
+          Playfair, ele pode trocar a fonte do título -> nesse caso use o PNG.
+- _overlay.png = imagem transparente, fica idêntico ao mockup. Só sobrepor.
+  Para só "trocar fotos e baixar", o _overlay.png é o caminho mais seguro.
+
+MAPA SLIDE -> CONTEÚDO (posição do texto)
+-----------------------------------------
+01 capa        "O Mounjaro derrete o seu Rosto?"     (FOTO já inclusa)
+02 entenda     "O chamado Mounjaro Face"             texto: topo-esquerda
+03 acontece    "A face perde volume e suporte"       texto: base-direita
+04 naoeculpa   "O problema não é emagrecer"          texto: topo-direita
+05 solucao     "Dá para devolver o que se perdeu"    texto: base-esquerda
+06 principio   "Emagrecer não precisa envelhecer"    texto: topo-esquerda
+07 cta         "Recupere o seu rosto" + Agende        (slide escuro)
+
+Dica: as fotos dos slides 2-6 são claras (a sombra é creme, clareando o canto
+do texto); o slide 7 é escuro (foto de retrato quente, sombra escura embaixo).

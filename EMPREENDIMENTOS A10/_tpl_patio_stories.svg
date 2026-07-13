@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;family=Jost:wght@300;400;500&amp;display=swap');
+      .serif{font-family:'Cormorant Garamond',serif;}
+      .sans{font-family:'Jost','Poppins',sans-serif;}
+    </style>
+    <clipPath id="photoClip"><rect x="0" y="0" width="1080" height="1180"/></clipPath>
+    <clipPath id="sunClip"><circle cx="540" cy="150" r="24"/></clipPath>
+    <linearGradient id="topScrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14120E" stop-opacity="0.55"/>
+      <stop offset="0.22" stop-color="#14120E" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="botFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5F0E8" stop-opacity="0"/>
+      <stop offset="0.80" stop-color="#F5F0E8" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#F5F0E8" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1080" height="1920" fill="#F5F0E8"/>
+
+  <!-- PHOTO -->
+  <g clip-path="url(#photoClip)">
+    <image x="0" y="0" width="1080" height="1180" preserveAspectRatio="xMidYMid slice" xlink:href="data:image/jpeg;base64,__IMG__"/>
+    <rect x="0" y="0" width="1080" height="1180" fill="url(#topScrim)"/>
+    <rect x="0" y="860" width="1080" height="320" fill="url(#botFade)"/>
+  </g>
+
+  <!-- BRAND MARK -->
+  <g>
+    <circle cx="540" cy="150" r="24" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <g clip-path="url(#sunClip)" stroke="#FFFFFF" stroke-width="1.7">
+      <line x1="516" y1="138" x2="564" y2="138"/>
+      <line x1="516" y1="146" x2="564" y2="146"/>
+      <line x1="516" y1="154" x2="564" y2="154"/>
+      <line x1="516" y1="162" x2="564" y2="162"/>
+    </g>
+    <path d="M540,148 C537,154 530,156 525,162 C530,160 535,159 540,158 C545,159 550,160 555,162 C550,156 543,154 540,148 Z" fill="#FFFFFF"/>
+  </g>
+  <text class="sans" x="540" y="208" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="400" letter-spacing="8">P&#193;TIO ESTALEIRO</text>
+
+  <!-- FRAME -->
+  <rect x="24" y="24" width="1032" height="1872" fill="none" stroke="#B0894C" stroke-width="1.3" opacity="0.85"/>
+  <rect x="34" y="34" width="1012" height="1852" fill="none" stroke="#B0894C" stroke-width="0.6" opacity="0.45"/>
+
+  <!-- CASA -->
+  <text class="sans" x="540" y="1300" text-anchor="middle" fill="#B0894C" font-size="25" font-weight="400" letter-spacing="11">C A S A</text>
+  <!-- NAME -->
+  <text class="serif" x="540" y="1418" text-anchor="middle" fill="#2C2A24" font-size="118" font-weight="500" font-style="italic">__NAME__</text>
+  <line x1="495" y1="1452" x2="585" y2="1452" stroke="#B0894C" stroke-width="1.5"/>
+
+  <!-- SPECS -->
+  <g>
+    <line x1="405" y1="1512" x2="405" y2="1590" stroke="#B0894C" stroke-width="0.8" opacity="0.5"/>
+    <line x1="675" y1="1512" x2="675" y2="1590" stroke="#B0894C" stroke-width="0.8" opacity="0.5"/>
+    <text class="serif" x="270" y="1562" text-anchor="middle" fill="#2C2A24" font-size="52" font-weight="500">__AREA__ m&#178;</text>
+    <text class="sans"  x="270" y="1594" text-anchor="middle" fill="#8C8273" font-size="15" letter-spacing="3">&#193;REA TOTAL</text>
+    <text class="serif" x="540" y="1562" text-anchor="middle" fill="#2C2A24" font-size="52" font-weight="500">__SUITES__</text>
+    <text class="sans"  x="540" y="1594" text-anchor="middle" fill="#8C8273" font-size="15" letter-spacing="3">SU&#205;TES</text>
+    <text class="serif" x="810" y="1562" text-anchor="middle" fill="#2C2A24" font-size="52" font-weight="500">3</text>
+    <text class="sans"  x="810" y="1594" text-anchor="middle" fill="#8C8273" font-size="15" letter-spacing="3">VAGAS</text>
+  </g>
+
+  <!-- AMENITIES -->
+  <text class="sans" x="540" y="1664" text-anchor="middle" fill="#6E665A" font-size="17" letter-spacing="2.5">Living &#183; Cozinha &#183; Deck &#183; Piscina privativa &#8212; integrados</text>
+
+  <line x1="480" y1="1712" x2="600" y2="1712" stroke="#B0894C" stroke-width="0.8" opacity="0.55"/>
+
+  <!-- PRICE -->
+  <text class="sans" x="540" y="1756" text-anchor="middle" fill="#B0894C" font-size="15" letter-spacing="6">INVESTIMENTO</text>
+  <text class="serif" x="540" y="1818" text-anchor="middle" fill="#2C2A24" font-size="58" font-weight="600" font-style="italic">R$ __PRICE__</text>
+
+  <!-- ADDRESS -->
+  <text class="sans" x="540" y="1860" text-anchor="middle" fill="#8C8273" font-size="14" letter-spacing="3">PRAIA DO ESTALEIRO &#183; BALNE&#193;RIO CAMBORI&#218;/SC &#183; 90 M DO MAR &#183; A10 &#215; R21</text>
+</svg>

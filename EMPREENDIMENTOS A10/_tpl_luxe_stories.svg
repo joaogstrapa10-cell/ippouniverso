@@ -1,0 +1,58 @@
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient id="fadeS" x1="540" y1="850" x2="540" y2="1180" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C1422" stop-opacity="0"/><stop offset="1" stop-color="#0C1422"/>
+</linearGradient>
+<clipPath id="clipS"><rect width="1080" height="1920"/></clipPath>
+</defs>
+<g clip-path="url(#clipS)">
+
+<!-- BACKGROUND -->
+<rect width="1080" height="1920" fill="#0C1422"/>
+<image x="0" y="0" width="1080" height="1180" preserveAspectRatio="xMidYMid slice" xlink:href="data:image/jpeg;base64,__IMG__"/>
+<rect x="0" y="860" width="1080" height="320" fill="url(#fadeS)"/>
+
+<!-- FRAME -->
+<rect x="30" y="30" width="1020" height="1860" rx="2" stroke="__ACC__" stroke-opacity="0.45" stroke-width="1"/>
+<rect x="40" y="40" width="1000" height="1840" rx="1" stroke="__ACC__" stroke-opacity="0.16" stroke-width="1"/>
+
+<!-- KICKER -->
+<text font-family="Poppins" x="78" y="1300" font-size="16" font-weight="500" fill="__ACC__" letter-spacing="7">__KICKER__</text>
+
+<!-- HEADLINE -->
+<text font-family="Cormorant Garamond" x="72" y="1392" font-size="108" font-weight="500" fill="#FFFFFF" letter-spacing="1">__TITLE__</text>
+<rect x="78" y="1418" width="116" height="2" fill="__ACC__"/>
+<text font-family="Poppins" x="80" y="1458" font-size="16.5" font-weight="400" fill="#FFFFFF" fill-opacity="0.66" letter-spacing="4">__SUB__</text>
+
+<!-- SPEC BAND -->
+<line x1="78" y1="1496" x2="1002" y2="1496" stroke="__ACC__" stroke-opacity="0.20"/>
+<line x1="78" y1="1592" x2="1002" y2="1592" stroke="__ACC__" stroke-opacity="0.20"/>
+<line x1="309" y1="1508" x2="309" y2="1580" stroke="__ACC__" stroke-opacity="0.20"/>
+<line x1="540" y1="1508" x2="540" y2="1580" stroke="__ACC__" stroke-opacity="0.20"/>
+<line x1="771" y1="1508" x2="771" y2="1580" stroke="__ACC__" stroke-opacity="0.20"/>
+<g text-anchor="middle">
+<text font-family="Cormorant Garamond" x="193" y="1552" font-size="40" font-weight="600" fill="#FFFFFF">__S1__</text>
+<text font-family="Cormorant Garamond" x="424" y="1552" font-size="40" font-weight="600" fill="#FFFFFF">__S2__</text>
+<text font-family="Cormorant Garamond" x="655" y="1552" font-size="40" font-weight="600" fill="#FFFFFF">__S3__</text>
+<text font-family="Cormorant Garamond" x="886" y="1552" font-size="40" font-weight="600" fill="#FFFFFF">__S4__</text>
+<text font-family="Poppins" x="193" y="1578" font-size="11.5" font-weight="400" fill="#FFFFFF" fill-opacity="0.58" letter-spacing="1.6">__S1L__</text>
+<text font-family="Poppins" x="424" y="1578" font-size="11.5" font-weight="400" fill="#FFFFFF" fill-opacity="0.58" letter-spacing="1.6">__S2L__</text>
+<text font-family="Poppins" x="655" y="1578" font-size="11.5" font-weight="400" fill="#FFFFFF" fill-opacity="0.58" letter-spacing="1.6">__S3L__</text>
+<text font-family="Poppins" x="886" y="1578" font-size="11.5" font-weight="400" fill="#FFFFFF" fill-opacity="0.58" letter-spacing="1.6">__S4L__</text>
+</g>
+
+<!-- AMENITIES -->
+<text font-family="Poppins" x="80" y="1640" font-size="15.5" font-weight="400" fill="__ACC__" letter-spacing="1">__AMEN__</text>
+<line x1="78" y1="1670" x2="1002" y2="1670" stroke="__ACC__" stroke-opacity="0.16"/>
+
+<!-- PRICE (left, editorial) -->
+<text font-family="Poppins" x="80" y="1710" font-size="13" font-weight="500" fill="#FFFFFF" fill-opacity="0.55" letter-spacing="3">VALOR</text>
+<text font-family="Cormorant Garamond" x="78" y="1756" font-size="42" font-style="italic" font-weight="600" fill="#FFFFFF">__PRICE__</text>
+
+<!-- ADDRESS (right) -->
+<text text-anchor="end" font-family="Poppins" x="1002" y="1704" font-size="13" font-weight="500" fill="__ACC__" letter-spacing="3">ENDEREÇO</text>
+<text text-anchor="end" font-family="Poppins" x="1002" y="1736" font-size="20" font-weight="600" fill="#FFFFFF">__ADDR1__</text>
+<text text-anchor="end" font-family="Poppins" x="1002" y="1762" font-size="15" font-weight="400" fill="#FFFFFF" fill-opacity="0.72">__ADDR2__</text>
+
+</g>
+</svg>

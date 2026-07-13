@@ -1,0 +1,74 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient id="fadeF" x1="540" y1="540" x2="540" y2="850" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C1422" stop-opacity="0"/><stop offset="1" stop-color="#0C1422"/>
+</linearGradient>
+<radialGradient id="glowF" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(100 -95) scale(880 430)">
+<stop stop-color="#08111E" stop-opacity="0.30"/><stop offset="1" stop-color="#08111E" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="clipF"><rect width="1080" height="1350"/></clipPath>
+</defs>
+<g clip-path="url(#clipF)">
+
+<!-- BACKGROUND -->
+<rect width="1080" height="1350" fill="#0C1422"/>
+<image x="0" y="0" width="1080" height="880" preserveAspectRatio="xMidYMid slice" xlink:href="data:image/jpeg;base64,__IMG__"/>
+<ellipse cx="540" cy="120" rx="440" ry="215" fill="url(#glowF)"/>
+<rect x="0" y="540" width="1080" height="340" fill="url(#fadeF)"/>
+
+<!-- HEADLINE -->
+<text font-family="Cormorant Garamond" x="73" y="962" font-size="106" font-weight="500" fill="#FFFFFF" letter-spacing="1">__TITLE__</text>
+<text font-family="Poppins" x="80" y="1002" font-size="19" font-weight="500" fill="#C9A86A" letter-spacing="3.5">__SUB__</text>
+
+<!-- SPEC CARDS -->
+<g>
+<rect x="76"  y="1028" width="172" height="98" rx="16" fill="#101A2B"/>
+<rect x="76.5"  y="1028.5" width="171" height="97" rx="15.5" stroke="#C9A86A" stroke-opacity="0.34"/>
+<rect x="288" y="1028" width="175" height="98" rx="16" fill="#101A2B"/>
+<rect x="288.5" y="1028.5" width="174" height="97" rx="15.5" stroke="#C9A86A" stroke-opacity="0.34"/>
+<rect x="502" y="1028" width="172" height="98" rx="16" fill="#101A2B"/>
+<rect x="502.5" y="1028.5" width="171" height="97" rx="15.5" stroke="#C9A86A" stroke-opacity="0.34"/>
+<rect x="714" y="1028" width="172" height="98" rx="16" fill="#101A2B"/>
+<rect x="714.5" y="1028.5" width="171" height="97" rx="15.5" stroke="#C9A86A" stroke-opacity="0.34"/>
+</g>
+<g id="icons">
+<path d="M100.167 1058.13V1055.42V1050C100.167 1049.43 100.395 1048.87 100.801 1048.47C101.208 1048.06 101.759 1047.83 102.333 1047.83H119.667C120.241 1047.83 120.792 1048.06 121.199 1048.47C121.605 1048.87 121.833 1049.43 121.833 1050V1055.42V1058.13M100.167 1052.17H121.833M104.5 1047.83V1046.21C104.5 1045.78 104.671 1045.36 104.976 1045.06C105.281 1044.75 105.694 1044.58 106.125 1044.58H109.375C109.806 1044.58 110.219 1044.75 110.524 1045.06C110.829 1045.36 111 1045.78 111 1046.21M111 1046.21V1047.83M111 1046.21C111 1045.78 111.171 1045.36 111.476 1045.06C111.781 1044.75 112.194 1044.58 112.625 1044.58H115.875C116.306 1044.58 116.719 1044.75 117.024 1045.06C117.329 1045.36 117.5 1045.78 117.5 1046.21V1047.83" stroke="#C9A86A" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M313.333 1046.75V1041.33H318.75M330.667 1046.75V1041.33H325.25M313.333 1053.25V1058.67H318.75M330.667 1053.25V1058.67H325.25" stroke="#C9A86A" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M531.333 1059.75V1045.67L540 1041.33L548.667 1045.67V1059.75M530.25 1059.75H549.75M536.75 1059.75V1055.42H543.25V1059.75M535.667 1048.92H537.833M542.167 1048.92H544.333M535.667 1053.47H537.833M542.167 1053.47H544.333" stroke="#C9A86A" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M755.75 1050V1054.33C755.75 1054.62 755.636 1054.9 755.433 1055.1C755.23 1055.3 754.954 1055.42 754.667 1055.42H737.333C737.046 1055.42 736.77 1055.3 736.567 1055.1C736.364 1054.9 736.25 1054.62 736.25 1054.33V1050L738.417 1044.04C738.535 1043.58 738.8 1043.18 739.172 1042.88C739.544 1042.59 740.001 1042.43 740.475 1042.42H751.525C751.999 1042.43 752.456 1042.59 752.828 1042.88C753.2 1043.18 753.465 1043.58 753.583 1044.04L755.75 1050ZM736.25 1050H755.75M740.583 1055.42V1057.04M751.417 1055.42V1057.04M740.042 1052.17H742.208M749.792 1052.17H751.958" stroke="#C9A86A" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M431 1237.25C431 1237.25 439.75 1229.37 439.75 1223.5C439.75 1222.35 439.524 1221.21 439.084 1220.15C438.644 1219.09 438 1218.13 437.187 1217.31C436.375 1216.5 435.41 1215.86 434.348 1215.42C433.287 1214.98 432.149 1214.75 431 1214.75C429.851 1214.75 428.713 1214.98 427.652 1215.42C426.59 1215.86 425.625 1216.5 424.813 1217.31C424 1218.13 423.356 1219.09 422.916 1220.15C422.476 1221.21 422.25 1222.35 422.25 1223.5C422.25 1229.37 431 1237.25 431 1237.25Z" stroke="#C9A86A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M431 1226.75C432.795 1226.75 434.25 1225.29 434.25 1223.5C434.25 1221.71 432.795 1220.25 431 1220.25C429.205 1220.25 427.75 1221.71 427.75 1223.5C427.75 1225.29 429.205 1226.75 431 1226.75Z" stroke="#C9A86A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g font-family="Poppins" fill="#FFFFFF">
+<text font-family="Poppins" x="98"  y="1090" font-size="26" font-weight="600">__S1__</text>
+<text font-family="Poppins" x="310" y="1090" font-size="26" font-weight="600">__S2__</text>
+<text font-family="Poppins" x="524" y="1090" font-size="26" font-weight="600">__S3__</text>
+<text font-family="Poppins" x="736" y="1090" font-size="26" font-weight="600">__S4__</text>
+</g>
+<g font-family="Poppins" fill="#FFFFFF" fill-opacity="0.66" font-size="13.5" font-weight="400">
+<text font-family="Poppins" x="98"  y="1110">__S1L__</text>
+<text font-family="Poppins" x="310" y="1110">__S2L__</text>
+<text font-family="Poppins" x="524" y="1110">__S3L__</text>
+<text font-family="Poppins" x="736" y="1110">__S4L__</text>
+</g>
+
+<!-- AMENITIES TAG -->
+<text font-family="Poppins" x="80" y="1167" font-size="16" font-weight="400" fill="#C9A86A" letter-spacing="0.3">__AMEN__</text>
+
+<!-- PRICE CARD -->
+<rect x="76" y="1198" width="300" height="110" rx="18" fill="#F5F1E9"/>
+<text font-family="Poppins" x="98" y="1234" font-size="15" font-weight="500" fill="#6B6258" letter-spacing="2.5">VALOR</text>
+<text font-family="Poppins" x="96" y="1286" font-size="36" font-weight="700" fill="#11141B" letter-spacing="-0.5">Sob consulta</text>
+
+<!-- ADDRESS CARD -->
+<rect x="392" y="1198" width="376" height="110" rx="18" fill="#161C2A"/>
+<rect x="392.5" y="1198.5" width="375" height="109" rx="17.5" stroke="#C9A86A" stroke-opacity="0.34"/>
+<text font-family="Poppins" x="452" y="1232" font-size="16" font-weight="500" fill="#FFFFFF" fill-opacity="0.62" letter-spacing="2.5">ENDEREÇO</text>
+<text font-family="Poppins" x="416" y="1266" font-size="23" font-weight="600" fill="#FFFFFF">__ADDR1__</text>
+<text font-family="Poppins" x="416" y="1296" font-size="23" font-weight="600" fill="#FFFFFF">__ADDR2__</text>
+
+<!-- FOOTER RIGHT -->
+<text font-family="Poppins" text-anchor="end" x="1004" y="1288" font-size="22" font-weight="500"><tspan fill="#FFFFFF" fill-opacity="0.84">__FOOT__ · </tspan><tspan fill="#C9A86A" font-weight="600">A10</tspan></text>
+
+</g>
+</svg>
