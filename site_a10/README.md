@@ -26,17 +26,18 @@ A10 (creme + navy + dourado · Cormorant Garamond + Poppins).
 > O código-fonte do site vive no repositório interno do Lovable. Esta pasta guarda a
 > **documentação** e as **fotos web** que alimentam o site.
 
-## Estrutura do site (deck — rota única `/`)
+## Estrutura do site (deck — rota única `/`, 11 cenas)
 
 | # | Cena | Descrição |
 |---|------|-----------|
-| 1 | Capa | Creme, logo A10, "Nossos *empreendimentos.*", stats 08 · Torres · Casas, "role para caminhar" |
+| 1 | Capa | **Fundo creme sólido** (`#F0EBDD`, sem foto), logo A10, "Nossos *empreendimentos.*", stats 08 · Torres · Casas, "role para caminhar" |
 | 2–9 | Empreendimentos | 1 por tela: foto full-bleed + moldura dourada, número fantasma, título serif/dourado, tag, specs (Tipologia, Destaque/Parceria, Localização, Status), inset da foto secundária (Pátio Estaleiro e Aurora) |
 | 10 | Direção | Navy, "10" gigante, "Um portfólio · uma direção" |
-| 11 | Manifesto | "Vamos construir *juntos.*" + link discreto WhatsApp "Falar com a A10" |
-| 12 | Assinatura | A10 × R21 |
-| 13 | Notas | Aviso sobre dados "a confirmar" |
-| 14 | Fim | "A10 · Portfólio 2026" / "Fim" |
+| 11 | Manifesto (final) | "Vamos construir *juntos.*" + link discreto WhatsApp "Falar com a A10" — **cena de encerramento** |
+
+> As cenas de Assinatura (A10 × R21), Notas e "Fim" foram removidas a pedido — o deck
+> encerra no manifesto. O número de WhatsApp do link "Falar com a A10" é placeholder
+> (`5547999999999`) até o número oficial ser definido.
 
 ## Os 8 empreendimentos e o mapeamento de fotos
 
