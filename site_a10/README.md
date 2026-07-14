@@ -1,8 +1,20 @@
 # Site A10 Empreendimentos
 
-Site institucional / portfólio da **A10 Empreendimentos**, construído no **Lovable**
+Portfólio da **A10 Empreendimentos**, construído no **Lovable**
 (React + TanStack Start + Tailwind + shadcn/ui) seguindo o padrão visual validado da
 A10 (creme + navy + dourado · Cormorant Garamond + Poppins).
+
+> **Formato atual: deck cinematográfico (single-page vertical).** O site é uma única
+> página em slideshow com scroll-snap (14 cenas, cada uma 100vh): capa creme → 8
+> empreendimentos em foto full-bleed com moldura dourada, número fantasma e specs →
+> slides de encerramento ("Um portfólio · uma direção", manifesto "Vamos construir
+> juntos" com link WhatsApp, assinatura A10 × R21, notas, "Fim"). Tem barra de
+> progresso, dots de navegação laterais, navegação por teclado (↑/↓, PgUp/PgDn,
+> Home/End), parallax suave e reveal-on-scroll. Réplica refinada do deck de referência
+> (netlify) aprovado pelo cliente.
+>
+> *(Histórico: uma primeira versão era institucional multi-página — home, portfólio,
+> sobre, contato e páginas de detalhe. Foi substituída pelo deck a pedido.)*
 
 ## Links do projeto (Lovable)
 
@@ -14,15 +26,17 @@ A10 (creme + navy + dourado · Cormorant Garamond + Poppins).
 > O código-fonte do site vive no repositório interno do Lovable. Esta pasta guarda a
 > **documentação** e as **fotos web** que alimentam o site.
 
-## Estrutura do site
+## Estrutura do site (deck — rota única `/`)
 
-| Rota | Descrição |
-|------|-----------|
-| `/` (home) | Hero "Endereços que atravessam gerações", stats (08 empreendimentos · 14+ anos · A10 × R21) e cards em destaque |
-| `/portfolio` | Grade com os 8 empreendimentos, cada card com foto + zoom no hover |
-| `/empreendimentos/$slug` | Página de detalhe: hero com foto, specs, descrição, galeria (foto secundária) e link para o próximo |
-| `/sobre` | Institucional A10 |
-| `/contato` | Fale conosco |
+| # | Cena | Descrição |
+|---|------|-----------|
+| 1 | Capa | Creme, logo A10, "Nossos *empreendimentos.*", stats 08 · Torres · Casas, "role para caminhar" |
+| 2–9 | Empreendimentos | 1 por tela: foto full-bleed + moldura dourada, número fantasma, título serif/dourado, tag, specs (Tipologia, Destaque/Parceria, Localização, Status), inset da foto secundária (Pátio Estaleiro e Aurora) |
+| 10 | Direção | Navy, "10" gigante, "Um portfólio · uma direção" |
+| 11 | Manifesto | "Vamos construir *juntos.*" + link discreto WhatsApp "Falar com a A10" |
+| 12 | Assinatura | A10 × R21 |
+| 13 | Notas | Aviso sobre dados "a confirmar" |
+| 14 | Fim | "A10 · Portfólio 2026" / "Fim" |
 
 ## Os 8 empreendimentos e o mapeamento de fotos
 
