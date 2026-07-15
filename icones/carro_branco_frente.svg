@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Carro branco de frente</title>
+  <desc id="descricao">Ícone vetorial de um automóvel branco visto de frente.</desc>
+  <defs>
+    <linearGradient id="carroCorpo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.58" stop-color="#F4F2ED"/>
+      <stop offset="1" stop-color="#E2DFD8"/>
+    </linearGradient>
+    <linearGradient id="carroVidro" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DFE5EA"/>
+      <stop offset="1" stop-color="#AAB4BD"/>
+    </linearGradient>
+    <linearGradient id="carroFarol" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E9E3D6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- sombra no chão -->
+  <ellipse cx="256" cy="402" rx="176" ry="16" fill="#2A2722" opacity="0.12"/>
+
+  <!-- rodas -->
+  <rect x="112" y="352" width="64" height="48" rx="18" fill="#2A2722"/>
+  <rect x="336" y="352" width="64" height="48" rx="18" fill="#2A2722"/>
+
+  <!-- teto / cabine -->
+  <path d="M168 262 L190 172 Q194 152 214 152 L298 152 Q318 152 322 172 L344 262 Z"
+        fill="url(#carroCorpo)" stroke="#2A2722" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- para-brisa -->
+  <path d="M186 250 L204 184 Q208 176 218 176 L294 176 Q304 176 308 184 L326 250 Z"
+        fill="url(#carroVidro)" stroke="#2A2722" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- retrovisores -->
+  <path d="M88 266 Q62 264 60 278 Q60 288 79 287 Z" fill="url(#carroCorpo)" stroke="#2A2722" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M424 266 Q450 264 452 278 Q452 288 433 287 Z" fill="url(#carroCorpo)" stroke="#2A2722" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- corpo inferior -->
+  <rect x="84" y="248" width="344" height="128" rx="30" fill="url(#carroCorpo)" stroke="#2A2722" stroke-width="6"/>
+
+  <!-- brilho no capô -->
+  <path d="M112 264 Q256 256 400 264" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- faróis -->
+  <path d="M104 272 L186 282 L182 306 L110 300 Q102 299 102 291 L102 280 Q102 273 104 272 Z"
+        fill="url(#carroFarol)" stroke="#2A2722" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M408 272 L326 282 L330 306 L402 300 Q410 299 410 291 L410 280 Q410 273 408 272 Z"
+        fill="url(#carroFarol)" stroke="#2A2722" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- linha de caráter -->
+  <path d="M100 316 Q256 324 412 316" fill="none" stroke="#2A2722" stroke-width="3" stroke-linecap="round" opacity="0.15"/>
+
+  <!-- grade frontal -->
+  <rect x="196" y="298" width="120" height="34" rx="12" fill="#2A2722"/>
+  <line x1="208" y1="308" x2="304" y2="308" stroke="#565049" stroke-width="3" stroke-linecap="round"/>
+  <line x1="208" y1="315" x2="304" y2="315" stroke="#565049" stroke-width="3" stroke-linecap="round"/>
+  <line x1="208" y1="322" x2="304" y2="322" stroke="#565049" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="256" cy="315" r="8" fill="#E4E1DA" stroke="#2A2722" stroke-width="2"/>
+
+  <!-- entrada de ar inferior -->
+  <rect x="160" y="342" width="192" height="24" rx="12" fill="#2A2722" opacity="0.9"/>
+
+  <!-- placa -->
+  <rect x="222" y="344" width="68" height="20" rx="4" fill="#F7F5F0" stroke="#2A2722" stroke-width="3"/>
+</svg>
