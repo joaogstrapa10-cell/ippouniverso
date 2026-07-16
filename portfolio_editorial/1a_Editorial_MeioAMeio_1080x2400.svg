@@ -1,0 +1,263 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="2400" viewBox="0 0 1080 2400">
+  <title>Portfólio A10 · Editorial · Meio a Meio</title>
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&amp;family=Poppins:wght@300;400;500;600&amp;display=swap');</style>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#0C1C31"/>
+      <stop offset="0.55" stop-color="#0B1A2D"/>
+      <stop offset="1" stop-color="#081320"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E3C77E"/>
+      <stop offset="1" stop-color="#B5904E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.10" r="0.55">
+      <stop offset="0" stop-color="#E3C77E" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#E3C77E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1080" height="2400" fill="url(#bg)"/>
+  <clipPath id="clip1"><rect x="0" y="0" width="1080" height="2400"/></clipPath>
+  <g clip-path="url(#clip1)" opacity="0.22">
+    <line x1="-2400" y1="2400" x2="3480" y2="-3480" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2428" x2="3480" y2="-3452" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2456" x2="3480" y2="-3424" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2484" x2="3480" y2="-3396" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2512" x2="3480" y2="-3368" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2540" x2="3480" y2="-3340" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2568" x2="3480" y2="-3312" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2596" x2="3480" y2="-3284" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2624" x2="3480" y2="-3256" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2652" x2="3480" y2="-3228" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2680" x2="3480" y2="-3200" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2708" x2="3480" y2="-3172" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2736" x2="3480" y2="-3144" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2764" x2="3480" y2="-3116" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2792" x2="3480" y2="-3088" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2820" x2="3480" y2="-3060" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2848" x2="3480" y2="-3032" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2876" x2="3480" y2="-3004" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2904" x2="3480" y2="-2976" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2932" x2="3480" y2="-2948" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2960" x2="3480" y2="-2920" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="2988" x2="3480" y2="-2892" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3016" x2="3480" y2="-2864" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3044" x2="3480" y2="-2836" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3072" x2="3480" y2="-2808" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3100" x2="3480" y2="-2780" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3128" x2="3480" y2="-2752" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3156" x2="3480" y2="-2724" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3184" x2="3480" y2="-2696" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3212" x2="3480" y2="-2668" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3240" x2="3480" y2="-2640" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3268" x2="3480" y2="-2612" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3296" x2="3480" y2="-2584" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3324" x2="3480" y2="-2556" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3352" x2="3480" y2="-2528" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3380" x2="3480" y2="-2500" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3408" x2="3480" y2="-2472" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3436" x2="3480" y2="-2444" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3464" x2="3480" y2="-2416" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3492" x2="3480" y2="-2388" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3520" x2="3480" y2="-2360" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3548" x2="3480" y2="-2332" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3576" x2="3480" y2="-2304" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3604" x2="3480" y2="-2276" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3632" x2="3480" y2="-2248" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3660" x2="3480" y2="-2220" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3688" x2="3480" y2="-2192" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3716" x2="3480" y2="-2164" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3744" x2="3480" y2="-2136" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3772" x2="3480" y2="-2108" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3800" x2="3480" y2="-2080" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3828" x2="3480" y2="-2052" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3856" x2="3480" y2="-2024" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3884" x2="3480" y2="-1996" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3912" x2="3480" y2="-1968" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3940" x2="3480" y2="-1940" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3968" x2="3480" y2="-1912" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="3996" x2="3480" y2="-1884" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4024" x2="3480" y2="-1856" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4052" x2="3480" y2="-1828" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4080" x2="3480" y2="-1800" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4108" x2="3480" y2="-1772" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4136" x2="3480" y2="-1744" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4164" x2="3480" y2="-1716" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4192" x2="3480" y2="-1688" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4220" x2="3480" y2="-1660" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4248" x2="3480" y2="-1632" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4276" x2="3480" y2="-1604" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4304" x2="3480" y2="-1576" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4332" x2="3480" y2="-1548" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4360" x2="3480" y2="-1520" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4388" x2="3480" y2="-1492" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4416" x2="3480" y2="-1464" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4444" x2="3480" y2="-1436" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4472" x2="3480" y2="-1408" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4500" x2="3480" y2="-1380" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4528" x2="3480" y2="-1352" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4556" x2="3480" y2="-1324" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4584" x2="3480" y2="-1296" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4612" x2="3480" y2="-1268" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4640" x2="3480" y2="-1240" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4668" x2="3480" y2="-1212" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4696" x2="3480" y2="-1184" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4724" x2="3480" y2="-1156" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4752" x2="3480" y2="-1128" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4780" x2="3480" y2="-1100" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4808" x2="3480" y2="-1072" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4836" x2="3480" y2="-1044" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4864" x2="3480" y2="-1016" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4892" x2="3480" y2="-988" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4920" x2="3480" y2="-960" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4948" x2="3480" y2="-932" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="4976" x2="3480" y2="-904" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5004" x2="3480" y2="-876" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5032" x2="3480" y2="-848" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5060" x2="3480" y2="-820" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5088" x2="3480" y2="-792" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5116" x2="3480" y2="-764" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5144" x2="3480" y2="-736" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5172" x2="3480" y2="-708" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5200" x2="3480" y2="-680" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5228" x2="3480" y2="-652" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5256" x2="3480" y2="-624" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5284" x2="3480" y2="-596" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5312" x2="3480" y2="-568" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5340" x2="3480" y2="-540" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5368" x2="3480" y2="-512" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5396" x2="3480" y2="-484" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5424" x2="3480" y2="-456" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5452" x2="3480" y2="-428" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5480" x2="3480" y2="-400" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5508" x2="3480" y2="-372" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5536" x2="3480" y2="-344" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5564" x2="3480" y2="-316" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5592" x2="3480" y2="-288" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5620" x2="3480" y2="-260" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5648" x2="3480" y2="-232" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5676" x2="3480" y2="-204" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5704" x2="3480" y2="-176" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5732" x2="3480" y2="-148" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5760" x2="3480" y2="-120" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5788" x2="3480" y2="-92" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5816" x2="3480" y2="-64" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5844" x2="3480" y2="-36" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-2400" y1="5872" x2="3480" y2="-8" stroke="#2C4763" stroke-width="1"/>
+  </g>
+  <rect x="0" y="0" width="1080" height="2400" fill="url(#glow)"/>
+  <rect x="380.0" y="96" width="320" height="84" fill="#08131F" opacity="0.5"/>
+  <clipPath id="clip2"><rect x="380.0" y="96" width="320" height="84"/></clipPath>
+  <g clip-path="url(#clip2)" opacity="0.5">
+    <line x1="296.0" y1="180.0" x2="784.0" y2="-308.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="195.0" x2="784.0" y2="-293.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="210.0" x2="784.0" y2="-278.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="225.0" x2="784.0" y2="-263.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="240.0" x2="784.0" y2="-248.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="255.0" x2="784.0" y2="-233.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="270.0" x2="784.0" y2="-218.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="285.0" x2="784.0" y2="-203.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="300.0" x2="784.0" y2="-188.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="315.0" x2="784.0" y2="-173.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="330.0" x2="784.0" y2="-158.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="345.0" x2="784.0" y2="-143.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="360.0" x2="784.0" y2="-128.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="375.0" x2="784.0" y2="-113.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="390.0" x2="784.0" y2="-98.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="405.0" x2="784.0" y2="-83.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="420.0" x2="784.0" y2="-68.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="435.0" x2="784.0" y2="-53.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="450.0" x2="784.0" y2="-38.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="465.0" x2="784.0" y2="-23.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="480.0" x2="784.0" y2="-8.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="495.0" x2="784.0" y2="7.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="510.0" x2="784.0" y2="22.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="525.0" x2="784.0" y2="37.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="540.0" x2="784.0" y2="52.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="555.0" x2="784.0" y2="67.0" stroke="#2C4763" stroke-width="1"/>
+    <line x1="296.0" y1="570.0" x2="784.0" y2="82.0" stroke="#2C4763" stroke-width="1"/>
+  </g>
+  <rect x="380.0" y="96" width="320" height="84" fill="none" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="540" y="144.0" font-family="Poppins" font-size="19" font-weight="500" fill="#F3ECDB" text-anchor="middle" letter-spacing="5" opacity="0.55">LOGO · IMOBILIÁRIA</text>
+  <rect x="72" y="236" width="936" height="214" fill="none" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="540" y="312" font-family="Poppins" font-size="20" font-weight="500" fill="#C9A86A" text-anchor="middle" letter-spacing="5">PORTFÓLIO ALTO PADRÃO · BALNEÁRIO CAMBORIÚ</text>
+  <text x="540" y="382" font-family="Bodoni Moda" font-size="44" font-weight="500" fill="#F3ECDB" font-style="italic" text-anchor="middle">Dois endereços à altura do mais alto padrão</text>
+  <rect x="-9" y="-9" width="18" height="18" transform="translate(540,450) rotate(45)" fill="#0B1A2D" stroke="#C9A86A" stroke-width="1"/>
+  <rect x="-4" y="-4" width="8" height="8" transform="translate(540,450) rotate(45)" fill="#C9A86A"/>
+  <rect x="0" y="496" width="1080" height="726" fill="#08131F" opacity="0.55"/>
+  <text x="540" y="812" font-family="Poppins" font-size="22" font-weight="400" fill="#C9A86A" text-anchor="middle" letter-spacing="4" opacity="0.12">FOTO · SOLENNE (FACHADA)</text>
+  <rect x="72" y="560" width="330" height="52" fill="none" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.65"/>
+  <text x="96" y="592.0" font-family="Poppins" font-size="17" font-weight="500" fill="#C9A86A" letter-spacing="3">PRÉ-LANÇAMENTO · 2030</text>
+  <text x="70" y="776" font-family="Bodoni Moda" font-size="104" font-weight="500" fill="#F3ECDB">Solenne</text>
+  <text x="74" y="828" font-family="Poppins" font-size="18" font-weight="500" fill="#C9A86A" letter-spacing="3">CENTRO · BARRA SUL — BALNEÁRIO CAMBORIÚ</text>
+  <text x="74" y="882" font-family="Bodoni Moda" font-size="30" font-weight="400" fill="#E7E0D0" font-style="italic">Arquitetura neoclássica de herança francesa · Zermiani Schäfer</text>
+  <text x="74" y="924" font-family="Poppins" font-size="20" font-weight="300" fill="#AEB8C2">3 suítes · 2+1 vagas · 138,59 m² privativos</text>
+  <text x="150" y="1004" font-family="Bodoni Moda" font-size="52" font-weight="500" fill="#F3ECDB" text-anchor="middle">35</text>
+  <text x="150" y="1044" font-family="Poppins" font-size="13" font-weight="500" fill="#C9A86A" text-anchor="middle" letter-spacing="1.6" opacity="0.85">PAVIMENTOS</text>
+  <text x="330" y="1004" font-family="Bodoni Moda" font-size="52" font-weight="500" fill="#F3ECDB" text-anchor="middle">+110m</text>
+  <text x="330" y="1044" font-family="Poppins" font-size="13" font-weight="500" fill="#C9A86A" text-anchor="middle" letter-spacing="1.6" opacity="0.85">ALTURA</text>
+  <text x="512" y="1004" font-family="Bodoni Moda" font-size="52" font-weight="500" fill="#F3ECDB" text-anchor="middle">700m</text>
+  <text x="512" y="1044" font-family="Poppins" font-size="13" font-weight="500" fill="#C9A86A" text-anchor="middle" letter-spacing="1.6" opacity="0.85">DA PRAIA</text>
+  <text x="690" y="1004" font-family="Bodoni Moda" font-size="52" font-weight="500" fill="#F3ECDB" text-anchor="middle">17</text>
+  <text x="690" y="1044" font-family="Poppins" font-size="13" font-weight="500" fill="#C9A86A" text-anchor="middle" letter-spacing="1.6" opacity="0.85">LAZER</text>
+  <line x1="240.0" y1="968" x2="240.0" y2="1058" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.32"/>
+  <line x1="421.0" y1="968" x2="421.0" y2="1058" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.32"/>
+  <line x1="601.0" y1="968" x2="601.0" y2="1058" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.32"/>
+  <line x1="72" y1="1094" x2="1008" y2="1094" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="72" y="1152" font-family="Bodoni Moda" font-size="40" font-weight="500" fill="#E3C77E" font-style="italic">A partir de R$ 2,2 mi</text>
+  <text x="1008" y="1150" font-family="Poppins" font-size="17" font-weight="400" fill="#C9A86A" text-anchor="end" letter-spacing="2" opacity="0.8">R21 &amp; A10</text>
+  <line x1="72" y1="1224" x2="500" y2="1224" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="580" y1="1224" x2="1008" y2="1224" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.3"/>
+  <rect x="-9" y="-9" width="18" height="18" transform="translate(540,1224) rotate(45)" fill="#0B1A2D" stroke="#C9A86A" stroke-width="1"/>
+  <rect x="-4" y="-4" width="8" height="8" transform="translate(540,1224) rotate(45)" fill="#C9A86A"/>
+  <text x="540" y="1548" font-family="Poppins" font-size="22" font-weight="400" fill="#C9A86A" text-anchor="middle" letter-spacing="4" opacity="0.12">FOTO · PÁTIO ESTALEIRO</text>
+  <rect x="72" y="1296" width="290" height="52" fill="none" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.65"/>
+  <text x="96" y="1328.0" font-family="Poppins" font-size="17" font-weight="500" fill="#C9A86A" letter-spacing="3">PRONTO PARA MORAR</text>
+  <text x="70" y="1512" font-family="Bodoni Moda" font-size="104" font-weight="500" fill="#F3ECDB">Pátio Estaleiro</text>
+  <text x="74" y="1564" font-family="Poppins" font-size="18" font-weight="500" fill="#C9A86A" letter-spacing="3">PRAIA DO ESTALEIRO · BALNEÁRIO CAMBORIÚ</text>
+  <text x="74" y="1618" font-family="Bodoni Moda" font-size="30" font-weight="400" fill="#E7E0D0" font-style="italic">Casas exclusivas à beira-mar, imersas na Mata Atlântica</text>
+  <text x="74" y="1660" font-family="Poppins" font-size="20" font-weight="300" fill="#AEB8C2">4 suítes · 3 vagas · piscina privativa</text>
+  <text x="150" y="1740" font-family="Bodoni Moda" font-size="46" font-weight="500" fill="#F3ECDB" text-anchor="middle">298—344</text>
+  <text x="150" y="1780" font-family="Poppins" font-size="13" font-weight="500" fill="#C9A86A" text-anchor="middle" letter-spacing="1.6" opacity="0.85">M² PRIVATIVOS</text>
+  <text x="330" y="1740" font-family="Bodoni Moda" font-size="46" font-weight="500" fill="#F3ECDB" text-anchor="middle">90m</text>
+  <text x="330" y="1780" font-family="Poppins" font-size="13" font-weight="500" fill="#C9A86A" text-anchor="middle" letter-spacing="1.6" opacity="0.85">DO MAR</text>
+  <text x="512" y="1740" font-family="Bodoni Moda" font-size="46" font-weight="500" fill="#F3ECDB" text-anchor="middle">08</text>
+  <text x="512" y="1780" font-family="Poppins" font-size="13" font-weight="500" fill="#C9A86A" text-anchor="middle" letter-spacing="1.6" opacity="0.85">CASAS</text>
+  <text x="690" y="1740" font-family="Bodoni Moda" font-size="46" font-weight="500" fill="#F3ECDB" text-anchor="middle">Azul</text>
+  <text x="690" y="1780" font-family="Poppins" font-size="13" font-weight="500" fill="#C9A86A" text-anchor="middle" letter-spacing="1.6" opacity="0.85">BANDEIRA</text>
+  <line x1="240.0" y1="1704" x2="240.0" y2="1794" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.32"/>
+  <line x1="421.0" y1="1704" x2="421.0" y2="1794" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.32"/>
+  <line x1="601.0" y1="1704" x2="601.0" y2="1794" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.32"/>
+  <line x1="72" y1="1830" x2="1008" y2="1830" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="72" y="1888" font-family="Bodoni Moda" font-size="40" font-weight="500" fill="#E3C77E" font-style="italic">Entrada + saldo em 180 meses</text>
+  <text x="1008" y="1886" font-family="Poppins" font-size="17" font-weight="400" fill="#C9A86A" text-anchor="end" letter-spacing="2" opacity="0.8">A10</text>
+  <line x1="72" y1="2110" x2="1008" y2="2110" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.28"/>
+  <rect x="72" y="2150" width="150" height="150" fill="#08131F" stroke="#C9A86A" stroke-width="1" stroke-opacity="0.55"/>
+  <clipPath id="clip3"><rect x="72" y="2150" width="150" height="150"/></clipPath>
+  <g clip-path="url(#clip3)" opacity="0.6">
+    <line x1="-78" y1="2300" x2="372" y2="1850" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2316" x2="372" y2="1866" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2332" x2="372" y2="1882" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2348" x2="372" y2="1898" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2364" x2="372" y2="1914" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2380" x2="372" y2="1930" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2396" x2="372" y2="1946" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2412" x2="372" y2="1962" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2428" x2="372" y2="1978" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2444" x2="372" y2="1994" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2460" x2="372" y2="2010" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2476" x2="372" y2="2026" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2492" x2="372" y2="2042" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2508" x2="372" y2="2058" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2524" x2="372" y2="2074" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2540" x2="372" y2="2090" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2556" x2="372" y2="2106" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2572" x2="372" y2="2122" stroke="#2C4763" stroke-width="1"/>
+    <line x1="-78" y1="2588" x2="372" y2="2138" stroke="#2C4763" stroke-width="1"/>
+  </g>
+  <rect x="72" y="2150" width="150" height="150" fill="none" stroke="#C9A86A" stroke-width="1" opacity="0.55"/>
+  <text x="147" y="2232" font-family="Poppins" font-size="13" font-weight="500" fill="#C9A86A" text-anchor="middle" letter-spacing="2" opacity="0.65">QR CODE</text>
+  <text x="258" y="2172" font-family="Poppins" font-size="17" font-weight="500" fill="#C9A86A" letter-spacing="4" opacity="0.9">RECEBA O BOOK COMPLETO</text>
+  <text x="258" y="2224" font-family="Bodoni Moda" font-size="42" font-weight="500" fill="#F3ECDB">Agende uma apresentação privativa</text>
+  <text x="258" y="2268" font-family="Poppins" font-size="18" font-weight="300" fill="#AEB8C2">WhatsApp (47) 99170-2508 · Corretor credenciado</text>
+</svg>
