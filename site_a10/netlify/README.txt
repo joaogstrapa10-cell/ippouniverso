@@ -1,19 +1,15 @@
-A10 Empreendimentos — Portfólio (deck estático v3 · 21 empreendimentos)
+A10 Empreendimentos — Portfólio (deck estático v4 · 21 empreendimentos)
 
-PUBLICAR NO NETLIFY (rápido, sem login/build):
-1. https://app.netlify.com/drop
-2. Arraste esta pasta (ou o a10-deck-v3.zip).
-3. URL pública na hora. Em "Site settings > Change site name" troca o subdomínio.
+PUBLICAR: https://app.netlify.com/drop → arraste esta pasta (ou o a10-deck-v4.zip).
 
-Novidades v3:
-- Endereço · Valor · Metragem grandes e em destaque em cada empreendimento (endereço completo, sem corte).
-- 2 botões por empreendimento:
-  • "Ver informações" → abre TODAS as informações (tipologia, quartos, vagas, atributos/lazer completos do checklist, descrição).
-  • "Galeria de fotos" → fotos do empreendimento (quando houver; senão "Fotos em breve").
-- 21 empreendimentos, capa, "uma direção" e manifesto.
+Novidades v4:
+- PÁTIO ESTALEIRO: metragem no front (344 e 299 m²) e, em "Ver informações", o detalhamento
+  completo das duas casas — Casa Mar (344,29 m²) e Casa Brisa (298,89 m²): suítes, living,
+  cozinha, adega, piscina, vagas, a 90 m do mar (dados das plantas).
+- SOLENNE: agora com fotos reais (renders da apresentação) na frente e na galeria, mais
+  informações completas (Rua 3110 - Centro/BC, neoclássico, 35 pavimentos, home club 1.600 m²,
+  3 suítes, etc.).
+- Cada empreendimento com 2 botões: "Ver informações" e "Galeria de fotos".
+- Endereço/Valor/Metragem grandes e em destaque; endereço completo sem corte.
 
-Obs.:
-- Informações completas (quartos/vagas/atributos) nos 10 que tiveram checklist: Aurora, Notting Hill,
-  Ville Del Acqua, Holmes, San Valentin, San Andreas, Sunstar Tower, Villa do Mar, Green Valley, Hub 240.
-  Os demais mostram os dados disponíveis (valor etc.) e "A confirmar" onde faltar.
-- Botão "Falar com a A10" usa WhatsApp placeholder 5547999999999 — troque pelo número oficial no index.html.
+Obs.: botão "Falar com a A10" usa WhatsApp placeholder 5547999999999 — troque pelo número oficial.
