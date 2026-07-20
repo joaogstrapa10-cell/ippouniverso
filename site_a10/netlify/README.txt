@@ -1,15 +1,18 @@
-A10 Empreendimentos — Portfólio (deck estático v4 · 21 empreendimentos)
+A10 Empreendimentos — Site (catálogo padrão Apple) · para Netlify
 
-PUBLICAR: https://app.netlify.com/drop → arraste esta pasta (ou o a10-deck-v4.zip).
+PUBLICAR (rápido, sem login/build):
+1. Acesse https://app.netlify.com/drop
+2. Arraste esta pasta INTEIRA (ou o arquivo a10-site.zip) para a área de drop.
+3. O Netlify gera a URL pública na hora. Em "Site settings > Change site name" troque o subdomínio.
 
-Novidades v4:
-- PÁTIO ESTALEIRO: metragem no front (344 e 299 m²) e, em "Ver informações", o detalhamento
-  completo das duas casas — Casa Mar (344,29 m²) e Casa Brisa (298,89 m²): suítes, living,
-  cozinha, adega, piscina, vagas, a 90 m do mar (dados das plantas).
-- SOLENNE: agora com fotos reais (renders da apresentação) na frente e na galeria, mais
-  informações completas (Rua 3110 - Centro/BC, neoclássico, 35 pavimentos, home club 1.600 m²,
-  3 suítes, etc.).
-- Cada empreendimento com 2 botões: "Ver informações" e "Galeria de fotos".
-- Endereço/Valor/Metragem grandes e em destaque; endereço completo sem corte.
+Conteúdo:
+- index.html ......... Catálogo (home): grade de cards com filtros, ordenação, categorias,
+                       contador de resultados e detalhe/galeria de cada empreendimento.
+- apresentacao.html .. Deck cinematográfico (a "Apresentação" linkada no menu).
 
-Obs.: botão "Falar com a A10" usa WhatsApp placeholder 5547999999999 — troque pelo número oficial.
+Site estático, arquivos únicos com fontes e fotos embutidas — não precisa de build nem servidor.
+
+Observações:
+- 21 empreendimentos A10. Categoria "Imóveis diversos" fica como "em breve" (aguardando base).
+- Botão/menu "Falar com a A10" usa WhatsApp placeholder 5547999999999 — troque pelo número oficial
+  (procure por 5547999999999 nos dois HTML).
