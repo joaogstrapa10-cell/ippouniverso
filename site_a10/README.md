@@ -76,10 +76,11 @@ otimizadas (JPEG progressivo, qualidade ~84) para uso web.
 > endereço, metragem e configuração. Esses dados foram adicionados ao
 > `empreendimentos.json` no objeto **`ficha`** (campos `nome_oficial`, `endereco`,
 > `area_privativa`, `area_total`, `configuracao`, `vagas`, `lazer[]`) para
-> Aurora, Hub 240, Sunstar Tower, San Andreas, San Valentin e Villa do Mar.
-> Pátio Estaleiro e Casa Colombo ainda sem `ficha` (Casa Colombo depende do
-> CHECKLIST específico). Obs.: San Valentin tem divergência de metragem no PDF
-> original (marcada no campo `area_total`).
+> Aurora, Hub 240, Sunstar Tower, San Andreas, San Valentin, Villa do Mar e
+> Casa Colombo. Só Pátio Estaleiro fica sem `ficha` (a pasta do Drive não tem
+> CHECKLIST — só criativos de marketing). Obs.: San Valentin tem divergência de
+> metragem no PDF original (marcada no campo `area_total`); Casa Colombo é um
+> **sobrado em Colombo/PR** (não litoral) — a `localizacao` foi corrigida.
 
 ## Identidade visual (tokens A10)
 

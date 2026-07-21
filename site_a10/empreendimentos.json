@@ -285,7 +285,7 @@
       "nome": "Casa Colombo",
       "tipologia": "Residência exclusiva",
       "destaque": "Casa de alto padrão",
-      "localizacao": "A confirmar",
+      "localizacao": "Colombo/PR",
       "status": "Pronto",
       "imagem": "fotos_web/casa-colombo.jpg",
       "galeria": [
@@ -297,7 +297,18 @@
         "fotos_web/casa-colombo-6.jpg",
         "fotos_web/casa-colombo-7.jpg",
         "fotos_web/casa-colombo-8.jpg"
-      ]
+      ],
+      "ficha": {
+        "nome_oficial": "Sobrado (Casa Colombo)",
+        "endereco": "Rua do Rosário, 99 — Colombo/PR",
+        "area_privativa": "163 m²",
+        "area_total": "178 m²",
+        "configuracao": "3 dormitórios (1 suíte) · 3 banheiros",
+        "vagas": 2,
+        "lazer": [
+          "Imóvel independente (sem lazer condominial)"
+        ]
+      }
     }
   ]
 }
