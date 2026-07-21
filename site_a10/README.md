@@ -73,9 +73,13 @@ Todas as versões em `fotos_web/` foram redimensionadas (máx. 1920px de largura
 otimizadas (JPEG progressivo, qualidade ~84) para uso web.
 
 > **Dados dos CHECKLISTs (Drive):** os PDFs `CHECKLIST *.pdf` de cada pasta trazem
-> endereço, metragem e configuração. A `localizacao` de cada empreendimento foi
-> atualizada a partir deles (cidade/UF). Áreas e configuração completas estão listadas
-> na conversa e podem ser adicionadas ao `empreendimentos.json` quando confirmadas.
+> endereço, metragem e configuração. Esses dados foram adicionados ao
+> `empreendimentos.json` no objeto **`ficha`** (campos `nome_oficial`, `endereco`,
+> `area_privativa`, `area_total`, `configuracao`, `vagas`, `lazer[]`) para
+> Aurora, Hub 240, Sunstar Tower, San Andreas, San Valentin e Villa do Mar.
+> Pátio Estaleiro e Casa Colombo ainda sem `ficha` (Casa Colombo depende do
+> CHECKLIST específico). Obs.: San Valentin tem divergência de metragem no PDF
+> original (marcada no campo `area_total`).
 
 ## Identidade visual (tokens A10)
 

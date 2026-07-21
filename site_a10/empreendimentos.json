@@ -50,7 +50,31 @@
         "fotos_web/aurora-11.jpg",
         "fotos_web/aurora-12.jpg",
         "fotos_web/aurora-13.jpg"
-      ]
+      ],
+      "ficha": {
+        "nome_oficial": "Aurora Exclusive Home",
+        "endereco": "Avenida Atlântica — Balneário Camboriú/SC (frente mar)",
+        "area_privativa": "230 m²",
+        "area_total": "368 m²",
+        "configuracao": "5 suítes + 1 lavabo",
+        "vagas": 5,
+        "lazer": [
+          "Piscina adulto",
+          "Piscina infantil",
+          "Piscina térmica",
+          "Academia",
+          "Sala de jogos",
+          "Playground",
+          "Salão de festas",
+          "Espaço gourmet",
+          "Estar social",
+          "Spa",
+          "Sauna",
+          "Bicicletário",
+          "Box de praia",
+          "Hall decorado"
+        ]
+      }
     },
     {
       "slug": "hub-240",
@@ -72,7 +96,27 @@
         "fotos_web/hub-240-9.jpg",
         "fotos_web/hub-240-10.jpg",
         "fotos_web/hub-240-11.jpg"
-      ]
+      ],
+      "ficha": {
+        "nome_oficial": "Edifício Hub 240",
+        "endereco": "Rua Leonor Baron, 240 — Porto Belo/SC",
+        "area_privativa": "71,1 m²",
+        "area_total": "80 m²",
+        "configuracao": "2 dormitórios (1 suíte) + 1 banheiro social",
+        "vagas": 1,
+        "lazer": [
+          "Piscina adulto",
+          "Piscina infantil",
+          "Academia",
+          "Sala de jogos",
+          "Playground",
+          "Sala de reunião",
+          "Estar social",
+          "Espelho d'água",
+          "Hall decorado",
+          "Lavanderia compartilhada (OMO)"
+        ]
+      }
     },
     {
       "slug": "sunstar-tower",
@@ -95,7 +139,28 @@
         "fotos_web/sunstar-tower-10.jpg",
         "fotos_web/sunstar-tower-11.jpg",
         "fotos_web/sunstar-tower-12.jpg"
-      ]
+      ],
+      "ficha": {
+        "nome_oficial": "Sunstar Ocean Tower",
+        "endereco": "Avenida Nereu Ramos, 385 (esq. Rua 139), Centro — Itapema/SC (~100 m da praia)",
+        "area_privativa": "206 m²",
+        "area_total": "237 m²",
+        "configuracao": "4 suítes + 4 banheiros · 1 apto por andar",
+        "vagas": 3,
+        "lazer": [
+          "Piscina adulto",
+          "Piscina infantil",
+          "Piscina térmica",
+          "Academia",
+          "Lounge",
+          "Espaço gourmet",
+          "Rooftop",
+          "Bar",
+          "Salão de festas",
+          "Sala de jogos",
+          "Segurança 24h"
+        ]
+      }
     },
     {
       "slug": "san-andreas",
@@ -116,7 +181,20 @@
         "fotos_web/san-andreas-8.jpg",
         "fotos_web/san-andreas-9.jpg",
         "fotos_web/san-andreas-10.jpg"
-      ]
+      ],
+      "ficha": {
+        "nome_oficial": "San Andreas",
+        "endereco": "Rua 3900, 99 — Balneário Camboriú/SC",
+        "area_privativa": "91,9 m²",
+        "area_total": "116,32 m²",
+        "configuracao": "3 dormitórios (1 suíte) + 1 banheiro social",
+        "vagas": 2,
+        "lazer": [
+          "Elevador",
+          "Hall decorado",
+          "Box de praia"
+        ]
+      }
     },
     {
       "slug": "san-valentin",
@@ -136,7 +214,26 @@
         "fotos_web/san-valentin-7.jpg",
         "fotos_web/san-valentin-8.jpg",
         "fotos_web/san-valentin-9.jpg"
-      ]
+      ],
+      "ficha": {
+        "nome_oficial": "San Valentin",
+        "endereco": "Rua 2480, 155 — Balneário Camboriú/SC",
+        "area_privativa": "130,61 m²",
+        "area_total": "129,02 m² (verificar divergência)",
+        "configuracao": "3 suítes + 1 lavabo",
+        "vagas": 3,
+        "lazer": [
+          "Piscina adulto",
+          "Piscina infantil",
+          "Academia",
+          "Playground",
+          "Brinquedoteca",
+          "Espaço gourmet",
+          "Box de praia",
+          "Hall decorado",
+          "Medidores individuais"
+        ]
+      }
     },
     {
       "slug": "villa-do-mar",
@@ -157,7 +254,31 @@
         "fotos_web/villa-do-mar-8.jpg",
         "fotos_web/villa-do-mar-9.jpg",
         "fotos_web/villa-do-mar-10.jpg"
-      ]
+      ],
+      "ficha": {
+        "nome_oficial": "Residencial Villa do Mar",
+        "endereco": "Rua 222, 155 — Itapema/SC",
+        "area_privativa": "220 m²",
+        "area_total": "307 m²",
+        "configuracao": "4 dormitórios (2 suítes) + 1 lavabo",
+        "vagas": 2,
+        "lazer": [
+          "Piscina adulto",
+          "Piscina infantil",
+          "Academia",
+          "Sala de jogos",
+          "Playground",
+          "Spa",
+          "Salão de festas",
+          "Espaço gourmet",
+          "Estar social",
+          "Solarium",
+          "Brinquedoteca",
+          "Box de praia",
+          "Hall decorado",
+          "Mercadinho 24h"
+        ]
+      }
     },
     {
       "slug": "casa-colombo",
