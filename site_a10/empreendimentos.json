@@ -17,62 +17,147 @@
       "status": "Lançamento",
       "parceria": "A10 × R21",
       "imagem": "fotos_web/patio-estaleiro.jpg",
-      "imagem_secundaria": "fotos_web/patio-estaleiro-2.jpg"
+      "imagem_secundaria": "fotos_web/patio-estaleiro-2.jpg",
+      "galeria": [
+        "fotos_web/patio-estaleiro.jpg",
+        "fotos_web/patio-estaleiro-2.jpg",
+        "fotos_web/patio-estaleiro-3.jpg",
+        "fotos_web/patio-estaleiro-4.jpg",
+        "fotos_web/patio-estaleiro-5.jpg",
+        "fotos_web/patio-estaleiro-6.jpg"
+      ]
     },
     {
       "slug": "aurora",
       "nome": "Residencial Aurora",
       "tipologia": "Torre residencial",
       "destaque": "Piscina · Rooftop",
-      "localizacao": "A confirmar",
+      "localizacao": "Balneário Camboriú/SC",
       "status": "Em obras",
       "imagem": "fotos_web/aurora.jpg",
-      "imagem_secundaria": "fotos_web/aurora-2.jpg"
+      "imagem_secundaria": "fotos_web/aurora-2.jpg",
+      "galeria": [
+        "fotos_web/aurora.jpg",
+        "fotos_web/aurora-2.jpg",
+        "fotos_web/aurora-3.jpg",
+        "fotos_web/aurora-4.jpg",
+        "fotos_web/aurora-5.jpg",
+        "fotos_web/aurora-6.jpg",
+        "fotos_web/aurora-7.jpg",
+        "fotos_web/aurora-8.jpg",
+        "fotos_web/aurora-9.jpg",
+        "fotos_web/aurora-10.jpg",
+        "fotos_web/aurora-11.jpg",
+        "fotos_web/aurora-12.jpg",
+        "fotos_web/aurora-13.jpg"
+      ]
     },
     {
       "slug": "hub-240",
       "nome": "Hub 240",
       "tipologia": "Torre multiuso",
       "destaque": "Live · Work · Hub",
-      "localizacao": "A confirmar",
+      "localizacao": "Porto Belo/SC",
       "status": "Lançamento",
-      "imagem": "fotos_web/hub-240.jpg"
+      "imagem": "fotos_web/hub-240.jpg",
+      "galeria": [
+        "fotos_web/hub-240.jpg",
+        "fotos_web/hub-240-2.jpg",
+        "fotos_web/hub-240-3.jpg",
+        "fotos_web/hub-240-4.jpg",
+        "fotos_web/hub-240-5.jpg",
+        "fotos_web/hub-240-6.jpg",
+        "fotos_web/hub-240-7.jpg",
+        "fotos_web/hub-240-8.jpg",
+        "fotos_web/hub-240-9.jpg",
+        "fotos_web/hub-240-10.jpg",
+        "fotos_web/hub-240-11.jpg"
+      ]
     },
     {
       "slug": "sunstar-tower",
       "nome": "Sunstar Tower",
       "tipologia": "Torre residencial",
       "destaque": "Rooftop vista mar",
-      "localizacao": "A confirmar",
+      "localizacao": "Itapema/SC",
       "status": "Em obras",
-      "imagem": "fotos_web/sunstar-tower.jpg"
+      "imagem": "fotos_web/sunstar-tower.jpg",
+      "galeria": [
+        "fotos_web/sunstar-tower.jpg",
+        "fotos_web/sunstar-tower-2.jpg",
+        "fotos_web/sunstar-tower-3.jpg",
+        "fotos_web/sunstar-tower-4.jpg",
+        "fotos_web/sunstar-tower-5.jpg",
+        "fotos_web/sunstar-tower-6.jpg",
+        "fotos_web/sunstar-tower-7.jpg",
+        "fotos_web/sunstar-tower-8.jpg",
+        "fotos_web/sunstar-tower-9.jpg",
+        "fotos_web/sunstar-tower-10.jpg",
+        "fotos_web/sunstar-tower-11.jpg",
+        "fotos_web/sunstar-tower-12.jpg"
+      ]
     },
     {
       "slug": "san-andreas",
       "nome": "Residencial San Andreas",
       "tipologia": "Torre residencial",
       "destaque": "Vertical premium",
-      "localizacao": "A confirmar",
+      "localizacao": "Balneário Camboriú/SC",
       "status": "Em obras",
-      "imagem": "fotos_web/san-andreas.jpg"
+      "imagem": "fotos_web/san-andreas.jpg",
+      "galeria": [
+        "fotos_web/san-andreas.jpg",
+        "fotos_web/san-andreas-2.jpg",
+        "fotos_web/san-andreas-3.jpg",
+        "fotos_web/san-andreas-4.jpg",
+        "fotos_web/san-andreas-5.jpg",
+        "fotos_web/san-andreas-6.jpg",
+        "fotos_web/san-andreas-7.jpg",
+        "fotos_web/san-andreas-8.jpg",
+        "fotos_web/san-andreas-9.jpg",
+        "fotos_web/san-andreas-10.jpg"
+      ]
     },
     {
       "slug": "san-valentin",
       "nome": "Residencial San Valentin",
       "tipologia": "Torre residencial",
       "destaque": "Fachada assinatura",
-      "localizacao": "A confirmar",
+      "localizacao": "Balneário Camboriú/SC",
       "status": "Lançamento",
-      "imagem": "fotos_web/san-valentin.jpg"
+      "imagem": "fotos_web/san-valentin.jpg",
+      "galeria": [
+        "fotos_web/san-valentin.jpg",
+        "fotos_web/san-valentin-2.jpg",
+        "fotos_web/san-valentin-3.jpg",
+        "fotos_web/san-valentin-4.jpg",
+        "fotos_web/san-valentin-5.jpg",
+        "fotos_web/san-valentin-6.jpg",
+        "fotos_web/san-valentin-7.jpg",
+        "fotos_web/san-valentin-8.jpg",
+        "fotos_web/san-valentin-9.jpg"
+      ]
     },
     {
       "slug": "villa-do-mar",
       "nome": "Villa do Mar",
       "tipologia": "Torre residencial",
       "destaque": "Frente mar",
-      "localizacao": "A confirmar",
+      "localizacao": "Itapema/SC",
       "status": "Em obras",
-      "imagem": "fotos_web/villa-do-mar.jpg"
+      "imagem": "fotos_web/villa-do-mar.jpg",
+      "galeria": [
+        "fotos_web/villa-do-mar.jpg",
+        "fotos_web/villa-do-mar-2.jpg",
+        "fotos_web/villa-do-mar-3.jpg",
+        "fotos_web/villa-do-mar-4.jpg",
+        "fotos_web/villa-do-mar-5.jpg",
+        "fotos_web/villa-do-mar-6.jpg",
+        "fotos_web/villa-do-mar-7.jpg",
+        "fotos_web/villa-do-mar-8.jpg",
+        "fotos_web/villa-do-mar-9.jpg",
+        "fotos_web/villa-do-mar-10.jpg"
+      ]
     },
     {
       "slug": "casa-colombo",
@@ -81,7 +166,17 @@
       "destaque": "Casa de alto padrão",
       "localizacao": "A confirmar",
       "status": "Pronto",
-      "imagem": "fotos_web/casa-colombo.jpg"
+      "imagem": "fotos_web/casa-colombo.jpg",
+      "galeria": [
+        "fotos_web/casa-colombo.jpg",
+        "fotos_web/casa-colombo-2.jpg",
+        "fotos_web/casa-colombo-3.jpg",
+        "fotos_web/casa-colombo-4.jpg",
+        "fotos_web/casa-colombo-5.jpg",
+        "fotos_web/casa-colombo-6.jpg",
+        "fotos_web/casa-colombo-7.jpg",
+        "fotos_web/casa-colombo-8.jpg"
+      ]
     }
   ]
 }

@@ -31,7 +31,7 @@ A10 (creme + navy + dourado · Cormorant Garamond + Poppins).
 | # | Cena | Descrição |
 |---|------|-----------|
 | 1 | Capa | **Fundo creme sólido** (`#F0EBDD`, sem foto), logo A10, "Nossos *empreendimentos.*", stats 08 · Torres · Casas, "role para caminhar" |
-| 2–9 | Empreendimentos | 1 por tela: foto full-bleed + moldura dourada, número fantasma, título serif/dourado, tag, specs (Tipologia, Destaque/Parceria, Localização, Status), inset da foto secundária (Pátio Estaleiro e Aurora) |
+| 2–9 | Empreendimentos | 1 por tela: foto full-bleed (capa) + moldura dourada, número fantasma, título serif/dourado, tag, specs (Tipologia, Destaque/Parceria, Localização, Status) e **aba/galeria de fotos** com as demais imagens do campo `galeria` (6–13 por empreendimento) |
 | 10 | Direção | Navy, "10" gigante, "Um portfólio · uma direção" |
 | 11 | Manifesto (final) | "Vamos construir *juntos.*" + link discreto WhatsApp "Falar com a A10" — **cena de encerramento** |
 
@@ -39,26 +39,43 @@ A10 (creme + navy + dourado · Cormorant Garamond + Poppins).
 > encerra no manifesto. O número de WhatsApp do link "Falar com a A10" é placeholder
 > (`5547999999999`) até o número oficial ser definido.
 
-## Os 8 empreendimentos e o mapeamento de fotos
+## Os 8 empreendimentos e as galerias de fotos
 
 As fotos web otimizadas estão em [`fotos_web/`](./fotos_web/). Cada arquivo é nomeado
-pelo `slug` usado no site.
+`<slug>.jpg` (capa) + `<slug>-N.jpg` (galeria). O campo `galeria` de cada empreendimento
+em [`empreendimentos.json`](./empreendimentos.json) lista **todas** as fotos na ordem de
+exibição (a primeira é a capa/full-bleed; as demais compõem a aba **Galeria de fotos**).
 
-| # | Slug | Nome | Tipologia | Foto principal | Foto secundária |
-|---|------|------|-----------|----------------|-----------------|
-| 1 | `patio-estaleiro` | Pátio Estaleiro (A10 × R21) | Casas de alto padrão | `patio-estaleiro.jpg` (Casa Mar) | `patio-estaleiro-2.jpg` (Casa Brisa) |
-| 2 | `aurora` | Residencial Aurora | Torre residencial | `aurora.jpg` (torre) | `aurora-2.jpg` (piscina/lazer) |
-| 3 | `hub-240` | Hub 240 | Torre multiuso | `hub-240.jpg` | — |
-| 4 | `sunstar-tower` | Sunstar Tower | Torre residencial | `sunstar-tower.jpg` (rooftop vista mar) | — |
-| 5 | `san-andreas` | Residencial San Andreas | Torre residencial | `san-andreas.jpg` | — |
-| 6 | `san-valentin` | Residencial San Valentin | Torre residencial | `san-valentin.jpg` (fachada assinatura) | — |
-| 7 | `villa-do-mar` | Villa do Mar | Torre residencial | `villa-do-mar.jpg` | — |
-| 8 | `casa-colombo` | Casa Colombo | Residência exclusiva | `casa-colombo.jpg` | — |
+| # | Slug | Nome | Nº de fotos | Conteúdo da galeria |
+|---|------|------|:-----------:|---------------------|
+| 1 | `patio-estaleiro` | Pátio Estaleiro (A10 × R21) | 6 | Casa Mar + Casa Brisa (fachada, pôr do sol, real) |
+| 2 | `aurora` | Residencial Aurora | 13 | Torre + lazer + apto decorado (vista mar, living, cozinha, suíte, banheiro, varanda, rooftop, hall) |
+| 3 | `hub-240` | Hub 240 | 11 | Fachada + amenities (rooftop, piscina, coworking, game, mercado) + unidades decoradas |
+| 4 | `sunstar-tower` | Sunstar Tower | 12 | Fachada + rooftop/infinity pool + academia + penthouse panorâmica + closet + suíte vista mar |
+| 5 | `san-andreas` | Residencial San Andreas | 10 | Fachada + apto mobiliado (living, cozinha, suíte, banheiro, varanda vista) |
+| 6 | `san-valentin` | Residencial San Valentin | 9 | Apto decorado (living integrado, cozinha, suíte master, banheiro, varanda vista) |
+| 7 | `villa-do-mar` | Villa do Mar | 10 | Apto mobiliado (living, cozinha/jantar, suíte, banheiro, terraço gourmet) |
+| 8 | `casa-colombo` | Casa Colombo | 8 | Casa pronta (fachada, ambientes com teto/piso em madeira, cozinha) |
 
 - **Hero da home:** `home-hero.jpg` (torre Aurora com piscina refletindo — foto-assinatura do portfólio).
 
-As fotos originais em alta ficam na pasta `../EMPREENDIMENTOS A10/`. As versões em
-`fotos_web/` foram redimensionadas/otimizadas (JPEG progressivo, qualidade ~84) para uso web.
+### Origem das fotos
+
+- **Aurora, Hub 240, Sunstar Tower, San Andreas, San Valentin, Villa do Mar, Casa Colombo:**
+  baixadas do Google Drive **Grupo Vluw - Mkt e Comercial → 1. EMPREENDIMENTOS →
+  `<NOME>` → FOTOS `<NOME>`**. Cada pasta tem 16–36 fotos brutas; foram curadas as
+  melhores 7–11 por empreendimento.
+- **Pátio Estaleiro:** a pasta do Drive só tem criativos de marketing (com preço/logo);
+  a galeria usa as fotos limpas de `../EMPREENDIMENTOS A10/` (Casa Mar / Casa Brisa,
+  variantes `_real` e `_foto_pordosol`).
+
+Todas as versões em `fotos_web/` foram redimensionadas (máx. 1920px de largura) e
+otimizadas (JPEG progressivo, qualidade ~84) para uso web.
+
+> **Dados dos CHECKLISTs (Drive):** os PDFs `CHECKLIST *.pdf` de cada pasta trazem
+> endereço, metragem e configuração. A `localizacao` de cada empreendimento foi
+> atualizada a partir deles (cidade/UF). Áreas e configuração completas estão listadas
+> na conversa e podem ser adicionadas ao `empreendimentos.json` quando confirmadas.
 
 ## Identidade visual (tokens A10)
 
