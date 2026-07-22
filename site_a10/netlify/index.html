@@ -406,14 +406,18 @@ function renderChips(){
 function activeCount(){const f=state.f;return f.cidade.size+f.tipo.size+f.status.size+f.com.size+f.faixa.size+(f.quartos?1:0)+(f.vagas?1:0);}
 function toggleSet(k,v){const s=state.f[k];s.has(v)?s.delete(v):s.add(v);syncOpts();render();}
 function setSingle(k,v){state.f[k]=(state.f[k]===v?null:v);syncOpts();render();}
-function clearFilters(){state.f={cidade:new Set(),tipo:new Set(),quartos:null,vagas:null,faixa:new Set(),status:new Set(),com:new Set()};syncOpts();render();}
+function clearFilters(){state.cat='todos';state.f={cidade:new Set(),tipo:new Set(),quartos:null,vagas:null,faixa:new Set(),status:new Set(),com:new Set()};syncBrand();syncOpts();render();}
+function setBrand(v){state.cat=v;syncBrand();render();}
+function syncBrand(){document.querySelectorAll('.cat-btn').forEach(x=>x.classList.toggle('on',x.dataset.cat===state.cat));document.querySelectorAll('.opt[data-brand]').forEach(o=>o.classList.toggle('on',o.dataset.brand===state.cat));}
 
 function buildFilters(){
   const b=document.getElementById('filterBody');
   const grp=(title,html)=>'<div class="fgroup"><h4>'+title+'</h4><div class="opts">'+html+'</div></div>';
   const set=(k,arr)=>arr.map(v=>'<button type="button" class="opt" data-k="'+k+'" data-v="'+v+'" onclick="toggleSet(\''+k+'\',\''+v+'\')">'+v+'</button>').join('');
   const single=(k,arr)=>arr.map(v=>'<button type="button" class="opt" data-single="'+k+'" data-v="'+v+'" onclick="setSingle(\''+k+'\','+v+')">'+v+'+</button>').join('');
+  const brand=['a10','r21'].map(v=>'<button type="button" class="opt" data-brand="'+v+'" onclick="setBrand(state.cat===\''+v+'\'?\'todos\':\''+v+'\')">'+v.toUpperCase()+'</button>').join('');
   b.innerHTML =
+    grp('Marca',brand)+
     grp('Cidade',set('cidade',CIDADES))+
     grp('Tipo',set('tipo',TIPOS))+
     grp('Quartos',single('quartos',[1,2,3,4]))+
@@ -432,7 +436,7 @@ function closeDrawer(){const d=document.getElementById('drawer');if(!d.classList
 document.getElementById('openFilters').onclick=openDrawer;
 document.getElementById('overlay').onclick=closeDrawer;
 document.getElementById('sort').onchange=e=>{state.sort=e.target.value;render();};
-document.querySelectorAll('.cat-btn').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.cat-btn').forEach(x=>x.classList.remove('on'));btn.classList.add('on');state.cat=btn.dataset.cat;render();});
+document.querySelectorAll('.cat-btn').forEach(btn=>btn.onclick=()=>setBrand(btn.dataset.cat));
 
 /* MODAL */
 function specRow(ic,l,v){if(!v)return '';const mut=(v==="A confirmar");return '<div class="spec"><span class="spec-ic">'+icon(ic)+'</span><div><dt>'+l+'</dt><dd'+(mut?' class="muted"':'')+'>'+v+'</dd></div></div>';}
@@ -468,5 +472,5 @@ document.getElementById('infoModal').onclick=e=>{if(e.target.id==='infoModal')cl
 document.getElementById('lightbox').onclick=e=>{if(e.target.id==='lightbox')closeLB();};
 window.addEventListener('keydown',e=>{if(e.key==='Escape'){if(lbOpen()){closeLB();}else{closeModals();closeDrawer();}}});
 
-buildFilters();render();
+buildFilters();syncBrand();render();
 </script></body></html>
