@@ -89,8 +89,8 @@ na UI do Lovable, pede explicitamente e **para**.
 
 | Fase | Descrição | Estado |
 |---|---|---|
-| 0 | Mapear antes de executar | **Bloqueada parcialmente** — egress policy bloqueia as fontes (ver §7) |
-| 1 | Prompt-mestre do Lovable (`docs/prompt-lovable.md`) | Não iniciada |
+| 0 | Mapear antes de executar | **Concluída com ressalva** — OK do usuário em 24/07; egress policy bloqueou as fontes (ver §7) |
+| 1 | Prompt-mestre do Lovable (`docs/prompt-lovable.md`) | **Escrito**, aguardando o usuário colar no Lovable |
 | 2 | Assumir o repositório gerado | Não iniciada |
 | 3 | Primeiro ciclo completo de edição | Não iniciada |
 | 4 | Componente de destaque do 21st.dev | Não iniciada |
@@ -143,3 +143,9 @@ Nunca contornar a policy (proxies de terceiros, mirrors). Reportar o host bloque
 - 2026-07-24 — `docs/referencia-layout.md` escrito com a ordem de seções fornecida pelo usuário (ground truth) + proposta de sistema visual marcada como `PROPOSTA`, para não bloquear a Fase 1. Substituir por extração real quando a referência for acessível.
 - 2026-07-24 — Proveniência do conteúdo marcada por tag em `docs/conteudo-fonte.md` (`[HOME]`, `[WS]`, `[FALTA]`) para nunca confundir dado verificado com inferência.
 - 2026-07-24 — `odontosuzuki.com.br`, `suzukikannoodontologia.com.br` e `clinicaseizosuzuki.com.br` são clínicas Suzuki distintas em Curitiba; não misturar conteúdo com a fonte.
+- 2026-07-24 — Fase 1 seguiu sem as respostas das lacunas de conteúdo: a geração do Lovable define **estrutura e arquitetura**, e copy vive em `clinica.ts` — preencher depois é edição no repo, custo zero de crédito. Arquitetura errada é que sai caro.
+- 2026-07-24 — Instância base do template = **Suzuki / Dr. Dalton** (único conteúdo real disponível). Rogério e Décio derivam trocando `clinica.ts` + accent.
+- 2026-07-24 — Seção 9 da referência (pricing) → **"Tratamentos" com `Valor sob avaliação`**: a clínica não divulga preço e não se inventa valor. Formato de 3 cards preservado.
+- 2026-07-24 — Depoimentos ficam como `[DEPOIMENTO VERBATIM — Nome]` visível no render. Não se fabrica depoimento atribuído a paciente real.
+- 2026-07-24 — Descrições das 8 especialidades no prompt são **rascunho de Claude** (factuais, sem promessa de resultado), não a copy do site. Substituir quando as 8 páginas forem raspadas.
+- 2026-07-24 — Telefone exibido e `href` saem do **mesmo campo** de `clinica.ts`, para não repetir o bug do site antigo (display do celular apontando para `tel:4133633040`).
