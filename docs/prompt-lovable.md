@@ -178,3 +178,32 @@ Ao final, garanta que: `src/content/clinica.ts` contém 100% do conteúdo acima;
 3. **Descrições das 8 especialidades são rascunho de Claude**, não a copy do site (as 8 páginas não foram raspadas). São descrições factualmente corretas da especialidade, escritas sem promessa de resultado, para o render não sair vazio. Substituir pela copy real quando disponível — é edição em `clinica.ts`, custo zero de crédito.
 4. **Instância base = Suzuki / Dr. Dalton**, porque é o único conteúdo real que existe. Rogério e Décio saem daqui trocando `clinica.ts` + accent.
 5. Tudo que depende de dado que só a clínica tem virou `[CONFIRMAR: ...]` ou `[... — a confirmar]` visível no render: telefone, WhatsApp, convênio, parcelamento, garantia, sedação, CNPJ, nome da clínica, retratos.
+
+---
+
+## Correções obrigatórias antes de reusar este prompt
+
+Aprendido na geração da base (24/07). **Aplicar antes de rodar para Rogério ou Décio.**
+
+1. **A stack não é Vite + `tailwind.config.ts`.** O scaffold do Lovable é TanStack Start +
+   Tailwind v4 + bun. Não existe `tailwind.config.ts` (config é CSS-first via `@theme`) nem
+   `src/index.css` (é `src/styles.css`). Pedir `tailwind.config.ts` faz o agente criar um
+   arquivo inerte.
+
+2. **Não mandar tudo numa mensagem só.** A primeira tentativa com o prompt inteiro como
+   `initial_message` **falhou silenciosamente**: `agentFinished: true`, `error: null`,
+   zero arquivo criado. O que funcionou: arquitetura + design + compliance no
+   **project knowledge**, e só o conteúdo das seções na mensagem.
+
+3. **`text-muted` não é texto secundário.** No `@theme` o Lovable segue a convenção shadcn e
+   mapeia `--color-muted` para a cor de *fundo*. Texto secundário é `text-muted-foreground`.
+   Escrever "use `text-muted`" no prompt induz ao erro.
+
+4. **Reforçar o campo único de telefone.** Mesmo com instrução explícita, o agente recriou
+   `telefone: { display, href }`. Pedir desde o início `telefone: string` + um módulo
+   `src/lib/contato.ts` com `telHref()`/`whatsappHref()` derivando o link do próprio número.
+
+5. **Uma tarefa por mensagem nas correções.** Mensagem com 3 itens teve 2 ignorados.
+
+6. **Verificar, não confiar.** Commit message do Lovable ("Ajustes finais de landing") não
+   descreve o que foi feito. Conferir com `list_edits` + `list_files` + `read_file`.

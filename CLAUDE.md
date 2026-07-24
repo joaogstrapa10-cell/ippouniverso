@@ -145,6 +145,27 @@ Nunca contornar a policy (proxies de terceiros, mirrors). Reportar o host bloque
 | Editor | `https://lovable.dev/projects/9d05bd27-0257-47ec-bd63-1901ee5d1c12` |
 | Preview | `https://id-preview--9d05bd27-0257-47ec-bd63-1901ee5d1c12.lovable.app` |
 | Criado | 2026-07-24, prompt enviado via MCP |
+| Último commit auditado | `ff1cfb8e738263325a62a25ad7ad96f88f6208e6` |
+
+### Estrutura de arquivos gerada
+
+```
+src/content/types.ts          tipos, um por seção + raiz Clinica, zero `any`
+src/content/clinica.ts        100% do conteúdo; telefone/whatsapp em constante única
+src/lib/contato.ts            telHref() / whatsappHref() — derivam o link do número exibido
+src/hooks/useReveal.ts        IntersectionObserver à mão
+src/components/Reveal.tsx     wrapper de animação de entrada
+src/components/Header.tsx     header fixo, âncoras, CTA
+src/components/sections/      Section.tsx (wrapper de ritmo) + SectionHeader
+                              Hero, Selos, Diferenciais, Acompanhamento, Localizacao,
+                              Estrutura, Areas, Depoimentos, Comparativo, Tratamentos,
+                              Bio, Faq, Footer
+src/routes/index.tsx          lê clinica.ts e distribui props tipadas
+src/styles.css                @theme + :root com os tokens; --section-py
+```
+
+Ordem de render: Hero → Selos → Diferenciais → Acompanhamento → Localizacao →
+**Estrutura** → Areas → Depoimentos → Comparativo → Tratamentos → Bio → Faq → Footer.
 
 ### Stack real do scaffold (≠ do que o prompt assumiu)
 
@@ -191,3 +212,7 @@ O scaffold também traz `AGENTS.md` e `.lovable/project.json` — ler antes de r
 - 2026-07-24 — Usuário autorizou operação 100% autônoma (sem perguntas, sem gate de commit, sem checkpoint de fase) para a sessão seguir sem ele. Regra de OK antes de commit suspensa por decisão dele.
 - 2026-07-24 — Fase 4 sem o 21st.dev: host bloqueado, impossível pesquisar os 3 candidatos. Galeria de comparação construída do zero, sem dependência nova, com divisor navegável por teclado (`role="slider"`) — o que atende a restrição de "sem dependência pesada" melhor que qualquer adaptação.
 - 2026-07-24 — Galeria da Fase 4 nasce com 12 slots `src: null` e rótulo `[ESTRUTURA NN]` visível, porque os binários de "Nossa Estrutura" estão atrás do host bloqueado.
+- 2026-07-24 — O agente do Lovable **ignora itens** de mensagem multi-tarefa: a rodada de 3 itens virou só o move de um arquivo. Mandar tarefa por mensagem, imperativo e curto, e sempre verificar com `list_files`/`read_file` — nunca confiar no commit message.
+- 2026-07-24 — O agente recriou `telefone: { display, href }` mesmo com instrução explícita contra. Corrigido para `telefone: string` + `src/lib/contato.ts` derivando o href. **Verificar isso em cada variante** — é o desvio que mais reincide.
+- 2026-07-24 — Ritmo vertical consolidado em `--section-py` (6rem mobile / 10rem ≥768px), aplicado por `paddingBlock` no `Section.tsx`. Nenhum `py-` de seção sobrou.
+- 2026-07-24 — `descricao: ""` em 4 seções (acompanhamento, localizacao, areas, comparativo): string vazia é falsy e o `SectionHeader` não renderiza o parágrafo. Não é lorem ipsum, mas preencher quando houver copy real.
