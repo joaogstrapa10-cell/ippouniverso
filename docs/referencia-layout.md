@@ -1,0 +1,146 @@
+# Referência de layout — especificação
+
+**Fonte:** `https://productized-agency-template-acetern.vercel.app/`
+**Status:** ⚠️ **extração não realizada** — host bloqueado pela network policy do ambiente
+(403 no CONNECT). Ver `CLAUDE.md` §7.
+
+Legenda de proveniência:
+- `[USER]` = fornecido pelo usuário nas instruções → **ground truth**
+- `[PROPOSTA]` = definido por Claude para não bloquear a Fase 1 → **precisa de aprovação ou
+  de substituição por extração real**
+
+---
+
+## 1. Ordem exata das seções, de cima a baixo `[USER]`
+
+| # | Seção na referência | Adaptação odontológica |
+|---|---|---|
+| 1 | Hero | Headline + subheadline + CTA |
+| 2 | Barra de logos "empresas que confiam" | Selos, parcerias, formações, certificações |
+| 3 | Proposta de valor / diferencial | Diferenciais da clínica |
+| 4 | Mockup de acompanhamento/atualizações | Acompanhamento do tratamento do paciente |
+| 5 | Mapa / presença | Localização da clínica |
+| 6 | Grid de cases (card: título, descrição, tags) | Casos de tratamento |
+| 7 | Depoimentos | Depoimentos de pacientes |
+| 8 | Tabela comparativa | A clínica vs. atendimento odontológico tradicional |
+| 9 | Planos / pricing | Tratamentos ou planos oferecidos |
+| 10 | Bio | Bio do dentista/sócio |
+| 11 | FAQ | FAQ |
+| 12 | Footer com CTA final + colunas de navegação | Idem |
+
+Nota: a seção 2 **se mantém mesmo sem material** — com placeholders nomeados, nunca removida.
+
+---
+
+## 2. Hierarquia tipográfica `[PROPOSTA]`
+
+Duas famílias, contraste alto entre display e corpo.
+
+| Papel | Tamanho (desktop / mobile) | Peso | Tracking | Line-height |
+|---|---|---|---|---|
+| Hero display | `clamp(3rem, 7vw, 5.5rem)` | 500–600 | `-0.03em` | `0.95–1.05` |
+| H2 de seção | `clamp(2rem, 4vw, 3.25rem)` | 500 | `-0.02em` | `1.1` |
+| H3 / título de card | `1.25–1.5rem` | 500 | `-0.01em` | `1.25` |
+| Corpo | `1rem–1.125rem` | 400 | `0` | `1.6` |
+| Eyebrow / badge | `0.75rem` | 500 | `+0.08em`, uppercase | `1` |
+| Meta / footnote | `0.8125rem` | 400 | `0` | `1.5` |
+
+- Display: sans geométrica/neo-grotesca de peso médio (não bold-black). Nunca serif clássica —
+  isso puxa para "clínica tradicional".
+- Corpo: mesma família ou grotesca neutra, em cinza-médio sobre fundo escuro (não branco puro).
+- Números e preços na escala de display, para ancorar a seção de planos.
+
+---
+
+## 3. Paleta e superfícies `[PROPOSTA]`
+
+Base escura, neutra-fria, com **um único** accent. Sem azul-de-consultório.
+
+| Token | Uso | Valor sugerido |
+|---|---|---|
+| `--background` | fundo da página | quase-preto neutro (`~4% L`) |
+| `--surface` | card, painel | +3–4% de luminosidade sobre o fundo |
+| `--surface-raised` | hover de card, popover | +6–8% sobre o fundo |
+| `--border` | borda de card, divisores | branco a 8–12% de opacidade |
+| `--foreground` | texto principal | branco a 92% |
+| `--muted` | texto secundário | branco a 55–60% |
+| `--accent` | CTA, destaque, ativo | **1 cor só** — ver decisão abaixo |
+| `--accent-foreground` | texto sobre accent | contraste ≥ 4.5:1 |
+
+- Bordas fazem o trabalho de separação, **não** sombras. Sombra só em elemento flutuante.
+- Superfície de card = fundo levemente elevado + borda de 1px, raio `12–16px`.
+- Gradiente permitido **apenas** como glow radial suave atrás do hero e como fade de máscara
+  na barra de logos. Nunca gradiente em texto de corpo nem em card.
+- Accent aplicado com parcimônia: CTA primário, indicador de plano recomendado, ícone de check
+  na tabela comparativa. Se aparecer em mais de ~5% da área visível, está demais.
+
+**Decisão de accent para o nicho `[PROPOSTA]`:** um accent quente e sóbrio (bronze/champanhe
+dessaturado) em vez de ciano/verde-tech. Sinaliza alto padrão e afasta do clichê clínico,
+mantendo o esqueleto escuro da referência. Trocável por sócio via token — é exatamente o eixo
+de diferenciação entre Dalton, Rogério e Décio.
+
+---
+
+## 4. Grid, densidade e ritmo vertical `[PROPOSTA]`
+
+- Container: `max-width 1200px`, padding lateral `24px` mobile / `40px` desktop.
+- Grid de 12 colunas, `gap 24px`.
+- **Ritmo vertical entre seções:** `py-24` mobile → `py-32` / `py-40` desktop
+  (`96px → 128–160px`). Generoso e constante — é o principal responsável pela sensação de
+  "alto padrão". Não variar por seção sem motivo.
+- Cabeçalho de seção: eyebrow → H2 → parágrafo de apoio, largura máxima `~680px`,
+  alinhado à esquerda (não centralizado) para leitura editorial.
+- Cases: grid `1 / 2 / 3` colunas (mobile / tablet / desktop).
+- Pricing: `1 / 3` colunas, card do meio destacado por borda em accent.
+- Densidade interna de card: padding `24–32px`, espaçamento interno `12–16px`.
+
+---
+
+## 5. Padrões de componente `[PROPOSTA]`
+
+**Card (case/tratamento)**
+`[imagem ou ícone] → título (H3) → descrição 2–3 linhas em --muted → linha de tags`
+Borda 1px `--border`; no hover, borda clareia e superfície sobe um degrau. Sem escala/zoom.
+
+**Badge / tag**
+Pill de raio total, `padding 4px 10px`, fundo `--surface-raised`, borda `--border`,
+texto `0.75rem` uppercase com tracking `+0.06em` em `--muted`. Variante `accent` só para
+"Recomendado" / "Mais procurado".
+
+**CTA**
+- Primário: fundo `--accent`, texto `--accent-foreground`, raio `10px`,
+  altura `48px` (`56px` no hero), peso 500. Hover = leve escurecimento, sem sombra colorida.
+- Secundário: `ghost` com borda `--border`, texto `--foreground`.
+- Setinha `ArrowRight` (lucide) opcional à direita, deslocando `2px` no hover.
+- Máximo **um** CTA primário por dobra.
+
+**Tabela comparativa**
+Duas colunas de valor (`A clínica` × `Tradicional`); coluna da clínica com fundo `--surface` e
+borda em accent; ícones `Check` (accent) × `X`/`Minus` (`--muted`). Linhas separadas por
+`--border`, sem zebra.
+
+**FAQ**
+Accordion (shadcn `Accordion`), um item aberto por vez, divisor `--border` entre itens,
+chevron rotacionando. Sem card por pergunta.
+
+---
+
+## 6. Animação e scroll reveal `[PROPOSTA]`
+
+- **Intensidade: baixa.** Fade + translate-Y de `12–16px`, duração `400–500ms`,
+  easing `cubic-bezier(0.16, 1, 0.3, 1)`.
+- Dispara uma vez, ao entrar no viewport, via `IntersectionObserver` — **sem** biblioteca de
+  animação (nada de framer-motion / GSAP).
+- Stagger de `60–80ms` entre itens de um mesmo grid. Nunca mais que ~6 itens em stagger.
+- Barra de logos: marquee CSS linear e lento (`~30s`), com máscara de fade nas duas pontas.
+- Respeitar `prefers-reduced-motion`: desliga translate e stagger, mantém opacidade final.
+- Sem parallax, sem animação disparada por scroll contínuo, sem contador animado.
+
+---
+
+## 7. Pendências desta especificação
+
+1. Extrair de verdade §2–§6 quando o host da referência estiver liberado — hoje são propostas.
+2. Confirmar a cor de accent (§3) ou definir uma por sócio.
+3. A referência tem seções 8 (tabela comparativa), 9 (pricing) e 11 (FAQ) que **não têm
+   conteúdo correspondente** no site antigo. Ver `docs/conteudo-fonte.md` §7.
