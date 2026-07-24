@@ -90,8 +90,8 @@ na UI do Lovable, pede explicitamente e **para**.
 | Fase | Descrição | Estado |
 |---|---|---|
 | 0 | Mapear antes de executar | **Concluída com ressalva** — OK do usuário em 24/07; egress policy bloqueou as fontes (ver §7) |
-| 1 | Prompt-mestre do Lovable (`docs/prompt-lovable.md`) | **Escrito**, aguardando o usuário colar no Lovable |
-| 2 | Assumir o repositório gerado | Não iniciada |
+| 1 | Prompt-mestre do Lovable (`docs/prompt-lovable.md`) | **Concluída** — prompt enviado ao Lovable via MCP em 24/07 |
+| 2 | Assumir o repositório gerado | **Bloqueada** — aguardando o GitHub ser conectado na UI do Lovable |
 | 3 | Primeiro ciclo completo de edição | Não iniciada |
 | 4 | Componente de destaque do 21st.dev | Não iniciada |
 | 5 | Preparar a replicação (`docs/replicacao.md`) | Não iniciada |
@@ -135,7 +135,39 @@ Nunca contornar a policy (proxies de terceiros, mirrors). Reportar o host bloque
 
 ---
 
-## 8. Log de decisões (append-only, uma linha por decisão)
+## 8. Projeto no Lovable
+
+| Campo | Valor |
+|---|---|
+| Nome | Dentis Base Template |
+| `project_id` | `9d05bd27-0257-47ec-bd63-1901ee5d1c12` |
+| Workspace | `Giulliano's Lovable` (`9G3fAkdnuvQqWzEwcVjW`), plano pro |
+| Editor | `https://lovable.dev/projects/9d05bd27-0257-47ec-bd63-1901ee5d1c12` |
+| Preview | `https://id-preview--9d05bd27-0257-47ec-bd63-1901ee5d1c12.lovable.app` |
+| Criado | 2026-07-24, prompt enviado via MCP |
+
+### Stack real do scaffold (≠ do que o prompt assumiu)
+
+O prompt da Fase 1 assumiu Vite + `tailwind.config.ts` + `src/index.css` + npm.
+O scaffold que o Lovable entregou é outro:
+
+| Prompt assumiu | Scaffold real |
+|---|---|
+| Vite + React puro | **TanStack Start** (`src/router.tsx`, `src/routes/`, `src/server.ts`, `src/start.ts`) |
+| `tailwind.config.ts` | **não existe** — Tailwind v4, config CSS-first via `@theme` |
+| `src/index.css` | `src/styles.css` |
+| `npm install` | **bun** (`bun.lock`, `bunfig.toml`) |
+| "sem router" | scaffold é router-based; a página vive em `src/routes/index.tsx` |
+
+Consequência para a Fase 2: auditar se o agente criou um `tailwind.config.ts` inerte
+(ignorado pelo Tailwind v4) e migrar os tokens para `@theme` no `src/styles.css`.
+Usar `bun install`, não `npm install`.
+
+O scaffold também traz `AGENTS.md` e `.lovable/project.json` — ler antes de refatorar.
+
+---
+
+## 9. Log de decisões (append-only, uma linha por decisão)
 
 - 2026-07-24 — Base do projeto criada na branch `claude/dental-clinic-site-base-s7tibx` do repo `joaogstrapa10-cell/ippouniverso`, que já contém material não relacionado (`A10_PADRAO/`, `EMPREENDIMENTOS A10/`, `capetown/`) — pendente confirmar se é o repo definitivo.
 - 2026-07-24 — `CLAUDE.md` e `docs/` ficam na raiz conforme especificado; na Fase 2 serão copiados para o repo gerado pelo Lovable, que passa a ser a fonte única de verdade.
@@ -149,3 +181,7 @@ Nunca contornar a policy (proxies de terceiros, mirrors). Reportar o host bloque
 - 2026-07-24 — Depoimentos ficam como `[DEPOIMENTO VERBATIM — Nome]` visível no render. Não se fabrica depoimento atribuído a paciente real.
 - 2026-07-24 — Descrições das 8 especialidades no prompt são **rascunho de Claude** (factuais, sem promessa de resultado), não a copy do site. Substituir quando as 8 páginas forem raspadas.
 - 2026-07-24 — Telefone exibido e `href` saem do **mesmo campo** de `clinica.ts`, para não repetir o bug do site antigo (display do celular apontando para `tel:4133633040`).
+- 2026-07-24 — **Regra do §2 revogada pelo usuário:** um MCP do Lovable ficou disponível e o usuário autorizou Claude a dirigir o Lovable por ele. Claude agora cria projeto e manda mensagem; conectar o GitHub continua manual (o MCP não faz).
+- 2026-07-24 — Projeto criado no workspace do **Giulliano** (pro), escolha do usuário, por o plano free do João não aguentar a geração. Crédito consumido é do Giulliano.
+- 2026-07-24 — `create_project` estourou o timeout de 60s do cliente MCP mas **o projeto foi criado**. Sempre checar com `list_projects` antes de repetir uma chamada de criação — repetir duplica projeto e queima crédito.
+- 2026-07-24 — Scaffold do Lovable é TanStack Start + Tailwind v4 + bun, não Vite + `tailwind.config.ts` + npm. Ver §8. Corrigir o prompt-mestre antes de reusar para Rogério e Décio.
