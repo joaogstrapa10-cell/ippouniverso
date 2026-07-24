@@ -74,10 +74,40 @@ Base escura, neutra-fria, com **um único** accent. Sem azul-de-consultório.
 - Accent aplicado com parcimônia: CTA primário, indicador de plano recomendado, ícone de check
   na tabela comparativa. Se aparecer em mais de ~5% da área visível, está demais.
 
-**Decisão de accent para o nicho `[PROPOSTA]`:** um accent quente e sóbrio (bronze/champanhe
-dessaturado) em vez de ciano/verde-tech. Sinaliza alto padrão e afasta do clichê clínico,
-mantendo o esqueleto escuro da referência. Trocável por sócio via token — é exatamente o eixo
-de diferenciação entre Dalton, Rogério e Décio.
+**Decisão de accent — REVISADA em 24/07 pelo usuário `[USER]`:**
+
+A proposta original era um accent quente (bronze/champanhe dessaturado), para afastar do
+clichê clínico. **O usuário corrigiu a direção: o alvo é "estilo tech"**, como a referência.
+
+Valores em vigor (`src/styles.css`):
+
+| Token | Valor | Nota |
+|---|---|---|
+| `--background` | `oklch(0.13 0.008 265)` | preto mais fundo, neutro frio |
+| `--foreground` | `oklch(0.97 0.002 265)` | contraste alto (tech), não branco a 92% |
+| `--surface` | `oklch(0.17 0.009 265)` | |
+| `--surface-raised` | `oklch(0.215 0.011 265)` | |
+| `--border` | `oklch(1 0 0 / 0.09)` | |
+| `--muted` | `oklch(0.685 0.012 265)` | |
+| `--accent` | `oklch(0.74 0.165 285)` | **violeta vivo** |
+| `--accent-foreground` | `oklch(0.145 0.02 285)` | texto escuro sobre o accent |
+| `--radius` | `0.625rem` | 10px — mais fechado que os 14px iniciais |
+
+Por que violeta e não azul: azul, mesmo elétrico, resvala no "azul de consultório" que a
+restrição de conteúdo proíbe. Violeta lê como produto de software e não tem associação clínica.
+
+Por que o accent é **claro** (`L 0.74`) e não escuro: ele serve simultaneamente como texto de
+12px sobre fundo escuro (eyebrows) e como fundo de botão. Nessa luminosidade os dois passam
+contraste com folga — um accent escuro derruba a legibilidade do eyebrow. **Não escurecer.**
+
+Assinatura tech adicional:
+- `--font-mono` aplicada só em **metadados pequenos** (eyebrow, tags, badge, números de etapa,
+  labels de estado, credencial). Nunca em título, corpo, FAQ ou label de botão.
+- `.tech-grid` + `.tech-grid-fade`: grid de linhas de 64px com máscara radial, atrás do glow
+  do hero.
+
+Accent segue sendo o eixo de diferenciação entre Dalton, Rogério e Décio — sugestão:
+violeta / ciano / lime.
 
 ---
 
