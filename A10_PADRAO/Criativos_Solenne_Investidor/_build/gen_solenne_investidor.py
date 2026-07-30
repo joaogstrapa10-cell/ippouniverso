@@ -13,7 +13,12 @@ import base64, json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT  = os.path.abspath(os.path.join(HERE, '..'))
-REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..', '..'))
+def _repo_root(d):
+    """sobe ate achar a raiz do repo (onde vive capetown/)."""
+    while d != '/' and not os.path.isdir(os.path.join(d, 'capetown')):
+        d = os.path.dirname(d)
+    return d
+REPO = _repo_root(HERE)
 
 # ---------------------------------------------------------------- identidade
 CREAM      = '#EDEAD9'   # painel
