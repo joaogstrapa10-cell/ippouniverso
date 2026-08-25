@@ -15,7 +15,10 @@ retorno, sem link — o CTA é responder a mensagem.
 | `CONVITE_BC_ODONTO_INVEST_v3.pdf` | PDF canônico — sai com a paleta que estiver no `<body>` do HTML |
 | `CONVITE_BC_ODONTO_INVEST_v3_A_escura.pdf` | Variação A · p.1 navy · p.2 creme · p.3 navy |
 | `CONVITE_BC_ODONTO_INVEST_v3_B_creme.pdf` | Variação B · creme dominante, navy só nos blocos de destaque |
+| `adilson.jpg` · `rafa.jpg` | retratos tratados, já usados nas p.1 e p.2 |
 | `preview/` | páginas rasterizadas (150 dpi) + comparativos A × B |
+| `_fotos/` | fotos originais, recortes com fundo transparente e retratos gerados |
+| `_build/retratos.py` | pipeline dos retratos (recorte, enquadramento, tratamento, fundo) |
 | `_build/render.py` | script de render (Playwright + Chromium) |
 | `_build/fonts/` | cache local das fontes do Google Fonts, para render offline |
 
@@ -25,17 +28,35 @@ No `<body>` do HTML, troque a classe: `pal-a` (escuras alternadas) ou `pal-b`
 (creme dominante). Só isso — todas as cores derivam de tokens por superfície.
 Depois rode o render de novo.
 
-## Trocar os retratos pelas fotos reais
+## Retratos
 
-Os blocos de retrato já estão no tamanho e na proporção finais (**recorte vertical
-2:3**, ex.: 43 × 64,5 mm na p.1). Para entrar com as fotos:
+`adilson.jpg` e `rafa.jpg` já estão nos quatro blocos de retrato (p.1 e p.2). Saem
+de `_build/retratos.py`, que faz tudo a partir das fotos originais em `_fotos/`:
 
-1. Salve `adilson.jpg` e `rafa.jpg` na mesma pasta do HTML.
-2. Descomente o bloco `RETRATOS REAIS` no fim do CSS.
+1. **Recorte** — remove o fundo com `rembg` (modelo `isnet-general-use`), encolhe a
+   máscara 1px e suaviza, para não sobrar franja da cor do fundo original.
+2. **Enquadramento 2:3** — normaliza pela **largura da cabeça**, não pela altura do
+   corpo: as duas fotos vieram com recortes diferentes (uma até a cintura, outra até
+   o peito), e sem isso os rostos saíam em escalas visivelmente distintas.
+3. **Tratamento** — monocromático quente (duotone de sombra neutra para creme), em
+   vez de cinza puro, para casar com a paleta.
+4. **Fundo** — navy `#0B1624` com halo de luz atrás da cabeça, **igual nos dois**, e
+   queda de luz no pé do quadro. O sujeito dissolve nessa queda: os dois originais
+   terminam num corte reto na altura do peito, e a dissolução esconde isso.
 
-Isso já aplica preto e branco (`grayscale`), recorte sem distorção (`cover`) e
-esconde o rótulo do placeholder. Uma edição cobre os dois lugares onde cada pessoa
-aparece (p.1 e p.2).
+Os recortes com fundo transparente ficam em `_fotos/recorte_*.png`, reaproveitáveis
+em outras peças.
+
+Para trocar por outras fotos: substitua os arquivos em `_fotos/` (mantendo os nomes
+`origem_1` = Adilson e `origem_2` = Rafael) e rode:
+
+```bash
+cd _build && python3 retratos.py
+```
+
+O halo é navy levantado com só um sopro de champagne dentro. Misturar champagne
+direto no navy dá cast oliva — azul mais amarelo —, então o dourado fica na
+tipografia, não na foto.
 
 ## Re-renderizar
 
@@ -74,4 +95,5 @@ o convenceu · resultado do primeiro aporte · motivo de abrir para o grupo.
 participante do grupo. Hoje ele não aparece; a p.1 está montada para duas pessoas
 (grid 7/5) e comportaria um terceiro bloco na p.2 sem refazer a página.
 
-**Fotos** — retratos do Adilson e do Rafa (vertical, 2:3).
+**Conferir** — o jaleco da foto do Rafael traz "Prof. Raphael Alto"; o material usa
+"Rafael Monte Alto". Confirmar qual grafia vai no convite.

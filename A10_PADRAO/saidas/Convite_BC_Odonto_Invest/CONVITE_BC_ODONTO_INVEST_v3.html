@@ -18,10 +18,11 @@
      class="pal-a"  →  Variação A · escuras alternadas (p1 navy · p2 creme · p3 navy)
      class="pal-b"  →  Variação B · creme dominante (navy só nos blocos de destaque)
 
-   COMO TROCAR OS RETRATOS PELAS FOTOS REAIS
-   Coloque as fotos na mesma pasta deste arquivo e descomente o bloco
-   "RETRATOS REAIS" no final deste CSS. Os blocos já estão no tamanho e na
-   proporção final (recorte vertical 2:3) — a foto entra recortada, sem esticar.
+   RETRATOS
+   `adilson.jpg` e `rafa.jpg` já entram nos quatro blocos de retrato (p.1 e p.2),
+   tratadas por `_build/retratos.py`. Para trocar por outras fotos, substitua os
+   dois arquivos e rode `python3 _build/retratos.py` — ele refaz recorte,
+   enquadramento 2:3, monocromático e fundo.
    ========================================================================== */
 
 @page { size: 297mm 210mm; margin: 0; }
@@ -411,19 +412,21 @@ h1 .dim { color: var(--ink-dim); }
 }
 
 /* ==========================================================================
-   RETRATOS REAIS — descomente quando tiver as fotos
-   (recorte vertical 2:3, preto e branco, sem moldura)
-   ==========================================================================
+   RETRATOS REAIS — ativos
+   As fotos saem de `_build/retratos.py`: fundo removido, recorte 2:3 já no
+   enquadramento final, monocromático quente e fundo navy com halo — o mesmo
+   fundo nos dois. Por isso aqui não há `filter` nem ajuste de `position`:
+   o tratamento está gravado na imagem. Comente este bloco para voltar ao
+   placeholder texturizado.
+   ========================================================================== */
 .por--adilson { background-image: url('adilson.jpg'); }
 .por--rafa    { background-image: url('rafa.jpg'); }
 .por--adilson, .por--rafa {
   background-color: transparent;
   background-size: cover;
-  background-position: 50% 22%;
-  filter: grayscale(1) contrast(1.06) brightness(1.02);
+  background-position: 50% 50%;
 }
 .por--adilson .por__tag, .por--rafa .por__tag { display: none; }
-*/
 
 /* Pré-visualização em tela (não afeta o PDF) */
 @media screen {
