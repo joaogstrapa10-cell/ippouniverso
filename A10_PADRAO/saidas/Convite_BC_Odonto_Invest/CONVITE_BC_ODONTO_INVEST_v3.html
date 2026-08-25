@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Convite · Coinvestimento imobiliário em Balneário Camboriú · v3</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap">
+
+<style>
+/* ==========================================================================
+   CONVITE · COINVESTIMENTO IMOBILIÁRIO EM BALNEÁRIO CAMBORIÚ — v3
+   A4 paisagem (297 × 210 mm) · 3 páginas
+   --------------------------------------------------------------------------
+   COMO TROCAR A VARIAÇÃO DE PALETA
+   No <body>, troque a classe:
+     class="pal-a"  →  Variação A · escuras alternadas (p1 navy · p2 creme · p3 navy)
+     class="pal-b"  →  Variação B · creme dominante (navy só nos blocos de destaque)
+
+   COMO TROCAR OS RETRATOS PELAS FOTOS REAIS
+   Coloque as fotos na mesma pasta deste arquivo e descomente o bloco
+   "RETRATOS REAIS" no final deste CSS. Os blocos já estão no tamanho e na
+   proporção final (recorte vertical 2:3) — a foto entra recortada, sem esticar.
+   ========================================================================== */
+
+@page { size: 297mm 210mm; margin: 0; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Proteção contra shrink-to-fit do Chromium: nenhum filho de grid/flex pode
+   ter largura mínima maior que a página. */
+.page, .page * { min-width: 0; }
+
+html, body {
+  margin: 0; padding: 0;
+  width: 297mm;
+  background: #FFFFFF;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------------------------------------------------
+   1. TOKENS DE MARCA (fixos)
+   -------------------------------------------------------------------------- */
+:root {
+  --navy:      #0B1624;
+  --navy-deep: #08111C;
+  --champagne: #C19C51;
+  --cream:     #F0EBDD;
+
+  --ink-on-cream: #16243A;   /* navy levemente aberto, para texto sobre creme */
+  --gold-on-cream: #9C7C31;  /* champagne rebaixado, legível sobre creme      */
+
+  --serif: 'Cormorant Garamond', 'Cormorant', Garamond, 'Times New Roman', serif;
+  --sans:  'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Geometria */
+  --mx: 22mm;    /* margem lateral   */
+  --mt: 16mm;    /* margem superior  */
+  --mb: 12mm;    /* margem inferior  */
+  --radius: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   2. SUPERFÍCIES — quais páginas são escuras e quais são claras
+   -------------------------------------------------------------------------- */
+
+/* superfície ESCURA */
+.pal-a #p1,
+.pal-a #p3 {
+  --bg:         var(--navy);
+  --ink:        var(--cream);
+  --ink-soft:   rgba(240,235,221,0.70);
+  --ink-dim:    rgba(240,235,221,0.78);
+  --ink-mute:   rgba(240,235,221,0.55);
+  --accent:     var(--champagne);
+  --rule:       rgba(193,156,81,0.30);
+  --rule-soft:  rgba(193,156,81,0.16);
+  --ph-bg:      rgba(193,156,81,0.22);
+
+  /* painel discreto (destaque na mesma família de cor) */
+  --soft-bg:    rgba(193,156,81,0.105);
+  --soft-ink:   var(--cream);
+  --soft-soft:  rgba(240,235,221,0.70);
+  --soft-accent:var(--champagne);
+  --soft-rule:  rgba(193,156,81,0.30);
+  --soft-ph:    rgba(193,156,81,0.22);
+
+  /* painel invertido (destaque máximo) */
+  --inv-bg:     var(--cream);
+  --inv-ink:    var(--ink-on-cream);
+  --inv-soft:   rgba(22,36,58,0.72);
+  --inv-accent: var(--gold-on-cream);
+  --inv-rule:   rgba(156,124,49,0.38);
+}
+
+/* superfície CLARA */
+.pal-a #p2,
+.pal-b #p1, .pal-b #p2, .pal-b #p3 {
+  --bg:         var(--cream);
+  --ink:        var(--ink-on-cream);
+  --ink-soft:   rgba(22,36,58,0.74);
+  --ink-dim:    rgba(22,36,58,0.70);
+  --ink-mute:   rgba(22,36,58,0.56);
+  --accent:     var(--gold-on-cream);
+  --rule:       rgba(156,124,49,0.36);
+  --rule-soft:  rgba(156,124,49,0.18);
+  --ph-bg:      rgba(193,156,81,0.15);
+
+  /* sobre creme, o destaque é o navy */
+  --soft-bg:    var(--navy);
+  --soft-ink:   var(--cream);
+  --soft-soft:  rgba(240,235,221,0.70);
+  --soft-accent:var(--champagne);
+  --soft-rule:  rgba(193,156,81,0.30);
+  --soft-ph:    rgba(193,156,81,0.22);
+
+  --inv-bg:     var(--navy);
+  --inv-ink:    var(--cream);
+  --inv-soft:   rgba(240,235,221,0.70);
+  --inv-accent: var(--champagne);
+  --inv-rule:   rgba(193,156,81,0.30);
+}
+
+/* --------------------------------------------------------------------------
+   3. PÁGINA
+   -------------------------------------------------------------------------- */
+.page {
+  position: relative;
+  width: 297mm; height: 210mm;
+  padding: var(--mt) var(--mx) var(--mb);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  break-after: page;
+  page-break-after: always;
+}
+.page:last-child { break-after: auto; page-break-after: auto; }
+
+/* --------------------------------------------------------------------------
+   4. ELEMENTOS TIPOGRÁFICOS COMUNS
+   -------------------------------------------------------------------------- */
+.eyebrow-row {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 10mm;
+}
+.eyebrow {
+  font-size: 9px; font-weight: 600; letter-spacing: 0.17em;
+  text-transform: uppercase; color: var(--accent);
+}
+.folio { font-family: var(--serif); font-size: 13px; font-weight: 400;
+         letter-spacing: 0.04em; color: var(--accent); opacity: 0.62; }
+
+/* filete champagne que separa eyebrow do título */
+.rule       { height: 1px; background: var(--rule); border: 0; margin: 0; }
+.rule-soft  { height: 1px; background: var(--rule-soft); border: 0; margin: 0; }
+
+h1 {
+  margin: 0;
+  font-family: var(--serif); font-weight: 500;
+  letter-spacing: -0.022em; line-height: 0.99;
+  color: var(--ink);
+}
+h1 .dim { color: var(--ink-dim); }
+
+.lead {
+  margin: 0;
+  font-size: 11.4px; font-weight: 400; line-height: 1.62;
+  color: var(--ink-soft);
+}
+
+.label {
+  font-size: 8.6px; font-weight: 600; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--accent);
+}
+.meta {
+  font-size: 8.4px; font-weight: 500; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--ink-mute);
+}
+.body {
+  margin: 0;
+  font-size: 10.2px; font-weight: 400; line-height: 1.63;
+  color: var(--ink-soft);
+}
+.body strong { font-weight: 500; color: var(--ink); }
+
+/* nomes das pessoas — serifa */
+.person-name {
+  font-family: var(--serif); font-weight: 500;
+  letter-spacing: -0.015em; line-height: 1.02; color: var(--ink);
+}
+
+/* citação: filete curto + aspas tipográficas em serifa itálica */
+.quote { margin: 0; }
+.quote .tick { width: 13mm; height: 1px; background: var(--rule);
+               margin: 0 0 3.2mm; }
+.quote p {
+  margin: 0;
+  font-family: var(--serif); font-style: italic; font-weight: 400;
+  font-size: 15.5px; line-height: 1.36; letter-spacing: 0;
+  color: var(--ink);
+}
+
+/* campo pendente de preenchimento */
+.ph {
+  background: var(--ph-bg);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 0.05em 0.28em;
+  border-radius: 2px;
+  color: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   5. RETRATOS — placeholder já no tamanho e proporção finais (vertical 3:4)
+   -------------------------------------------------------------------------- */
+.por {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  border: 0; border-radius: var(--radius);
+  background-color: rgba(193,156,81,0.07);
+  background-image:
+    repeating-linear-gradient(132deg,
+      rgba(193,156,81,0.11) 0 1px, rgba(193,156,81,0) 1px 6px),
+    linear-gradient(158deg,
+      rgba(193,156,81,0.16) 0%, rgba(193,156,81,0.02) 64%);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+.por__tag {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 1.6mm; text-align: center; padding: 3mm;
+}
+.por__tag span {
+  display: block;
+  font-size: 7px; font-weight: 600; letter-spacing: 0.19em; line-height: 1.7;
+  text-transform: uppercase; color: var(--accent); opacity: 0.74;
+}
+.por__tag .tick { width: 7mm; height: 1px; background: var(--rule); }
+
+/* --------------------------------------------------------------------------
+   6. RODAPÉ
+   -------------------------------------------------------------------------- */
+.foot { margin-top: auto; }
+.foot .rule-soft { margin-bottom: 3mm; }
+.foot__row {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12mm;
+}
+.foot__row p {
+  margin: 0;
+  font-size: 7.8px; font-weight: 400; letter-spacing: 0.055em;
+  color: var(--ink-mute);
+}
+.foot__row p.r { text-align: right; }
+
+/* ==========================================================================
+   PÁGINA 1 — Abertura pelas pessoas
+   ========================================================================== */
+#p1 h1 { font-size: 63px; margin-top: 6.5mm; }
+
+#p1 .intro {
+  display: grid; grid-template-columns: minmax(0,7fr) minmax(0,4.4fr);
+  gap: 14mm; align-items: end; margin-top: 6.5mm;
+}
+#p1 .lead { max-width: 118mm; }
+
+.pill {
+  width: max-content; max-width: 100%;
+  justify-self: end;
+  padding: 3.1mm 6mm;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-size: 9.2px; font-weight: 500; letter-spacing: 0.075em;
+  color: var(--ink);
+}
+
+#p1 .people {
+  display: grid; grid-template-columns: minmax(0,7fr) minmax(0,5fr);
+  gap: 11mm; margin-top: 11mm; align-items: start;
+}
+
+.card { display: flex; flex-direction: column; }
+
+/* Card A — destaque */
+.card--a {
+  background: var(--soft-bg);
+  border-top: 1px solid var(--soft-rule);
+  color: var(--soft-ink);
+  border-radius: var(--radius);
+  padding: 8.5mm 9mm 8mm;
+  --ink: var(--soft-ink);
+  --ink-soft: var(--soft-soft);
+  --ink-mute: var(--soft-soft);
+  --accent: var(--soft-accent);
+  --rule: var(--soft-rule);
+  --ph-bg: var(--soft-ph);
+}
+/* Card B — sem caixa, só filete superior */
+.card--b { padding: 8.5mm 0 8mm; border-top: 1px solid var(--rule); }
+
+.card__grid { display: grid; gap: 8mm; flex: 1; }
+.card--a .card__grid { grid-template-columns: 43mm minmax(0,1fr); }
+.card--b .card__grid { grid-template-columns: 36mm minmax(0,1fr); gap: 7mm; }
+
+.card__text { display: flex; flex-direction: column; }
+.card--a .person-name { font-size: 31px; margin-top: 3.4mm; }
+.card--b .person-name { font-size: 26px; margin-top: 3.4mm; }
+.card__meta { margin-top: 2.4mm; }
+.card .body { margin-top: 4.6mm; }
+.card--b .body { font-size: 9.9px; }
+.card .quote { margin-top: auto; padding-top: 6mm; }
+.card--b .quote p { font-size: 14.2px; }
+
+/* ==========================================================================
+   PÁGINA 2 — As duas histórias
+   ========================================================================== */
+#p2 h1 { font-size: 50px; margin-top: 6.5mm; max-width: 250mm; }
+
+#p2 .stories {
+  display: grid; grid-template-columns: minmax(0,1.07fr) minmax(0,1fr);
+  margin-top: 13mm;
+}
+#p2 .story:first-child { padding-right: 16mm; }
+#p2 .story:last-child  { padding-left: 16mm; border-left: 1px solid var(--rule-soft); }
+
+.story__labelrule { margin: 3.4mm 0 6.5mm; }
+.story__head { display: grid; grid-template-columns: 34mm minmax(0,1fr); gap: 8mm;
+                align-items: center; }
+.story__headtext { display: flex; flex-direction: column; }
+.story__sub {
+  margin: -1.2mm 0 0;
+  font-family: var(--serif); font-style: italic; font-weight: 400;
+  font-size: 20px; line-height: 1.22; letter-spacing: -0.005em;
+  color: var(--ink);
+}
+.story__tick { width: 13mm; height: 1px; background: var(--rule); margin: 4.6mm 0 3.6mm; }
+.story__line { font-size: 8.2px; font-weight: 500; letter-spacing: 0.14em;
+               text-transform: uppercase; color: var(--ink-mute); }
+.story__body { margin-top: 9mm; }
+.story__body p { margin: 0; max-width: 104mm; font-size: 10.4px; line-height: 1.68;
+                 color: var(--ink-soft); }
+.story__body p + p { margin-top: 4.2mm; }
+
+/* ==========================================================================
+   PÁGINA 3 — O projeto e o encontro
+   ========================================================================== */
+#p3 h1 { font-size: 50px; margin-top: 6.5mm; }
+#p3 .lead { margin-top: 6mm; max-width: 168mm; font-size: 11.2px; }
+
+#p3 .three {
+  display: grid; grid-template-columns: minmax(0,1.06fr) minmax(0,1fr) minmax(0,1.02fr);
+  margin-top: 9mm; border-top: 1px solid var(--rule);
+  padding-top: 5.5mm;
+}
+#p3 .three > div { padding-right: 14mm; }
+#p3 .three > div + div { padding-left: 14mm; border-left: 1px solid var(--rule-soft); }
+#p3 .three > div:last-child { padding-right: 0; }
+.num { font-family: var(--serif); font-size: 20px; font-weight: 400;
+       letter-spacing: 0.06em; color: var(--accent); opacity: 0.95; }
+.entry__title {
+  margin: 2.6mm 0 3.4mm;
+  font-family: var(--serif); font-weight: 500; font-size: 22px;
+  line-height: 1.1; letter-spacing: -0.012em; color: var(--ink);
+}
+.entry .body { font-size: 9.8px; }
+.entry__head { display: flex; align-items: baseline; gap: 5mm; }
+
+#p3 .close {
+  display: grid; grid-template-columns: minmax(0,7fr) minmax(0,5fr);
+  gap: 11mm; margin-top: 8.5mm;
+}
+
+.invite {
+  background: var(--inv-bg); color: var(--inv-ink);
+  border-radius: var(--radius);
+  padding: 7.5mm 9mm 8mm;
+  --ink: var(--inv-ink); --ink-soft: var(--inv-soft);
+  --accent: var(--inv-accent); --rule: var(--inv-rule);
+}
+.invite .label { color: var(--inv-accent); }
+.invite__date {
+  margin: 3.4mm 0 4.6mm;
+  font-family: var(--serif); font-weight: 500; font-size: 47px;
+  line-height: 1; letter-spacing: -0.02em; color: var(--inv-ink);
+}
+.invite .body { color: var(--inv-soft); font-size: 10.2px; max-width: 128mm; }
+
+.notes { display: flex; flex-direction: column; }
+.note { padding: 0 0 5.5mm; }
+.note + .note { border-top: 1px solid var(--rule-soft); padding-top: 5.5mm; }
+.note h3 {
+  margin: 0 0 2.6mm;
+  font-family: var(--serif); font-weight: 500; font-size: 18px;
+  line-height: 1.14; letter-spacing: -0.01em; color: var(--ink);
+}
+.note .body { font-size: 9.6px; }
+
+.disclaimer {
+  margin: 7mm 0 0;
+  max-width: 232mm;
+  font-size: 7.4px; font-weight: 400; line-height: 1.58;
+  letter-spacing: 0.012em; color: var(--ink-mute);
+}
+
+/* ==========================================================================
+   RETRATOS REAIS — descomente quando tiver as fotos
+   (recorte vertical 2:3, preto e branco, sem moldura)
+   ==========================================================================
+.por--adilson { background-image: url('adilson.jpg'); }
+.por--rafa    { background-image: url('rafa.jpg'); }
+.por--adilson, .por--rafa {
+  background-color: transparent;
+  background-size: cover;
+  background-position: 50% 22%;
+  filter: grayscale(1) contrast(1.06) brightness(1.02);
+}
+.por--adilson .por__tag, .por--rafa .por__tag { display: none; }
+*/
+
+/* Pré-visualização em tela (não afeta o PDF) */
+@media screen {
+  body { background: #6E6E73; padding: 24px 0; }
+  .page { margin: 0 auto 24px; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
+}
+</style>
+</head>
+
+<body class="pal-a">
+
+<!-- =====================================================================
+     PÁGINA 1 — Abertura pelas pessoas
+     ===================================================================== -->
+<section class="page" id="p1">
+
+  <div class="eyebrow-row">
+    <div class="eyebrow">Balneário Camboriú · Convite pessoal</div>
+    <div class="folio">01</div>
+  </div>
+  <hr class="rule">
+
+  <h1>Todo projeto é feito de gente.<br><span class="dim">Este começa com duas.</span></h1>
+
+  <div class="intro">
+    <p class="lead">Um incorporador que construiu boa parte do que você vê quando anda
+      por Balneário Camboriú. E um dentista que nunca foi do ramo, olhou de perto e
+      decidiu entrar. Deu certo — e é dessa conversa entre os dois que nasce este convite.</p>
+    <div class="pill">Encontro on-line, por convite · 1º de setembro</div>
+  </div>
+
+  <div class="people">
+
+    <!-- Card A — QUEM CONSTRÓI (destaque) -->
+    <article class="card card--a">
+      <div class="card__grid">
+        <div class="por por--adilson">
+          <div class="por__tag">
+            <div class="tick"></div>
+            <span>Retrato · Adilson</span>
+          </div>
+        </div>
+        <div class="card__text">
+          <div class="label">Quem constrói</div>
+          <div class="person-name">Adilson</div>
+          <div class="meta card__meta">A10 Empreendimentos · Balneário Camboriú</div>
+          <p class="body"><span class="ph">[X]</span> anos erguendo prédio em uma cidade
+            só. Não é falta de convite para construir em outro lugar: é escolha. Ele
+            acompanha obra de perto, conhece o terreno pelo nome e responde pelo que
+            assina — <span class="ph">[nº]</span> empreendimentos entregues em Balneário
+            Camboriú são a prova disso.</p>
+          <div class="quote">
+            <div class="tick"></div>
+            <p>&ldquo;<span class="ph">[frase do Adilson sobre por que só constrói em BC]</span>&rdquo;</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card B — QUEM CONVIDA -->
+    <article class="card card--b">
+      <div class="card__grid">
+        <div class="por por--rafa">
+          <div class="por__tag">
+            <div class="tick"></div>
+            <span>Retrato · Rafa</span>
+          </div>
+        </div>
+        <div class="card__text">
+          <div class="label">Quem convida</div>
+          <div class="person-name">Rafael Monte Alto</div>
+          <div class="meta card__meta">Cirurgião-dentista · Investidor</div>
+          <p class="body">O Rafa não é do mercado imobiliário. É dentista, como a maioria
+            de vocês — e chegou nisso pelo mesmo caminho: querendo colocar o dinheiro do
+            consultório em algo que faça sentido no longo prazo. Investiu com o Adilson
+            pela primeira vez em <span class="ph">[ano]</span>, entendeu como a conta
+            funciona por dentro e <span class="ph">[o que aconteceu depois]</span>.</p>
+          <div class="quote">
+            <div class="tick"></div>
+            <p>&ldquo;<span class="ph">[frase do Rafa sobre por que está chamando o grupo]</span>&rdquo;</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="foot">
+    <hr class="rule-soft">
+    <div class="foot__row">
+      <p>Projeto imobiliário · Balneário Camboriú · Convite ao encontro de apresentação</p>
+      <p class="r">Material informativo — não é oferta</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- =====================================================================
+     PÁGINA 2 — As duas histórias
+     ===================================================================== -->
+<section class="page" id="p2">
+
+  <div class="eyebrow-row">
+    <div class="eyebrow">As duas histórias</div>
+    <div class="folio">02</div>
+  </div>
+  <hr class="rule">
+
+  <h1>Um construiu a cidade.<br><span class="dim">O outro entendeu a conta antes dos outros.</span></h1>
+
+  <div class="stories">
+
+    <!-- Coluna esquerda — Adilson -->
+    <div class="story">
+      <div class="label story__label">Adilson · A10 Empreendimentos</div>
+      <hr class="rule-soft story__labelrule">
+      <div class="story__head">
+        <div class="por por--adilson">
+          <div class="por__tag">
+            <div class="tick"></div>
+            <span>Retrato · Adilson</span>
+          </div>
+        </div>
+        <div class="story__headtext">
+          <p class="story__sub">Quem constrói de verdade não terceiriza a obra.</p>
+          <div class="story__tick"></div>
+          <div class="story__line">Balneário Camboriú, <span class="ph">[ano de fundação]</span> — hoje</div>
+        </div>
+      </div>
+      <div class="story__body">
+        <p><span class="ph">[Como o Adilson começou: origem, primeira obra, o que fazia antes.]</span></p>
+        <p>De lá para cá foram <span class="ph">[nº]</span> empreendimentos, todos na mesma
+          cidade. Enquanto o mercado se acostumou a lançar de longe e vender no papel, ele
+          manteve uma regra simples: obra própria, terreno comprado à vista e nome na
+          fachada. É por isso que, quando alguém pergunta &ldquo;quem está
+          construindo?&rdquo;, a resposta ainda importa em Balneário.</p>
+        <p><span class="ph">[Um detalhe pessoal: família na empresa, hábito de visitar obra todo dia, algo que o humanize.]</span></p>
+      </div>
+    </div>
+
+    <!-- Coluna direita — Rafael -->
+    <div class="story">
+      <div class="label story__label">Rafael Monte Alto · Convidado que virou sócio</div>
+      <hr class="rule-soft story__labelrule">
+      <div class="story__head">
+        <div class="por por--rafa">
+          <div class="por__tag">
+            <div class="tick"></div>
+            <span>Retrato · Rafa</span>
+          </div>
+        </div>
+        <div class="story__headtext">
+          <p class="story__sub">Ele entrou como dentista. Ficou porque a conta fechou.</p>
+          <div class="story__tick"></div>
+          <div class="story__line">Primeiro investimento em <span class="ph">[ano]</span></div>
+        </div>
+      </div>
+      <div class="story__body">
+        <p><span class="ph">[Como o Rafa conheceu o Adilson e o que o convenceu a investir da primeira vez.]</span></p>
+        <p>Quem trabalha em consultório conhece a rotina: o dinheiro entra pelo próprio
+          esforço, procedimento a procedimento, e não existe muito tempo sobrando para
+          estudar investimento. Foi exatamente esse o problema que ele quis resolver —
+          colocar parte do que ganha em um ativo real, na cidade que ele conhece, ao lado
+          de quem constrói.</p>
+        <p><span class="ph">[Resultado do primeiro investimento / por que resolveu abrir isso para o grupo em vez de guardar para si.]</span></p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="foot">
+    <hr class="rule-soft">
+    <div class="foot__row">
+      <p>Projeto imobiliário · Balneário Camboriú · Convite ao encontro de apresentação</p>
+      <p class="r">Material informativo — não é oferta</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- =====================================================================
+     PÁGINA 3 — O projeto e o encontro
+     ===================================================================== -->
+<section class="page" id="p3">
+
+  <div class="eyebrow-row">
+    <div class="eyebrow">O que os dois montaram juntos</div>
+    <div class="folio">03</div>
+  </div>
+  <hr class="rule">
+
+  <h1>Um convite para conhecer<br><span class="dim">— e depois decidir.</span></h1>
+
+  <p class="lead">A partir dessa parceria, estruturamos um formato de coinvestimento
+    imobiliário em Balneário Camboriú: em vez de comprar um imóvel inteiro, você participa
+    de um patrimônio no percentual que fizer sentido para você. É esse formato que o Rafa
+    quis mostrar para o grupo antes de qualquer outra pessoa.</p>
+
+  <div class="three">
+    <div class="entry">
+      <div class="entry__head">
+        <div class="num">I</div>
+        <div class="label">O ativo</div>
+      </div>
+      <h2 class="entry__title">Imóveis de alto padrão</h2>
+      <p class="body">Um conjunto de apartamentos em um empreendimento de alto padrão em
+        Balneário Camboriú.</p>
+    </div>
+    <div class="entry">
+      <div class="entry__head">
+        <div class="num">II</div>
+        <div class="label">O formato</div>
+      </div>
+      <h2 class="entry__title">Coinvestimento</h2>
+      <p class="body">Participação em uma carteira, no percentual que couber no seu
+        momento — não em um imóvel inteiro.</p>
+    </div>
+    <div class="entry">
+      <div class="entry__head">
+        <div class="num">III</div>
+        <div class="label">O encontro</div>
+      </div>
+      <h2 class="entry__title">Conversa, não pitch</h2>
+      <p class="body">O Adilson explica o projeto, o Rafa conta a experiência dele e você
+        tira suas dúvidas. Sem compromisso.</p>
+    </div>
+  </div>
+
+  <div class="close">
+
+    <div class="invite">
+      <div class="label">Encontro de apresentação</div>
+      <div class="invite__date">1º de setembro</div>
+      <p class="body">On-line e ao vivo, por convite. Você conhece o projeto, ouve quem
+        construiu, tira suas dúvidas e, com calma, avalia se faz sentido para você.</p>
+    </div>
+
+    <div class="notes">
+      <div class="note">
+        <h3>Como receber o acesso</h3>
+        <p class="body">Responda a esta mensagem confirmando o interesse. Enviamos os
+          detalhes e o link do encontro individualmente.</p>
+      </div>
+      <div class="note">
+        <h3>Sem compromisso</h3>
+        <p class="body">Participar do encontro não gera nenhuma obrigação. Nenhuma decisão
+          precisa ser tomada durante a apresentação.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="disclaimer">Material meramente informativo, com finalidade de convite. Não
+    constitui oferta, recomendação ou promessa de rentabilidade. Investimentos imobiliários
+    envolvem riscos. Condições e estrutura preliminares, sujeitas a alteração. Rentabilidade
+    passada não garante resultado futuro.</p>
+
+  <div class="foot">
+    <hr class="rule-soft">
+    <div class="foot__row">
+      <p>Projeto imobiliário · Balneário Camboriú · Convite ao encontro de apresentação</p>
+      <p class="r">Vagas limitadas · participação por convite</p>
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>
