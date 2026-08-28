@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;700&display=swap">
+  <style>
+    body { margin: 0; background: #061824; }
+    a { color: #02D3B4; } a:hover { color: #6FE8D6; }
+  </style>
+</helmet>
+
+<div style="position: relative; width: 1080px; height: 1350px; overflow: hidden; background: #061824; font-family: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased;">
+
+  <!-- Halo teal: profundidade, não preenchimento -->
+  <div style="position: absolute; left: 50%; top: 70%; width: 1240px; height: 1240px; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(2,211,180,0.15) 0%, rgba(2,211,180,0.05) 34%, rgba(2,211,180,0) 62%);"></div>
+
+  <!-- Marca -->
+  <div style="position: absolute; top: 64px; left: 0; right: 0; display: flex; justify-content: center; align-items: center; gap: 13px;">
+    <svg width="36" height="42" viewBox="0 0 46 54" fill="none">
+      <path d="M23 2 L43 10 V28 C43 41 34 48 23 52 C12 48 3 41 3 28 V10 Z" stroke="#02D3B4" stroke-width="2.5"/>
+      <path d="M23 15 C18.5 15 15 18.2 15 22.4 C15 27.4 19.5 29.4 21 34 L21 41" stroke="#02D3B4" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="28.5" cy="22" r="4.2" stroke="#02D3B4" stroke-width="2.5"/>
+    </svg>
+    <span style="font-size: 22px; font-weight: 700; letter-spacing: 3.6px; color: #F7FAFB;">IPPO</span>
+  </div>
+
+  <!-- Título com a assinatura cromática na palavra-chave -->
+  <div style="position: absolute; left: 90px; right: 90px; top: 176px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <span style="font-size: 17px; font-weight: 500; letter-spacing: 4.6px; color: rgba(247,250,251,0.50); text-transform: uppercase;">Turma 18 · 28 meses · Início março 2027</span>
+
+    <span style="margin: 54px 0 0 0; font-size: 40px; font-weight: 400; letter-spacing: -0.8px; color: rgba(247,250,251,0.62);">Especialização em</span>
+
+    <h1 style="margin: 4px 0 0 0; font-size: 100px; font-weight: 700; letter-spacing: -3.4px; line-height: 1.02; background: linear-gradient(96deg, #F7FAFB 6%, #7BEFDD 52%, #02D3B4 96%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: #02D3B4;">Implantodontia</h1>
+
+    <p style="margin: 40px 0 0 0; max-width: 700px; font-size: 27px; font-weight: 400; line-height: 1.44; color: rgba(247,250,251,0.56); text-wrap: pretty;">Prática clínica supervisionada do primeiro ao último módulo.</p>
+  </div>
+
+  <!-- FOTO em recorte (PNG sem fundo), ancorada na base -->
+  <div style="position: absolute; left: 0; bottom: 0; width: 1080px; height: 800px;">
+    <svg viewBox="0 0 1080 800" preserveAspectRatio="xMidYMax meet" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block;">
+      <defs>
+        <linearGradient id="phfig5" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#1F4E61"/><stop offset="1" stop-color="#0A2130"/>
+        </linearGradient>
+      </defs>
+      <g fill="url(#phfig5)" stroke="rgba(2,211,180,0.30)" stroke-width="2">
+        <g><circle cx="330" cy="196" r="48"/><path d="M222 800 L222 302 Q222 244 288 232 L372 232 Q438 244 438 302 L438 800 Z"/></g>
+        <g><circle cx="716" cy="166" r="48"/><path d="M608 800 L608 272 Q608 214 674 202 L758 202 Q824 214 824 272 L824 800 Z"/></g>
+        <g><circle cx="862" cy="232" r="48"/><path d="M754 800 L754 338 Q754 280 820 268 L904 268 Q970 280 970 338 L970 800 Z"/></g>
+        <g><circle cx="204" cy="266" r="48"/><path d="M96 800 L96 372 Q96 314 162 302 L246 302 Q312 314 312 372 L312 800 Z"/></g>
+        <g><circle cx="536" cy="330" r="50"/><path d="M422 800 L422 444 Q422 382 492 370 L580 370 Q650 382 650 444 L650 800 Z"/></g>
+      </g>
+      <g>
+        <rect x="40" y="18" width="244" height="34" rx="4" fill="none" stroke="rgba(2,211,180,0.55)" stroke-dasharray="6 5"/>
+        <text x="162" y="40" text-anchor="middle" fill="rgba(2,211,180,0.85)" font-family="'Instrument Sans', Arial, sans-serif" font-size="13" font-weight="500" letter-spacing="2">FOTO EM RECORTE · PNG</text>
+      </g>
+    </svg>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,24,36,0) 48%, rgba(6,24,36,0.72) 76%, rgba(6,24,36,0.97) 92%, #061824 100%);"></div>
+  </div>
+
+  <p style="position: absolute; left: 90px; right: 90px; bottom: 62px; margin: 0; text-align: center; font-size: 18px; font-weight: 400; color: rgba(247,250,251,0.56);">Dalton Suzuki · Filipe Polese · Julio Sawada · Jacira Signoretti · Fabrício Leite</p>
+</div>
+</x-dc>
+</body>
+</html>

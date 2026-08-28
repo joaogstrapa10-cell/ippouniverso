@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&display=swap">
+  <style>
+    body { margin: 0; background: #061824; }
+    a { color: #02D3B4; } a:hover { color: #6FE8D6; }
+  </style>
+</helmet>
+
+<div style="position: relative; width: 1080px; height: 1350px; overflow: hidden; background: #061824; font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased;">
+
+  <!-- FOTO placeholder — slice 1080x790 -->
+  <div style="position: absolute; top: 0; left: 0; width: 1080px; height: 790px; overflow: hidden;">
+    <svg viewBox="0 0 1080 790" preserveAspectRatio="xMidYMax slice" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block;">
+      <defs>
+        <linearGradient id="phbg2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#12333F"/><stop offset="1" stop-color="#0A2431"/>
+        </linearGradient>
+        <linearGradient id="phfig2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#1C4759"/><stop offset="1" stop-color="#0C2534"/>
+        </linearGradient>
+      </defs>
+      <rect width="1080" height="790" fill="url(#phbg2)"/>
+      <g fill="url(#phfig2)" stroke="rgba(2,211,180,0.16)" stroke-width="2">
+        <g><circle cx="395" cy="250" r="50"/><path d="M281 790 L281 366 Q281 306 350 293 L440 293 Q509 306 509 366 L509 790 Z"/></g>
+        <g><circle cx="705" cy="216" r="50"/><path d="M591 790 L591 332 Q591 272 660 259 L750 259 Q819 272 819 332 L819 790 Z"/></g>
+        <g><circle cx="878" cy="288" r="50"/><path d="M764 790 L764 404 Q764 344 833 331 L923 331 Q992 344 992 404 L992 790 Z"/></g>
+        <g><circle cx="228" cy="326" r="50"/><path d="M114 790 L114 442 Q114 382 183 369 L273 369 Q342 382 342 442 L342 790 Z"/></g>
+        <g><circle cx="558" cy="392" r="52"/><path d="M438 790 L438 512 Q438 448 511 435 L605 435 Q678 448 678 512 L678 790 Z"/></g>
+      </g>
+      <g>
+        <rect x="806" y="50" width="222" height="34" rx="4" fill="none" stroke="rgba(2,211,180,0.55)" stroke-dasharray="6 5"/>
+        <text x="917" y="73" text-anchor="middle" fill="rgba(2,211,180,0.85)" font-family="'Schibsted Grotesk', Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="2.4">FOTO · CORPO DOCENTE</text>
+      </g>
+    </svg>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,24,36,0.55) 0%, rgba(6,24,36,0.04) 24%, rgba(6,24,36,0.55) 76%, #061824 100%);"></div>
+  </div>
+
+  <!-- Marca, centralizada -->
+  <div style="position: absolute; top: 56px; left: 0; right: 0; display: flex; justify-content: center; align-items: center; gap: 14px;">
+    <svg width="40" height="47" viewBox="0 0 46 54" fill="none">
+      <path d="M23 2 L43 10 V28 C43 41 34 48 23 52 C12 48 3 41 3 28 V10 Z" stroke="#02D3B4" stroke-width="2.4"/>
+      <path d="M23 15 C18.5 15 15 18.2 15 22.4 C15 27.4 19.5 29.4 21 34 L21 41" stroke="#02D3B4" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="28.5" cy="22" r="4.2" stroke="#02D3B4" stroke-width="2.4"/>
+    </svg>
+    <span style="font-size: 24px; font-weight: 700; letter-spacing: 4px; color: #F7FAFB;">IPPO</span>
+  </div>
+
+  <!-- Painel de conteúdo, centralizado -->
+  <div style="position: absolute; left: 72px; right: 72px; bottom: 68px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+
+    <span style="font-size: 20px; font-weight: 500; letter-spacing: 4.6px; color: #02D3B4; text-transform: uppercase;">Turma 18</span>
+
+    <h1 style="margin: 18px 0 0 0; font-size: 72px; font-weight: 700; letter-spacing: -2.2px; line-height: 1.04; color: #F7FAFB;">Especialização<br>em Implantodontia</h1>
+
+    <p style="margin: 24px 0 0 0; font-size: 28px; font-weight: 400; color: rgba(247,250,251,0.60);">Domínio técnico, cuidado humano.</p>
+
+    <!-- Trilha de especificação: numeral grande, rótulo mínimo -->
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 52px 0 0 0; width: 100%; border-top: 1px solid rgba(247,250,251,0.14); border-bottom: 1px solid rgba(247,250,251,0.14);">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 34px 0;">
+        <span style="font-size: 62px; font-weight: 700; letter-spacing: -2px; line-height: 1; color: #F7FAFB;">28</span>
+        <span style="font-size: 15px; font-weight: 500; letter-spacing: 3.2px; color: rgba(247,250,251,0.44); text-transform: uppercase;">Meses</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 34px 0; border-left: 1px solid rgba(247,250,251,0.14); border-right: 1px solid rgba(247,250,251,0.14);">
+        <span style="font-size: 62px; font-weight: 700; letter-spacing: -2px; line-height: 1; color: #F7FAFB;">18</span>
+        <span style="font-size: 15px; font-weight: 500; letter-spacing: 3.2px; color: rgba(247,250,251,0.44); text-transform: uppercase;">Turma</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 34px 0;">
+        <span style="font-size: 62px; font-weight: 700; letter-spacing: -2px; line-height: 1; color: #02D3B4;">Mar</span>
+        <span style="font-size: 15px; font-weight: 500; letter-spacing: 3.2px; color: rgba(247,250,251,0.44); text-transform: uppercase;">Início 2027</span>
+      </div>
+    </div>
+
+    <p style="margin: 36px 0 0 0; max-width: 800px; font-size: 19px; font-weight: 400; line-height: 1.6; color: rgba(247,250,251,0.42); text-wrap: pretty;">Dalton Suzuki · Filipe Polese · Julio Sawada<br>Jacira Signoretti · Fabrício Leite</p>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

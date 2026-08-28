@@ -1,0 +1,32 @@
+{
+  "pages": [
+    { "id": "page-1", "name": "Variações" },
+    { "id": "page-2", "name": "Formatos" }
+  ],
+  "artboards": [
+    { "file": "Main.dc.html", "title": "V1 · Herói Docente (recomendada)", "x": 0, "y": 0, "w": 1080, "h": 1350, "page": "page-1" },
+    { "file": "V2_TrilhaSpec.dc.html", "title": "V2 · Trilha de Especificação", "x": 1200, "y": 0, "w": 1080, "h": 1350, "page": "page-1" },
+    { "file": "V3_Silencio.dc.html", "title": "V3 · Silêncio", "x": 2400, "y": 0, "w": 1080, "h": 1350, "page": "page-1" },
+    { "file": "V4_GradeEditorial.dc.html", "title": "V4 · Grade Editorial", "x": 3600, "y": 0, "w": 1080, "h": 1350, "page": "page-1" },
+    { "file": "V5_AssinaturaTeal.dc.html", "title": "V5 · Assinatura Teal", "x": 4800, "y": 0, "w": 1080, "h": 1350, "page": "page-1" },
+    { "file": "Stories.dc.html", "title": "V1 em Stories · 1080×1920", "x": 0, "y": 0, "w": 1080, "h": 1920, "page": "page-2" },
+    { "file": "SiteHero.dc.html", "title": "V1 em hero de site · 1920×1080", "x": 1200, "y": 0, "w": 1920, "h": 1080, "page": "page-2" }
+  ],
+  "annotations": [
+    { "id": "brief", "x": 0, "y": -700, "w": 1900, "page": "page-1",
+      "text": "Base cromática única: navy #061824 + cyan-teal #02D3B4 como assinatura mínima. Sem dourado — ele não existe na paleta aprovada.\nUm destaque por peça: a manchete é o único elemento que grita. Turma, duração, início e vaga viram informação subordinada, não badge.\nTodas as peças usam placeholder de foto na proporção final — é só substituir pelo arquivo real, sempre em recorte (slice), nunca esticado." },
+    { "id": "opt-v1", "x": 40, "y": -340, "w": 1000, "page": "page-1",
+      "text": "V1 · HERÓI DOCENTE — Manrope 400/500/800\nA evolução direta do banner atual: foto em sangria total, véu navy, manchete reduzida a uma palavra.\nPor que: mantém o corpo docente como herói e é a que menos exige de quem produz — um layout, um texto longo.\nTrade-off: depende de uma foto forte. Com foto fraca, a peça inteira cai." },
+    { "id": "opt-v2", "x": 1240, "y": -340, "w": 1000, "page": "page-1",
+      "text": "V2 · TRILHA DE ESPECIFICAÇÃO — Schibsted Grotesk 400/500/700\nCentralizada, com a faixa de numerais grandes que a Apple usa em página de produto.\nPor que: resolve o problema das 4 badges — a informação dura ganha lugar próprio e legível, sem competir.\nTrade-off: composição simétrica é a mais fácil de imitar; diferencia menos a marca." },
+    { "id": "opt-v3", "x": 2440, "y": -340, "w": 1000, "page": "page-1",
+      "text": "V3 · SILÊNCIO — Instrument Serif + Manrope\nMargem de 110px, uma frase como argumento e a foto contida como um product shot.\nPor que: leva 'espaço como hierarquia' ao limite e é a única que testa o eixo humano com serifa.\nTrade-off: rebaixa a foto de herói absoluto para elemento de apoio, e a serifa sai do sistema único." },
+    { "id": "opt-v4", "x": 3640, "y": -340, "w": 1000, "page": "page-1",
+      "text": "V4 · GRADE EDITORIAL — Schibsted Grotesk 400/500/600\nFoto deslocada sangrando à direita, trilho vertical na margem, um único chip atravessando a grade.\nPor que: é a mais autoral do conjunto — reconhecível como IPPO mesmo sem logo.\nTrade-off: layout assimétrico é o mais frágil quando o texto muda de tamanho." },
+    { "id": "opt-v5", "x": 4840, "y": -340, "w": 1000, "page": "page-1",
+      "text": "V5 · ASSINATURA TEAL — Instrument Sans 400/500/700\nTipo no topo, foto em recorte ancorada na base, halo teal criando profundidade.\nPor que: é a que fixa o cyan-teal na memória, aplicando-o na palavra-chave em vez de numa área.\nTrade-off: gasta o maior orçamento de teal do conjunto e exige PNG sem fundo do corpo docente." },
+    { "id": "formatos", "x": 0, "y": -300, "w": 1900, "page": "page-2",
+      "text": "O sistema da V1 nos outros dois formatos que o curso precisa. Corpo de fonte não muda entre formatos — só o espaçamento vertical.\nStories respeita a área segura do Instagram (148px no topo, 236px na base). O hero de site é o único lugar com CTA, e é um só." }
+  ],
+  "launch": { "view": "canvas", "page": "page-1" }
+}

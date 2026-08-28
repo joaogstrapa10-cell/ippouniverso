@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&display=swap">
+  <style>
+    body { margin: 0; background: #061824; }
+    a { color: #02D3B4; } a:hover { color: #6FE8D6; }
+  </style>
+</helmet>
+
+<div style="position: relative; width: 1080px; height: 1350px; overflow: hidden; background: #061824; font-family: Manrope, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased;">
+
+  <!-- FOTO placeholder — substituir por foto do corpo docente, slice 1080x1350 -->
+  <svg viewBox="0 0 1080 1350" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block;">
+    <defs>
+      <linearGradient id="phbg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#11303F"/><stop offset="1" stop-color="#071B27"/>
+      </linearGradient>
+      <linearGradient id="phfig" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#1C4759"/><stop offset="1" stop-color="#0B2231"/>
+      </linearGradient>
+    </defs>
+    <rect width="1080" height="1350" fill="url(#phbg)"/>
+    <g fill="url(#phfig)" stroke="rgba(2,211,180,0.16)" stroke-width="2">
+      <g><circle cx="398" cy="420" r="58"/><path d="M270 1350 L270 556 Q270 486 350 471 L446 471 Q526 486 526 556 L526 1350 Z"/></g>
+      <g><circle cx="706" cy="380" r="58"/><path d="M578 1350 L578 516 Q578 446 658 431 L754 431 Q834 446 834 516 L834 1350 Z"/></g>
+      <g><circle cx="884" cy="470" r="58"/><path d="M756 1350 L756 606 Q756 536 836 521 L932 521 Q1012 536 1012 606 L1012 1350 Z"/></g>
+      <g><circle cx="228" cy="520" r="58"/><path d="M100 1350 L100 656 Q100 586 180 571 L276 571 Q356 586 356 656 L356 1350 Z"/></g>
+      <g><circle cx="560" cy="600" r="60"/><path d="M428 1350 L428 742 Q428 668 512 653 L608 653 Q692 668 692 742 L692 1350 Z"/></g>
+    </g>
+    <g>
+      <rect x="800" y="52" width="228" height="34" rx="4" fill="none" stroke="rgba(2,211,180,0.55)" stroke-dasharray="6 5"/>
+      <text x="914" y="75" text-anchor="middle" fill="rgba(2,211,180,0.85)" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="2.4">FOTO · CORPO DOCENTE</text>
+    </g>
+  </svg>
+
+  <!-- Véu navy: espaço como hierarquia, não como decoração -->
+  <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,24,36,0.62) 0%, rgba(6,24,36,0.10) 26%, rgba(6,24,36,0.72) 52%, #061824 74%);"></div>
+
+  <!-- Marca -->
+  <div style="position: absolute; top: 60px; left: 72px; display: flex; align-items: center; gap: 16px;">
+    <svg width="46" height="54" viewBox="0 0 46 54" fill="none">
+      <path d="M23 2 L43 10 V28 C43 41 34 48 23 52 C12 48 3 41 3 28 V10 Z" stroke="#02D3B4" stroke-width="2.4"/>
+      <path d="M23 15 C18.5 15 15 18.2 15 22.4 C15 27.4 19.5 29.4 21 34 L21 41" stroke="#02D3B4" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="28.5" cy="22" r="4.2" stroke="#02D3B4" stroke-width="2.4"/>
+    </svg>
+    <div style="display: flex; flex-direction: column; gap: 1px;">
+      <span style="font-size: 15px; font-weight: 400; letter-spacing: 3.4px; color: rgba(247,250,251,0.62); text-transform: lowercase;">instituto</span>
+      <span style="font-size: 27px; font-weight: 800; letter-spacing: 0.6px; color: #F7FAFB; line-height: 1;">IPPO</span>
+    </div>
+  </div>
+
+  <!-- Bloco de conteúdo -->
+  <div style="position: absolute; left: 72px; right: 72px; bottom: 72px; display: flex; flex-direction: column; align-items: flex-start;">
+
+    <span style="font-size: 21px; font-weight: 500; letter-spacing: 4.2px; color: #02D3B4; text-transform: uppercase;">Especialização · Turma 18</span>
+
+    <h1 style="margin: 22px 0 0 0; font-size: 112px; font-weight: 800; letter-spacing: -3.4px; line-height: 0.96; color: #F7FAFB;">Implantodontia</h1>
+
+    <p style="margin: 26px 0 0 0; max-width: 720px; font-size: 30px; font-weight: 400; line-height: 1.42; color: rgba(247,250,251,0.64); text-wrap: pretty;">28 meses de formação clínica ao lado de quem opera todos os dias.</p>
+
+    <div style="width: 100%; height: 1px; margin: 44px 0 0 0; background: rgba(2,211,180,0.32);"></div>
+
+    <!-- Especificação depois do benefício, nunca como gancho -->
+    <div style="display: flex; gap: 72px; margin: 38px 0 0 0;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#02D3B4" stroke-width="1.5" stroke-linecap="round">
+          <rect x="3.25" y="5.25" width="17.5" height="15.5" rx="2.5"/><path d="M3.25 10.25h17.5M8 3v4.2M16 3v4.2"/>
+        </svg>
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <span style="font-size: 14px; font-weight: 500; letter-spacing: 2.4px; color: rgba(247,250,251,0.42); text-transform: uppercase;">Início</span>
+          <span style="font-size: 25px; font-weight: 500; color: #F7FAFB; line-height: 1;">Março 2027</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#02D3B4" stroke-width="1.5" stroke-linecap="round">
+          <circle cx="12" cy="12" r="8.75"/><path d="M12 7.4V12l3.4 2.1"/>
+        </svg>
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <span style="font-size: 14px; font-weight: 500; letter-spacing: 2.4px; color: rgba(247,250,251,0.42); text-transform: uppercase;">Duração</span>
+          <span style="font-size: 25px; font-weight: 500; color: #F7FAFB; line-height: 1;">28 meses</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#02D3B4" stroke-width="1.5" stroke-linecap="round">
+          <circle cx="9.4" cy="8.6" r="3.6"/><path d="M3.4 20.2c0-3.3 2.7-6 6-6s6 2.7 6 6M16.2 5.5a3.6 3.6 0 0 1 0 6.9M18.4 20.2c0-2.1-.8-4-2.2-5.2"/>
+        </svg>
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <span style="font-size: 14px; font-weight: 500; letter-spacing: 2.4px; color: rgba(247,250,251,0.42); text-transform: uppercase;">Vagas</span>
+          <span style="font-size: 25px; font-weight: 500; color: #F7FAFB; line-height: 1;">Limitadas</span>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin: 34px 0 0 0; font-size: 20px; font-weight: 400; letter-spacing: 0.2px; color: rgba(247,250,251,0.40);">Dalton Suzuki · Filipe Polese · Julio Sawada · Jacira Signoretti · Fabrício Leite</p>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
