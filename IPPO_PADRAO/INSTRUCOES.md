@@ -187,8 +187,61 @@ Atenção: as pré-visualizações exibidas em chat cortam os últimos ~60px de 
 Para saber se algo realmente vazou, medir `getBoundingClientRect()` contra a altura do
 artboard — não confiar no olho sobre a imagem reduzida.
 
-### Templates SVG para Figma
+---
 
-Ainda não existem. O padrão do repo (`A10_PADRAO/templates/`) é um SVG-molde por layout
-com `{{TOKEN}}`. Faz sentido gerar depois da validação de **uma** variação — cinco jogos
-de molde antes da escolha criam cinco fontes de verdade para manter.
+## 8. Exportação em SVG (`svg/`)
+
+Três peças exportadas para Figma / Illustrator, geradas a partir dos artboards:
+
+| Arquivo | Variação | Fonte embutida |
+|---|---|---|
+| `IPPO_V1_HeroiDocente_Feed_1080x1350.svg` | V1 | Manrope |
+| `IPPO_V2_TrilhaSpec_Feed_1080x1350.svg` | V2 | Schibsted Grotesk |
+| `IPPO_V5_AssinaturaTeal_Feed_1080x1350.svg` | V5 | Instrument Sans |
+
+Cada SVG traz a fonte embutida como `@font-face` em base64 — abre correto em qualquer
+navegador sem instalar nada. **O Figma ignora `@font-face` em SVG**: para editar lá,
+instalar a família (todas são Google Fonts, licença aberta). Sem a fonte instalada o
+Figma cai no fallback e a métrica muda.
+
+As camadas vêm nomeadas para facilitar o trabalho: `FOTO_corpo_docente`, `veu_navy`,
+`halo_teal`, `scrim_base`, `marca_escudo`, `eyebrow`, `manchete`, `linha_apoio`,
+`spec_*`, `fio_*`, `icone_*`, `docentes`. Para colocar a foto real, é só substituir o
+grupo `FOTO_corpo_docente`.
+
+O texto é `<text>` de verdade (editável), não contorno vetorizado. Cada linha é um
+`<tspan>` com `x`/`y` absolutos — **o SVG não quebra linha sozinho**, então ao trocar a
+copy é preciso reposicionar as linhas à mão, ou regerar (abaixo).
+
+### Como regerar
+
+O gerador mede a geometria real no Chromium e converte para SVG:
+
+1. Monta uma página isolada por artboard (extrai `<helmet>` e o corpo do `.dc.html`).
+2. Injeta as fontes reais em base64 — sem elas a medição sai com métrica de fallback.
+3. Extrai, com `getBoundingClientRect()` e `Range`, a baseline e o `x` de cada linha,
+   os atributos de apresentação de cada `<svg>` inline, o `text-transform`, o `overflow`
+   do container e a caixa de cada bloco de texto.
+4. Emite o SVG e confere por diferença de pixel contra a renderização do HTML.
+
+Quatro coisas que se perdem numa conversão ingênua, e que o gerador trata:
+
+- **`text-transform: uppercase`** — `textContent` devolve o texto cru; a métrica medida é
+  da versão em caixa alta. Emitir o texto cru desalinha glifo e posição.
+- **Atributos de apresentação na tag `<svg>`** (`fill="none" stroke="#02D3B4"`) — os
+  ícones herdam deles. Levantar só o `innerHTML` faz o ícone virar mancha preta.
+- **`overflow: hidden` do container da foto** — sem `clipPath` equivalente, o traço da
+  borda inferior do placeholder vaza como um fio teal fora do quadro.
+- **`background-clip: text`** recorta o degradê na caixa do elemento. A descida do "p" de
+  "Implantodontia" caía fora dela na V5; a caixa foi estendida com `padding-bottom`
+  compensado por margem negativa.
+
+Fidelidade da última exportação, por diferença de pixel contra o HTML: V1 0,015%,
+V2 0,017%, V5 0,037% — tudo antialiasing de borda de glifo, nenhuma divergência de
+geometria, cor ou conteúdo.
+
+### Moldes com `{{TOKEN}}`
+
+Estes SVGs trazem a copy real da Turma 18, não tokens. O padrão de molde do repo
+(`A10_PADRAO/templates/`) faz sentido depois da validação de **uma** variação — cinco
+jogos de molde antes da escolha criam cinco fontes de verdade para manter.
