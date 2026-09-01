@@ -1,8 +1,6 @@
 <title>A10 em Balneário Camboriú</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:wght@400;500;600&display=swap">
-<style>
+<link id="fontes" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:wght@400;500;600&display=swap">
+<style id="css">
 /* ===== Tokens da identidade A10 (A10_PADRAO/INSTRUCOES.md) ===================
    Peça de marca única: mundo visual navy + dourado, assumido nos dois temas
    do visualizador — por isso toda cor é pintada explicitamente.            */
@@ -31,12 +29,13 @@ body{
   line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
+:focus-visible{outline:2px solid var(--gold-lt);outline-offset:3px}
 
 /* ===== Estrutura ========================================================== */
 .pagina{
   max-width:860px;
   margin:0 auto;
-  padding:clamp(38px,6vw,76px) clamp(20px,5vw,48px) clamp(64px,9vw,110px);
+  padding:clamp(38px,6vw,76px) clamp(20px,5vw,48px) clamp(56px,8vw,96px);
   display:flex;
   flex-direction:column;
   gap:clamp(38px,5.5vw,60px);
@@ -110,7 +109,7 @@ p{margin:0;max-width:var(--measure);color:var(--cream-soft)}
   object-position:center;
   display:block;
 }
-/* estado vazio: fio dourado tracejado = campo à espera de conteúdo */
+/* estado vazio: fio dourado tracejado = moldura à espera da foto */
 .moldura.vazio{
   border-style:dashed;
   border-color:var(--hair-soft);
@@ -118,6 +117,7 @@ p{margin:0;max-width:var(--measure);color:var(--cream-soft)}
     linear-gradient(180deg,rgba(201,168,106,.05),rgba(201,168,106,0) 62%),
     var(--navy-deep);
 }
+.moldura.vazio img{display:none}
 .moldura:not(.vazio) .etiqueta{display:none}
 .etiqueta{
   display:flex;flex-direction:column;gap:7px;align-items:center;
@@ -125,12 +125,12 @@ p{margin:0;max-width:var(--measure);color:var(--cream-soft)}
   font-size:9.5px;font-weight:500;line-height:1.5;
   letter-spacing:.2em;text-transform:uppercase;
   color:rgba(217,188,124,.72);
+  pointer-events:none;
 }
-.etiqueta .arquivo{
+.etiqueta .medida{
   letter-spacing:.06em;text-transform:none;
   font-size:10.5px;
   color:var(--cream-mute);
-  word-break:break-all;
 }
 figcaption{
   font-family:var(--serif);
@@ -140,6 +140,31 @@ figcaption{
   line-height:1.25;
   color:var(--cream);
 }
+
+/* ===== Envio de foto (só aparece para quem pode editar) =================== */
+.enviar{display:none}
+body.editavel .enviar{
+  position:absolute;inset:0;z-index:2;
+  display:flex;align-items:flex-end;justify-content:center;
+  padding:12px;
+  cursor:pointer;
+  background:linear-gradient(0deg,rgba(7,14,24,.82),rgba(7,14,24,0) 58%);
+  opacity:0;
+  transition:opacity .18s ease;
+}
+body.editavel .moldura.vazio .enviar{opacity:1;background:none}
+body.editavel .enviar:hover,
+body.editavel .enviar:focus-within{opacity:1}
+.enviar input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.enviar span{
+  font-size:9.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold-lt);
+  border:1px solid var(--hair);
+  padding:7px 12px;
+  background:rgba(7,14,24,.72);
+}
+.moldura.sobre{border-color:var(--gold);border-style:solid}
+.moldura.ocupado{opacity:.55}
 
 /* ===== Campo pendente (faixa de investimento) ============================= */
 .campo{
@@ -161,18 +186,29 @@ figcaption{
 .campo .valor em{font-style:italic;font-weight:500;color:var(--cream-mute)}
 .campo .nota{font-size:12.5px;color:var(--cream-mute)}
 
-/* ===== Rodapé ============================================================= */
+/* ===== Rodapé e recado do editor ========================================= */
 footer{
+  display:flex;flex-direction:column;gap:10px;align-items:center;
   font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
   color:rgba(245,240,230,.34);
 }
+#recado{
+  display:none;
+  font-size:11px;letter-spacing:.1em;text-transform:none;
+  color:rgba(217,188,124,.9);
+}
+#recado.aparece{display:block}
 
 @media (max-width:640px){
   .slot{flex:0 1 calc((100% - clamp(20px,3.2vw,30px)) / 2);min-width:140px}
   body{font-size:15px}
 }
+@media (prefers-reduced-motion:reduce){
+  body.editavel .enviar{transition:none}
+}
 </style>
 
+<template id="fonte">
 <div class="pagina">
 
   <header class="marca">
@@ -197,56 +233,63 @@ footer{
 
       <figure class="slot">
         <div class="moldura vazio">
-          <img alt="Cape Town" data-src="fotos/cape-town.jpg">
-          <span class="etiqueta">Foto 1080 × 1350<span class="arquivo">fotos/cape-town.jpg</span></span>
+          <img data-slot="cape-town" alt="Cape Town">
+          <span class="etiqueta">Foto<span class="medida">1080 × 1350</span></span>
+          <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
         </div>
         <figcaption>Cape Town</figcaption>
       </figure>
 
       <figure class="slot">
         <div class="moldura vazio">
-          <img alt="Holmes Residence" data-src="fotos/holmes-residence.jpg">
-          <span class="etiqueta">Foto 1080 × 1350<span class="arquivo">fotos/holmes-residence.jpg</span></span>
+          <img data-slot="holmes-residence" alt="Holmes Residence">
+          <span class="etiqueta">Foto<span class="medida">1080 × 1350</span></span>
+          <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
         </div>
         <figcaption>Holmes Residence</figcaption>
       </figure>
 
       <figure class="slot">
         <div class="moldura vazio">
-          <img alt="Solenne" data-src="fotos/solenne.jpg">
-          <span class="etiqueta">Foto 1080 × 1350<span class="arquivo">fotos/solenne.jpg</span></span>
+          <img data-slot="solenne" alt="Solenne">
+          <span class="etiqueta">Foto<span class="medida">1080 × 1350</span></span>
+          <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
         </div>
         <figcaption>Solenne</figcaption>
       </figure>
 
       <figure class="slot">
         <div class="moldura vazio">
-          <img alt="Pátio Estaleiro" data-src="fotos/patio-estaleiro.jpg">
-          <span class="etiqueta">Foto 1080 × 1350<span class="arquivo">fotos/patio-estaleiro.jpg</span></span>
+          <img data-slot="patio-estaleiro" alt="Pátio Estaleiro">
+          <span class="etiqueta">Foto<span class="medida">1080 × 1350</span></span>
+          <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
         </div>
         <figcaption>Pátio Estaleiro</figcaption>
       </figure>
 
       <figure class="slot">
         <div class="moldura vazio">
-          <img alt="Aurora" data-src="fotos/aurora.jpg">
-          <span class="etiqueta">Foto 1080 × 1350<span class="arquivo">fotos/aurora.jpg</span></span>
+          <img data-slot="aurora" alt="Aurora">
+          <span class="etiqueta">Foto<span class="medida">1080 × 1350</span></span>
+          <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
         </div>
         <figcaption>Aurora</figcaption>
       </figure>
 
       <figure class="slot">
         <div class="moldura vazio">
-          <img alt="Diamond Hill" data-src="fotos/diamond-hill.jpg">
-          <span class="etiqueta">Foto 1080 × 1350<span class="arquivo">fotos/diamond-hill.jpg</span></span>
+          <img data-slot="diamond-hill" alt="Diamond Hill">
+          <span class="etiqueta">Foto<span class="medida">1080 × 1350</span></span>
+          <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
         </div>
         <figcaption>Diamond Hill</figcaption>
       </figure>
 
       <figure class="slot">
         <div class="moldura vazio">
-          <img alt="Florence Garden" data-src="fotos/florence-garden.jpg">
-          <span class="etiqueta">Foto 1080 × 1350<span class="arquivo">fotos/florence-garden.jpg</span></span>
+          <img data-slot="florence-garden" alt="Florence Garden">
+          <span class="etiqueta">Foto<span class="medida">1080 × 1350</span></span>
+          <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
         </div>
         <figcaption>Florence Garden</figcaption>
       </figure>
@@ -267,17 +310,164 @@ footer{
     <p>Antes de indicar qualquer empreendimento, buscamos entender o momento de quem está do outro lado: se o objetivo é moradia, investimento ou uma segunda residência. A partir disso, indicamos a opção que melhor se encaixa — não a que está em destaque no momento.</p>
   </section>
 
-  <footer>A10 Empreendimentos · Balneário Camboriú · SC</footer>
+  <footer>
+    <span>A10 Empreendimentos · Balneário Camboriú · SC</span>
+    <span id="recado"></span>
+  </footer>
 
 </div>
+</template>
 
-<script>
-/* Cada moldura nasce vazia (fio tracejado + etiqueta com o arquivo esperado).
-   Assim que a foto de fotos/ existir, ela entra recortada e a etiqueta sai. */
-for (const img of document.querySelectorAll('.moldura img[data-src]')) {
-  const moldura = img.closest('.moldura');
-  img.addEventListener('load', () => moldura.classList.remove('vazio'));
-  img.addEventListener('error', () => img.remove());
-  img.src = img.dataset.src;
-}
+<div id="app"></div>
+
+<script id="estado" type="application/json">{"fotos":{}}</script>
+
+<script id="logica">
+/* A página é o arquivo: cada foto enviada entra recortada em 1080 × 1350 e é
+   salva como uma nova versão da própria página (capacidade "artifact"), então
+   quem abrir depois já vê o portfólio preenchido. Sem editor disponível
+   (arquivo local, visitante sem permissão), as molduras caem para
+   fotos/<slug>.jpg e, se não houver arquivo, seguem vazias. */
+(function () {
+  var LADO_W = 1080, LADO_H = 1350, QUALIDADE = 0.82;
+
+  var estado = {fotos: {}};
+  try { estado = JSON.parse(document.getElementById('estado').textContent) || estado; } catch (e) {}
+  if (!estado.fotos) estado.fotos = {};
+
+  var app = document.getElementById('app');
+  app.appendChild(document.getElementById('fonte').content.cloneNode(true));
+
+  var recado = document.getElementById('recado');
+  function dizer(texto) {
+    recado.textContent = texto || '';
+    recado.classList.toggle('aparece', !!texto);
+  }
+
+  var molduras = {};
+  var imagens = app.querySelectorAll('img[data-slot]');
+
+  Array.prototype.forEach.call(imagens, function (img) {
+    var slug = img.getAttribute('data-slot');
+    var moldura = img.parentNode;
+    molduras[slug] = moldura;
+    img.addEventListener('load', function () { moldura.classList.remove('vazio'); });
+    img.addEventListener('error', function () {
+      img.removeAttribute('src');
+      moldura.classList.add('vazio');
+    });
+    img.src = estado.fotos[slug] || ('fotos/' + slug + '.jpg');
+  });
+
+  /* --- recorte central em 4:5, para a foto entrar sem esticar ------------- */
+  function recortar(arquivo) {
+    return new Promise(function (resolve, reject) {
+      var leitor = new FileReader();
+      leitor.onerror = function () { reject(new Error('leitura')); };
+      leitor.onload = function () {
+        var im = new Image();
+        im.onerror = function () { reject(new Error('imagem')); };
+        im.onload = function () {
+          var tela = document.createElement('canvas');
+          tela.width = LADO_W; tela.height = LADO_H;
+          var ctx = tela.getContext('2d');
+          var escala = Math.max(LADO_W / im.width, LADO_H / im.height);
+          var w = im.width * escala, h = im.height * escala;
+          ctx.drawImage(im, (LADO_W - w) / 2, (LADO_H - h) / 2, w, h);
+          resolve(tela.toDataURL('image/jpeg', QUALIDADE));
+        };
+        im.src = leitor.result;
+      };
+      leitor.readAsDataURL(arquivo);
+    });
+  }
+
+  /* --- reconstrói o documento a partir do molde + estado ----------------- */
+  function documento() {
+    var abre = '<scr' + 'ipt', fecha = '</scr' + 'ipt>';
+    return '<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">'
+      + '<meta name="viewport" content="width=device-width, initial-scale=1">'
+      + '<title>A10 em Balneário Camboriú</title>'
+      + document.getElementById('fontes').outerHTML
+      + document.getElementById('css').outerHTML
+      + '</head><body>'
+      + document.getElementById('fonte').outerHTML
+      + '<div id="app"></div>'
+      + abre + ' id="estado" type="application/json">' + JSON.stringify(estado) + fecha
+      + abre + ' id="logica">' + document.getElementById('logica').textContent + fecha
+      + '</body></html>';
+  }
+
+  /* --- editor: liga os campos de envio ----------------------------------- */
+  if (!window.claude || typeof window.claude.use !== 'function') return;
+
+  window.claude.use('artifact').then(function (editor) {
+    if (!editor) return;
+    document.body.classList.add('editavel');
+
+    var pendente = null, salvando = false;
+
+    function salvar() {
+      if (salvando) { return; }
+      salvando = true;
+      dizer('Salvando na página…');
+      editor.publish(documento()).then(function () {
+        salvando = false;
+        dizer('Foto salva na página.');
+      }, function (erro) {
+        salvando = false;
+        dizer(erro && erro.code === 'conflict'
+          ? 'Outra versão foi publicada antes — recarregue a página e envie de novo.'
+          : 'Não deu para salvar agora. Tente novamente.');
+      });
+    }
+
+    function agendar() {
+      clearTimeout(pendente);
+      pendente = setTimeout(salvar, 900);   /* junta envios seguidos num publish */
+    }
+
+    function receber(slug, arquivo) {
+      if (!arquivo || arquivo.type.indexOf('image/') !== 0) {
+        dizer('Só imagem (JPG, PNG, WEBP).');
+        return;
+      }
+      var moldura = molduras[slug];
+      moldura.classList.add('ocupado');
+      recortar(arquivo).then(function (uri) {
+        estado.fotos[slug] = uri;
+        moldura.querySelector('img').src = uri;
+        moldura.classList.remove('ocupado');
+        agendar();
+      }, function () {
+        moldura.classList.remove('ocupado');
+        dizer('Não consegui abrir essa imagem.');
+      });
+    }
+
+    Array.prototype.forEach.call(app.querySelectorAll('.enviar input'), function (campo) {
+      var moldura = campo.closest('.moldura');
+      var slug = moldura.querySelector('img[data-slot]').getAttribute('data-slot');
+      campo.addEventListener('change', function () {
+        if (campo.files && campo.files[0]) receber(slug, campo.files[0]);
+        campo.value = '';
+      });
+      ['dragenter', 'dragover'].forEach(function (ev) {
+        moldura.addEventListener(ev, function (e) {
+          e.preventDefault(); moldura.classList.add('sobre');
+        });
+      });
+      ['dragleave', 'drop'].forEach(function (ev) {
+        moldura.addEventListener(ev, function () { moldura.classList.remove('sobre'); });
+      });
+      moldura.addEventListener('drop', function (e) {
+        e.preventDefault();
+        var arq = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+        if (arq) receber(slug, arq);
+      });
+    });
+
+    dizer('Arraste a foto de cada empreendimento para a moldura — ela fica salva aqui.');
+  });
+})();
 </script>

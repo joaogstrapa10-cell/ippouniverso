@@ -28,3 +28,9 @@ Se a foto oficial ainda não chegou, estas do acervo mostram o mesmo empreendime
 - Diamond Hill — `EMPREENDIMENTOS A10/diamondhill.jpg`
 - Florence Garden — `EMPREENDIMENTOS A10/florencegarden.jpg`
 - Holmes Residence — render embutido em `EMPREENDIMENTOS A10/Holmes_Luxe_Feed_1080x1350.svg`
+
+## Ou envie pela própria página
+
+A versão publicada tem um campo de envio em cada moldura (visível para quem pode
+editar): arraste a foto na moldura e ela é recortada em 1080 × 1350 e salva como
+nova versão da página. Depois é só me pedir para trazer essas fotos para cá.
