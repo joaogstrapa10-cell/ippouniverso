@@ -198,13 +198,27 @@ footer{
   color:rgba(217,188,124,.9);
 }
 #recado.aparece{display:block}
+.baixar{
+  display:none;
+  font-family:var(--sans);
+  font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold-lt);
+  background:transparent;
+  border:1px solid var(--hair);
+  padding:10px 18px;
+  cursor:pointer;
+  transition:background .18s ease,border-color .18s ease;
+}
+body.pode-baixar .baixar{display:inline-block}
+.baixar:hover{background:rgba(201,168,106,.1);border-color:var(--gold)}
+.baixar[disabled]{opacity:.5;cursor:default}
 
 @media (max-width:640px){
   .slot{flex:0 1 calc((100% - clamp(20px,3.2vw,30px)) / 2);min-width:140px}
   body{font-size:15px}
 }
 @media (prefers-reduced-motion:reduce){
-  body.editavel .enviar{transition:none}
+  body.editavel .enviar,.baixar{transition:none}
 }
 </style>
 
@@ -312,6 +326,7 @@ footer{
 
   <footer>
     <span>A10 Empreendimentos · Balneário Camboriú · SC</span>
+    <button id="baixar" class="baixar" type="button">Baixar esta página</button>
     <span id="recado"></span>
   </footer>
 
@@ -398,8 +413,47 @@ footer{
       + '</body></html>';
   }
 
+  /* --- baixar a página como arquivo único (fotos embutidas) -------------- */
+  var NOME_ARQUIVO = 'A10-portfolio-balneario-camboriu.html';
+  var botao = document.getElementById('baixar');
+
+  function ligarDownload(salvar) {
+    document.body.classList.add('pode-baixar');
+    botao.addEventListener('click', function () {
+      botao.disabled = true;
+      Promise.resolve(salvar()).then(function () {
+        botao.disabled = false;
+      }, function (erro) {
+        botao.disabled = false;
+        var codigo = erro && erro.code;
+        if (codigo === 'declined') return;
+        dizer(codigo === 'too_large'
+          ? 'A página passou de 16 MB — troque alguma foto por uma mais leve.'
+          : 'Não deu para baixar agora. Tente de novo.');
+      });
+    });
+  }
+
+  if (!window.claude || typeof window.claude.use !== 'function') {
+    /* arquivo aberto direto no navegador: baixa pelo próprio blob */
+    ligarDownload(function () {
+      var url = URL.createObjectURL(new Blob([documento()], {type: 'text/html'}));
+      var a = document.createElement('a');
+      a.href = url; a.download = NOME_ARQUIVO;
+      document.body.appendChild(a); a.click(); a.parentNode.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+    });
+    return;
+  }
+
+  window.claude.use('downloads').then(function (arquivos) {
+    if (!arquivos) return;
+    ligarDownload(function () {
+      return arquivos.save({filename: NOME_ARQUIVO, data: documento()});
+    });
+  });
+
   /* --- editor: liga os campos de envio ----------------------------------- */
-  if (!window.claude || typeof window.claude.use !== 'function') return;
 
   window.claude.use('artifact').then(function (editor) {
     if (!editor) return;
