@@ -54,9 +54,24 @@ def regua(y, x=960, largura=200, rotulo="Regua"):
             f' y2="{y}" stroke="{GOLD}" stroke-opacity="0.5"/>')
 
 
-def marca_de_foto(cx, cy, medida, escala=1.8, rotulo="Marca"):
+def linha(x1, y1, x2, y2, op=0.5, rotulo="Linha"):
+    return (f'  <line{nome(rotulo)} x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}"'
+            f' stroke="{GOLD}" stroke-opacity="{op}"/>')
+
+
+def marca_de_foto(cx, cy, medida, escala=1.8, rotulo="Marca", compacta=False):
     """Ícone + rótulo que sinalizam moldura vazia. No Figma: apague este grupo
     depois de colocar a foto."""
+    if compacta:
+        return f"""  <g{nome(rotulo)} opacity="0.5">
+    <g transform="translate({cx},{cy - 12}) scale(1.15)">
+      <rect x="-18" y="-14" width="36" height="28" rx="3" fill="none" stroke="{GOLD}" stroke-width="2"/>
+      <circle cx="-8" cy="-6" r="3" fill="none" stroke="{GOLD}" stroke-width="2"/>
+      <path d="M-18 10 L-4 -2 L4 6 L10 -1 L18 10" fill="none" stroke="{GOLD}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+{txt(cx, cy + 32, "FOTO", tam=11, cor=GOLD, peso="500", espaco=1.5)}
+{txt(cx, cy + 50, medida, tam=9.5, cor=GOLD)}
+  </g>"""
     return f"""  <g{nome(rotulo)} opacity="0.5">
     <g transform="translate({cx},{cy - 20}) scale({escala})">
       <rect x="-18" y="-14" width="36" height="28" rx="3" fill="none" stroke="{GOLD}" stroke-width="2"/>
@@ -68,15 +83,17 @@ def marca_de_foto(cx, cy, medida, escala=1.8, rotulo="Marca"):
   </g>"""
 
 
-def moldura_foto(x, y, w, h, rotulo_emp, indice, rx=12):
+def moldura_foto(x, y, w, h, rotulo_emp, indice, rx=12, tam_nome=36, dy_nome=62,
+                 compacta=False):
     """Um retângulo nomeado por empreendimento + a marca de vazio + o nome."""
     cx, cy = x + w / 2, y + h / 2
+    tracejado = "6 6" if compacta else "8 8"
     return f"""
   <g{nome(f"Foto {indice} - {rotulo_emp}")}>
     <rect{nome(f"Moldura {rotulo_emp}")} x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}"
-      fill="{CARD}" stroke="{GOLD}" stroke-width="1.5" stroke-dasharray="8 8" stroke-opacity="0.7"/>
-{marca_de_foto(cx, cy, f"{w}×{h}px", rotulo=f"Marca {rotulo_emp}")}
-{txt(cx, y + h + 62, rotulo_emp, fonte=SERIF, tam=36, peso="500", italico=True,
+      fill="{CARD}" stroke="{GOLD}" stroke-width="1.5" stroke-dasharray="{tracejado}" stroke-opacity="0.7"/>
+{marca_de_foto(cx, cy, f"{w}×{h}px", rotulo=f"Marca {rotulo_emp}", compacta=compacta)}
+{txt(cx, y + h + dy_nome, rotulo_emp, fonte=SERIF, tam=tam_nome, peso="500", italico=True,
      rotulo=f"Nome {rotulo_emp}")}
   </g>"""
 
