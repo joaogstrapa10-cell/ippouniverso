@@ -37,20 +37,15 @@ nova versão da página. Depois é só me pedir para trazer essas fotos para cá
 
 ## Versão SVG (editável no Figma)
 
-`Institucional_A10_OnePager_1080x2360.svg` traz a mesma peça no padrão da casa:
-7 molduras de 221×276px (a mesma proporção 4:5 do Feed 1080×1350), uma por
-empreendimento, com o nome embaixo em Cormorant itálico.
+`Institucional_A10_OnePager_1080x2360.svg` traz a mesma peça no padrão da casa,
+com 7 molduras de 221×286px e o nome embaixo em Cormorant itálico. (Aqui a
+moldura é em pé, porque a página é vertical; a versão deitada 3:2 está na
+apresentação, em `apresentacao/`.)
 
-Para colocar a foto, dentro de `<g clip-path="url(#fotoN)">` troque o `<rect>`
-por um `<image>` com o mesmo x/y/width/height:
+No Figma: selecione o retângulo `Moldura <empreendimento>`, em **Fill** troque a
+cor por **Image**, deixe o modo em **Fill** e apague o grupo
+`Marca <empreendimento>`. Fora do Figma, troque o retângulo por um `<image>` de
+mesmo x/y/width/height com `preserveAspectRatio="xMidYMid slice"`.
 
-```xml
-<image x="64" y="1064" width="221" height="276"
-       preserveAspectRatio="xMidYMid slice"
-       xlink:href="data:image/jpeg;base64,..."/>
-```
-
-O `slice` recorta para preencher — nunca esticar. A ordem dos clipPaths é
-foto1 Cape Town, foto2 Holmes Residence, foto3 Solenne, foto4 Pátio Estaleiro,
-foto5 Aurora, foto6 Diamond Hill, foto7 Florence Garden (cada um comentado no
-próprio arquivo). `_preview.png` é o render do arquivo como está.
+Os SVG não usam `<style>`, classes CSS nem `clipPath` justamente para o Figma
+abrir com a tipografia e as camadas certas — ver `apresentacao/README.md`.
