@@ -13,11 +13,12 @@ DEST.mkdir(parents=True, exist_ok=True)
 LOGO = (RAIZ / "A10_PADRAO/assets/a10.b64").read_text().strip().replace("\n", "")
 
 W, H, INSET = 1920, 1080, 44
-CW, CH, GAP = 390, 260, 40          # moldura deitada 3:2
-GRID_Y = 460
+CW, CH, GAP = 420, 525, 40          # moldura vertical 4:5
+GRID_Y = 230
+GRID_X = 290                        # 3 molduras centradas na tela
 
-EMPS = ["Cape Town", "Holmes Residence", "Solenne", "Pátio Estaleiro",
-        "Aurora", "Diamond Hill", "Florence Garden"]
+EMPS = ["Cape Town", "Holmes Residence", "Solenne",
+        "Pátio Estaleiro", "Aurora", "Florence Garden"]     # 3 por slide
 
 CIRCULOS = [(1860, 120, 340, 0.10), (60, 1000, 280, 0.08)]
 
@@ -34,7 +35,8 @@ def base(numero, total=6, com_logo=True):
 def fila(rotulos, x0, primeiro):
     corpo = [f'  <g{nome("Portfolio")}>']
     for j, rot in enumerate(rotulos):
-        corpo.append(moldura_foto(x0 + (CW + GAP) * j, GRID_Y, CW, CH, rot, primeiro + j))
+        corpo.append(moldura_foto(x0 + (CW + GAP) * j, GRID_Y, CW, CH, rot, primeiro + j,
+                                  tam_nome=32, dy_nome=52))
     corpo.append('  </g>')
     return "\n".join(corpo)
 
@@ -68,19 +70,19 @@ quem = "\n".join([
 # ------------------------------------------------------- 03 e 04 portfólio
 portfolio1 = "\n".join([
     base(3),
-    txt(960, 320, "Nosso portfólio", fonte=SERIF, tam=76, cor=GOLD, peso="600", rotulo="Titulo"),
-    txt(960, 368, "Um portfólio que hoje reúne:", tam=22, op="0.55", rotulo="Olho"),
-    fila(EMPS[:4], 120, 1),
+    txt(960, 132, "Nosso portfólio", fonte=SERIF, tam=64, cor=GOLD, peso="600", rotulo="Titulo"),
+    txt(960, 178, "Um portfólio que hoje reúne:", tam=22, op="0.55", rotulo="Olho"),
+    fila(EMPS[:3], GRID_X, 1),
 ])
 
 portfolio2 = "\n".join([
     base(4),
-    txt(960, 350, "NOSSO PORTFÓLIO", tam=20, cor=GOLD, peso="500", op="0.85", espaco=6,
+    txt(960, 150, "NOSSO PORTFÓLIO", tam=20, cor=GOLD, peso="500", op="0.85", espaco=6,
         rotulo="Titulo"),
-    fila(EMPS[4:], 335, 5),
-    campo(610, 830, 700, 126, "FAIXA DE INVESTIMENTO", "a partir de R$ [inserir valor]",
-          "Campo faixa de investimento"),
-    txt(960, 986, "Variável por empreendimento", tam=13, op="0.45", rotulo="Nota"),
+    fila(EMPS[3:], GRID_X, 4),
+    campo(610, 862, 700, 118, "FAIXA DE INVESTIMENTO", "a partir de R$ [inserir valor]",
+          "Campo faixa de investimento", tam_valor=34, dy_rotulo=40, dy_valor=84),
+    txt(960, 1008, "Variável por empreendimento", tam=13, op="0.45", rotulo="Nota"),
 ])
 
 # ------------------------------------------------------- 05 primeiro contato

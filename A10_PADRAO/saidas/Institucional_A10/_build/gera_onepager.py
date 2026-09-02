@@ -18,15 +18,13 @@ LOGO = (RAIZ / "A10_PADRAO/assets/a10.b64").read_text().strip().replace("\n", ""
 W, H, INSET = 1080, 2360, 28
 CW, CH, GAP = 221, 276, 22
 LIN1, LIN2 = 1064, 1424
-EMPS = ["Cape Town", "Holmes Residence", "Solenne", "Pátio Estaleiro",
-        "Aurora", "Diamond Hill", "Florence Garden"]
+EMPS = ["Cape Town", "Holmes Residence", "Solenne",
+        "Pátio Estaleiro", "Aurora", "Florence Garden"]
 
 molduras = [f'  <g{nome("Portfolio")}>']
 for i, rot in enumerate(EMPS):
-    if i < 4:
-        x, y = 64 + (CW + GAP) * i, LIN1
-    else:
-        x, y = 186 + (CW + GAP) * (i - 4), LIN2
+    x = 186 + (CW + GAP) * (i % 3)          # 3 + 3, centradas
+    y = LIN1 if i < 3 else LIN2
     molduras.append(moldura_foto(x, y, CW, CH, rot, i + 1, rx=10))
 molduras.append('  </g>')
 

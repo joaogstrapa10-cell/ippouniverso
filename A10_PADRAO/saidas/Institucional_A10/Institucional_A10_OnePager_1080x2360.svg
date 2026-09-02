@@ -28,69 +28,54 @@
   <g id="Portfolio" data-name="Portfolio">
 
   <g id="Foto_1_Cape_Town" data-name="Foto 1 - Cape Town">
-    <rect id="Moldura_Cape_Town" data-name="Moldura Cape Town" x="64" y="1064" width="221" height="276" rx="10"
+    <rect id="Moldura_Cape_Town" data-name="Moldura Cape Town" x="186" y="1064" width="221" height="276" rx="10"
       fill="#16233A" stroke="#C9A86A" stroke-width="1.5" stroke-dasharray="8 8" stroke-opacity="0.7"/>
   <g id="Marca_Cape_Town" data-name="Marca Cape Town" opacity="0.5">
-    <g transform="translate(174.5,1182.0) scale(1.8)">
+    <g transform="translate(296.5,1182.0) scale(1.8)">
       <rect x="-18" y="-14" width="36" height="28" rx="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
       <circle cx="-8" cy="-6" r="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
       <path d="M-18 10 L-4 -2 L4 6 L10 -1 L18 10" fill="none" stroke="#C9A86A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
     </g>
-  <text x="174.5" y="1242.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="15" font-weight="500" letter-spacing="2">FOTO</text>
-  <text x="174.5" y="1266.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="12" font-weight="400">221×276px</text>
+  <text x="296.5" y="1242.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="15" font-weight="500" letter-spacing="2">FOTO</text>
+  <text x="296.5" y="1266.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="12" font-weight="400">221×276px</text>
   </g>
-  <text id="Nome_Cape_Town" data-name="Nome Cape Town" x="174.5" y="1402" text-anchor="middle" fill="#F5F0E6" font-family="Cormorant Garamond" font-size="36" font-weight="500" font-style="italic">Cape Town</text>
+  <text id="Nome_Cape_Town" data-name="Nome Cape Town" x="296.5" y="1402" text-anchor="middle" fill="#F5F0E6" font-family="Cormorant Garamond" font-size="36" font-weight="500" font-style="italic">Cape Town</text>
   </g>
 
   <g id="Foto_2_Holmes_Residence" data-name="Foto 2 - Holmes Residence">
-    <rect id="Moldura_Holmes_Residence" data-name="Moldura Holmes Residence" x="307" y="1064" width="221" height="276" rx="10"
+    <rect id="Moldura_Holmes_Residence" data-name="Moldura Holmes Residence" x="429" y="1064" width="221" height="276" rx="10"
       fill="#16233A" stroke="#C9A86A" stroke-width="1.5" stroke-dasharray="8 8" stroke-opacity="0.7"/>
   <g id="Marca_Holmes_Residence" data-name="Marca Holmes Residence" opacity="0.5">
-    <g transform="translate(417.5,1182.0) scale(1.8)">
+    <g transform="translate(539.5,1182.0) scale(1.8)">
       <rect x="-18" y="-14" width="36" height="28" rx="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
       <circle cx="-8" cy="-6" r="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
       <path d="M-18 10 L-4 -2 L4 6 L10 -1 L18 10" fill="none" stroke="#C9A86A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
     </g>
-  <text x="417.5" y="1242.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="15" font-weight="500" letter-spacing="2">FOTO</text>
-  <text x="417.5" y="1266.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="12" font-weight="400">221×276px</text>
+  <text x="539.5" y="1242.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="15" font-weight="500" letter-spacing="2">FOTO</text>
+  <text x="539.5" y="1266.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="12" font-weight="400">221×276px</text>
   </g>
-  <text id="Nome_Holmes_Residence" data-name="Nome Holmes Residence" x="417.5" y="1402" text-anchor="middle" fill="#F5F0E6" font-family="Cormorant Garamond" font-size="36" font-weight="500" font-style="italic">Holmes Residence</text>
+  <text id="Nome_Holmes_Residence" data-name="Nome Holmes Residence" x="539.5" y="1402" text-anchor="middle" fill="#F5F0E6" font-family="Cormorant Garamond" font-size="36" font-weight="500" font-style="italic">Holmes Residence</text>
   </g>
 
   <g id="Foto_3_Solenne" data-name="Foto 3 - Solenne">
-    <rect id="Moldura_Solenne" data-name="Moldura Solenne" x="550" y="1064" width="221" height="276" rx="10"
+    <rect id="Moldura_Solenne" data-name="Moldura Solenne" x="672" y="1064" width="221" height="276" rx="10"
       fill="#16233A" stroke="#C9A86A" stroke-width="1.5" stroke-dasharray="8 8" stroke-opacity="0.7"/>
   <g id="Marca_Solenne" data-name="Marca Solenne" opacity="0.5">
-    <g transform="translate(660.5,1182.0) scale(1.8)">
+    <g transform="translate(782.5,1182.0) scale(1.8)">
       <rect x="-18" y="-14" width="36" height="28" rx="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
       <circle cx="-8" cy="-6" r="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
       <path d="M-18 10 L-4 -2 L4 6 L10 -1 L18 10" fill="none" stroke="#C9A86A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
     </g>
-  <text x="660.5" y="1242.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="15" font-weight="500" letter-spacing="2">FOTO</text>
-  <text x="660.5" y="1266.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="12" font-weight="400">221×276px</text>
+  <text x="782.5" y="1242.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="15" font-weight="500" letter-spacing="2">FOTO</text>
+  <text x="782.5" y="1266.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="12" font-weight="400">221×276px</text>
   </g>
-  <text id="Nome_Solenne" data-name="Nome Solenne" x="660.5" y="1402" text-anchor="middle" fill="#F5F0E6" font-family="Cormorant Garamond" font-size="36" font-weight="500" font-style="italic">Solenne</text>
+  <text id="Nome_Solenne" data-name="Nome Solenne" x="782.5" y="1402" text-anchor="middle" fill="#F5F0E6" font-family="Cormorant Garamond" font-size="36" font-weight="500" font-style="italic">Solenne</text>
   </g>
 
   <g id="Foto_4_Patio_Estaleiro" data-name="Foto 4 - Pátio Estaleiro">
-    <rect id="Moldura_Patio_Estaleiro" data-name="Moldura Pátio Estaleiro" x="793" y="1064" width="221" height="276" rx="10"
+    <rect id="Moldura_Patio_Estaleiro" data-name="Moldura Pátio Estaleiro" x="186" y="1424" width="221" height="276" rx="10"
       fill="#16233A" stroke="#C9A86A" stroke-width="1.5" stroke-dasharray="8 8" stroke-opacity="0.7"/>
   <g id="Marca_Patio_Estaleiro" data-name="Marca Pátio Estaleiro" opacity="0.5">
-    <g transform="translate(903.5,1182.0) scale(1.8)">
-      <rect x="-18" y="-14" width="36" height="28" rx="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
-      <circle cx="-8" cy="-6" r="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
-      <path d="M-18 10 L-4 -2 L4 6 L10 -1 L18 10" fill="none" stroke="#C9A86A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-    </g>
-  <text x="903.5" y="1242.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="15" font-weight="500" letter-spacing="2">FOTO</text>
-  <text x="903.5" y="1266.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="12" font-weight="400">221×276px</text>
-  </g>
-  <text id="Nome_Patio_Estaleiro" data-name="Nome Pátio Estaleiro" x="903.5" y="1402" text-anchor="middle" fill="#F5F0E6" font-family="Cormorant Garamond" font-size="36" font-weight="500" font-style="italic">Pátio Estaleiro</text>
-  </g>
-
-  <g id="Foto_5_Aurora" data-name="Foto 5 - Aurora">
-    <rect id="Moldura_Aurora" data-name="Moldura Aurora" x="186" y="1424" width="221" height="276" rx="10"
-      fill="#16233A" stroke="#C9A86A" stroke-width="1.5" stroke-dasharray="8 8" stroke-opacity="0.7"/>
-  <g id="Marca_Aurora" data-name="Marca Aurora" opacity="0.5">
     <g transform="translate(296.5,1542.0) scale(1.8)">
       <rect x="-18" y="-14" width="36" height="28" rx="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
       <circle cx="-8" cy="-6" r="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
@@ -99,13 +84,13 @@
   <text x="296.5" y="1602.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="15" font-weight="500" letter-spacing="2">FOTO</text>
   <text x="296.5" y="1626.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="12" font-weight="400">221×276px</text>
   </g>
-  <text id="Nome_Aurora" data-name="Nome Aurora" x="296.5" y="1762" text-anchor="middle" fill="#F5F0E6" font-family="Cormorant Garamond" font-size="36" font-weight="500" font-style="italic">Aurora</text>
+  <text id="Nome_Patio_Estaleiro" data-name="Nome Pátio Estaleiro" x="296.5" y="1762" text-anchor="middle" fill="#F5F0E6" font-family="Cormorant Garamond" font-size="36" font-weight="500" font-style="italic">Pátio Estaleiro</text>
   </g>
 
-  <g id="Foto_6_Diamond_Hill" data-name="Foto 6 - Diamond Hill">
-    <rect id="Moldura_Diamond_Hill" data-name="Moldura Diamond Hill" x="429" y="1424" width="221" height="276" rx="10"
+  <g id="Foto_5_Aurora" data-name="Foto 5 - Aurora">
+    <rect id="Moldura_Aurora" data-name="Moldura Aurora" x="429" y="1424" width="221" height="276" rx="10"
       fill="#16233A" stroke="#C9A86A" stroke-width="1.5" stroke-dasharray="8 8" stroke-opacity="0.7"/>
-  <g id="Marca_Diamond_Hill" data-name="Marca Diamond Hill" opacity="0.5">
+  <g id="Marca_Aurora" data-name="Marca Aurora" opacity="0.5">
     <g transform="translate(539.5,1542.0) scale(1.8)">
       <rect x="-18" y="-14" width="36" height="28" rx="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
       <circle cx="-8" cy="-6" r="3" fill="none" stroke="#C9A86A" stroke-width="2"/>
@@ -114,10 +99,10 @@
   <text x="539.5" y="1602.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="15" font-weight="500" letter-spacing="2">FOTO</text>
   <text x="539.5" y="1626.0" text-anchor="middle" fill="#C9A86A" font-family="Poppins" font-size="12" font-weight="400">221×276px</text>
   </g>
-  <text id="Nome_Diamond_Hill" data-name="Nome Diamond Hill" x="539.5" y="1762" text-anchor="middle" fill="#F5F0E6" font-family="Cormorant Garamond" font-size="36" font-weight="500" font-style="italic">Diamond Hill</text>
+  <text id="Nome_Aurora" data-name="Nome Aurora" x="539.5" y="1762" text-anchor="middle" fill="#F5F0E6" font-family="Cormorant Garamond" font-size="36" font-weight="500" font-style="italic">Aurora</text>
   </g>
 
-  <g id="Foto_7_Florence_Garden" data-name="Foto 7 - Florence Garden">
+  <g id="Foto_6_Florence_Garden" data-name="Foto 6 - Florence Garden">
     <rect id="Moldura_Florence_Garden" data-name="Moldura Florence Garden" x="672" y="1424" width="221" height="276" rx="10"
       fill="#16233A" stroke="#C9A86A" stroke-width="1.5" stroke-dasharray="8 8" stroke-opacity="0.7"/>
   <g id="Marca_Florence_Garden" data-name="Marca Florence Garden" opacity="0.5">

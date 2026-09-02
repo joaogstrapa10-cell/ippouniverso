@@ -35,6 +35,24 @@ const semXml = f => fs.readFileSync(f, 'utf8').replace(/<\?xml[^>]*\?>/, '');
     await p.locator('svg').screenshot({ path: svg.replace(/\.svg$/, '_preview.png') });
     await p.close();
   }
+  // PDF de cada peça de página única, no tamanho do próprio arquivo
+  for (const svg of fs.readdirSync(PECA).filter(f => f.endsWith('.svg')).map(f => path.join(PECA, f))) {
+    const bruto = semXml(svg);
+    const mm = /_A3_/.test(svg);
+    fs.writeFileSync('/tmp/_folha.html', '<!doctype html><meta charset="utf-8"><style>' + CSS +
+      (mm ? '\n@page{size:420mm 297mm;margin:0}#folha{width:420mm}#folha svg{width:100%;height:auto}' : '') +
+      '</style><div id="folha">' + bruto + '</div>');
+    const w = /width="(\d+)"/.exec(bruto)[1], h = /height="(\d+)"/.exec(bruto)[1];
+    const p = await b.newPage({ viewport: { width: Math.min(+w, 2480), height: 1000 } });
+    await p.goto('file:///tmp/_folha.html', { waitUntil: 'domcontentloaded', timeout: 120000 });
+    await p.evaluate(() => document.fonts.ready);
+    await p.waitForTimeout(500);
+    await p.pdf(mm ? { path: svg.replace(/_\d+x\d+\.svg$/, '.pdf'), width: '420mm', height: '297mm', printBackground: true }
+                   : { path: svg.replace(/_\d+x\d+\.svg$/, '.pdf'), width: w + 'px', height: h + 'px', printBackground: true });
+    await p.close();
+    console.log('pdf:', path.basename(svg.replace(/_\d+x\d+\.svg$/, '.pdf')));
+  }
+
   // PDF do deck: um slide por página, 1920×1080
   const slides = fs.readdirSync(deck).filter(f => f.endsWith('.svg')).sort()
     .map(f => '<div class="slide">' + semXml(path.join(deck, f)) + '</div>').join('');

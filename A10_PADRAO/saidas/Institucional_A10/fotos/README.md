@@ -1,6 +1,6 @@
 # fotos/ — uma foto por empreendimento
 
-A grade de `index.html` tem 7 molduras deitadas, na proporção **3:2 (1080 × 720)**.
+A grade de `index.html` tem 6 molduras verticais, na proporção **4:5 (1080 × 1350)**.
 Cada moldura nasce vazia (fio dourado tracejado + etiqueta com o nome do arquivo esperado) e
 se preenche sozinha assim que o arquivo abaixo existir nesta pasta — sem editar o HTML.
 
@@ -11,7 +11,6 @@ se preenche sozinha assim que o arquivo abaixo existir nesta pasta — sem edita
 | Solenne           | `solenne.jpg`             |
 | Pátio Estaleiro   | `patio-estaleiro.jpg`     |
 | Aurora            | `aurora.jpg`              |
-| Diamond Hill      | `diamond-hill.jpg`        |
 | Florence Garden   | `florence-garden.jpg`     |
 
 A foto entra recortada (`object-fit: cover`) — nunca esticada, conforme o padrão A10. Não é
@@ -25,20 +24,19 @@ Se a foto oficial ainda não chegou, estas do acervo mostram o mesmo empreendime
 - Pátio Estaleiro — `EMPREENDIMENTOS A10/PatioEstaleiro_CasaBrisa_foto.jpg` (e `_real.jpg`, `_pordosol.jpg`)
 - Aurora — `EMPREENDIMENTOS A10/aurora.jpg`, `aurora2.jpg`, `aurora_piscina.jpg`
 - Solenne — `capetown/ref_solene_1.jpg`, `ref_solene_2.jpg`
-- Diamond Hill — `EMPREENDIMENTOS A10/diamondhill.jpg`
 - Florence Garden — `EMPREENDIMENTOS A10/florencegarden.jpg`
 - Holmes Residence — render embutido em `EMPREENDIMENTOS A10/Holmes_Luxe_Feed_1080x1350.svg`
 
 ## Ou envie pela própria página
 
 A versão publicada tem um campo de envio em cada moldura (visível para quem pode
-editar): arraste a foto na moldura e ela é recortada em 1080 × 720 e salva como
+editar): arraste a foto na moldura e ela é recortada em 1080 × 1350 e salva como
 nova versão da página. Depois é só me pedir para trazer essas fotos para cá.
 
 ## Versão SVG (editável no Figma)
 
 `Institucional_A10_OnePager_1080x2360.svg` traz a mesma peça no padrão da casa,
-com 7 molduras de 221×286px e o nome embaixo em Cormorant itálico. (Aqui a
+com 6 molduras de 221×286px e o nome embaixo em Cormorant itálico. (Aqui a
 moldura é em pé, porque a página é vertical; a versão deitada 3:2 está na
 apresentação, em `apresentacao/`.)
 

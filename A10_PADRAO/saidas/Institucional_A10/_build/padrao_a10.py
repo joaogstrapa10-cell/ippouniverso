@@ -98,15 +98,16 @@ def moldura_foto(x, y, w, h, rotulo_emp, indice, rx=12, tam_nome=36, dy_nome=62,
   </g>"""
 
 
-def campo(x, y, w, h, rotulo, valor, rotulo_camada, tam_valor=38):
+def campo(x, y, w, h, rotulo, valor, rotulo_camada, tam_valor=38, tam_rotulo=14,
+          dy_rotulo=42, dy_valor=88, espaco=3.5):
     """Campo tracejado a preencher (faixa de investimento, contato…)."""
     cx = x + w / 2
     return f"""
   <g{nome(rotulo_camada)}>
     <rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{CARD_ESCURO}" fill-opacity="0.55"
       stroke="{GOLD}" stroke-width="1" stroke-dasharray="5 5" stroke-opacity="0.45"/>
-{txt(cx, y + 42, rotulo, tam=14, cor=GOLD, peso="500", op="0.85", espaco=3.5)}
-{txt(cx, y + 88, valor, fonte=SERIF, tam=tam_valor, peso="500", op="0.6", italico=True)}
+{txt(cx, y + dy_rotulo, rotulo, tam=tam_rotulo, cor=GOLD, peso="500", op="0.85", espaco=espaco)}
+{txt(cx, y + dy_valor, valor, fonte=SERIF, tam=tam_valor, peso="500", op="0.6", italico=True)}
   </g>"""
 
 

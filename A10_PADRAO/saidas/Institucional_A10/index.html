@@ -96,7 +96,7 @@ p{margin:0;max-width:var(--measure);color:var(--cream-soft)}
 }
 .moldura{
   position:relative;
-  aspect-ratio:3 / 2;              /* 1080 × 720 — foto deitada */
+  aspect-ratio:4 / 5;              /* 1080 × 1350 — foto vertical */
   overflow:hidden;
   background:var(--navy-card);
   border:1px solid var(--hair);
@@ -248,7 +248,7 @@ body.pode-baixar .baixar{display:inline-block}
       <figure class="slot">
         <div class="moldura vazio">
           <img data-slot="cape-town" alt="Cape Town">
-          <span class="etiqueta">Foto<span class="medida">1080 × 720</span></span>
+          <span class="etiqueta">Foto<span class="medida">1080 × 1350</span></span>
           <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
         </div>
         <figcaption>Cape Town</figcaption>
@@ -257,7 +257,7 @@ body.pode-baixar .baixar{display:inline-block}
       <figure class="slot">
         <div class="moldura vazio">
           <img data-slot="holmes-residence" alt="Holmes Residence">
-          <span class="etiqueta">Foto<span class="medida">1080 × 720</span></span>
+          <span class="etiqueta">Foto<span class="medida">1080 × 1350</span></span>
           <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
         </div>
         <figcaption>Holmes Residence</figcaption>
@@ -266,7 +266,7 @@ body.pode-baixar .baixar{display:inline-block}
       <figure class="slot">
         <div class="moldura vazio">
           <img data-slot="solenne" alt="Solenne">
-          <span class="etiqueta">Foto<span class="medida">1080 × 720</span></span>
+          <span class="etiqueta">Foto<span class="medida">1080 × 1350</span></span>
           <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
         </div>
         <figcaption>Solenne</figcaption>
@@ -275,7 +275,7 @@ body.pode-baixar .baixar{display:inline-block}
       <figure class="slot">
         <div class="moldura vazio">
           <img data-slot="patio-estaleiro" alt="Pátio Estaleiro">
-          <span class="etiqueta">Foto<span class="medida">1080 × 720</span></span>
+          <span class="etiqueta">Foto<span class="medida">1080 × 1350</span></span>
           <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
         </div>
         <figcaption>Pátio Estaleiro</figcaption>
@@ -284,25 +284,17 @@ body.pode-baixar .baixar{display:inline-block}
       <figure class="slot">
         <div class="moldura vazio">
           <img data-slot="aurora" alt="Aurora">
-          <span class="etiqueta">Foto<span class="medida">1080 × 720</span></span>
+          <span class="etiqueta">Foto<span class="medida">1080 × 1350</span></span>
           <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
         </div>
         <figcaption>Aurora</figcaption>
       </figure>
 
-      <figure class="slot">
-        <div class="moldura vazio">
-          <img data-slot="diamond-hill" alt="Diamond Hill">
-          <span class="etiqueta">Foto<span class="medida">1080 × 720</span></span>
-          <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
-        </div>
-        <figcaption>Diamond Hill</figcaption>
-      </figure>
 
       <figure class="slot">
         <div class="moldura vazio">
           <img data-slot="florence-garden" alt="Florence Garden">
-          <span class="etiqueta">Foto<span class="medida">1080 × 720</span></span>
+          <span class="etiqueta">Foto<span class="medida">1080 × 1350</span></span>
           <label class="enviar"><input type="file" accept="image/*"><span>Enviar foto</span></label>
         </div>
         <figcaption>Florence Garden</figcaption>
@@ -338,13 +330,13 @@ body.pode-baixar .baixar{display:inline-block}
 <script id="estado" type="application/json">{"fotos":{}}</script>
 
 <script id="logica">
-/* A página é o arquivo: cada foto enviada entra recortada em 1080 × 720 e é
+/* A página é o arquivo: cada foto enviada entra recortada em 1080 × 1350 e é
    salva como uma nova versão da própria página (capacidade "artifact"), então
    quem abrir depois já vê o portfólio preenchido. Sem editor disponível
    (arquivo local, visitante sem permissão), as molduras caem para
    fotos/<slug>.jpg e, se não houver arquivo, seguem vazias. */
 (function () {
-  var LADO_W = 1080, LADO_H = 720, QUALIDADE = 0.82;
+  var LADO_W = 1080, LADO_H = 1350, QUALIDADE = 0.82;
 
   var estado = {fotos: {}};
   try { estado = JSON.parse(document.getElementById('estado').textContent) || estado; } catch (e) {}
@@ -374,7 +366,7 @@ body.pode-baixar .baixar{display:inline-block}
     img.src = estado.fotos[slug] || ('fotos/' + slug + '.jpg');
   });
 
-  /* --- recorte central em 3:2, para a foto entrar sem esticar ------------- */
+  /* --- recorte central em 4:5, para a foto entrar sem esticar ------------- */
   function recortar(arquivo) {
     return new Promise(function (resolve, reject) {
       var leitor = new FileReader();
