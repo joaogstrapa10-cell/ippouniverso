@@ -23,12 +23,12 @@ Mesma peça do one-pager, quebrada em 6 slides de 1920×1080, no padrão da casa
 
 ## Colocar as fotos (slides 03 e 04)
 
-As 7 molduras são de 390×487px — a mesma proporção 4:5 do Feed 1080×1350. Dentro
-de `<g clip-path="url(#fotoN)">`, troque o `<rect>` por um `<image>` com o mesmo
+As 7 molduras são **deitadas, 390×260px (3:2)**. Dentro de
+`<g clip-path="url(#fotoN)">`, troque o `<rect>` por um `<image>` com o mesmo
 x/y/width/height:
 
 ```xml
-<image x="120" y="278" width="390" height="487"
+<image x="120" y="460" width="390" height="260"
        preserveAspectRatio="xMidYMid slice"
        xlink:href="data:image/jpeg;base64,..."/>
 ```

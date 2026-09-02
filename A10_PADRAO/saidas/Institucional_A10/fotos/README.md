@@ -1,6 +1,6 @@
 # fotos/ — uma foto por empreendimento
 
-A grade de `index.html` tem 7 molduras na proporção **4:5 (1080 × 1350 — Feed do padrão A10)**.
+A grade de `index.html` tem 7 molduras deitadas, na proporção **3:2 (1080 × 720)**.
 Cada moldura nasce vazia (fio dourado tracejado + etiqueta com o nome do arquivo esperado) e
 se preenche sozinha assim que o arquivo abaixo existir nesta pasta — sem editar o HTML.
 
@@ -32,7 +32,7 @@ Se a foto oficial ainda não chegou, estas do acervo mostram o mesmo empreendime
 ## Ou envie pela própria página
 
 A versão publicada tem um campo de envio em cada moldura (visível para quem pode
-editar): arraste a foto na moldura e ela é recortada em 1080 × 1350 e salva como
+editar): arraste a foto na moldura e ela é recortada em 1080 × 720 e salva como
 nova versão da página. Depois é só me pedir para trazer essas fotos para cá.
 
 ## Versão SVG (editável no Figma)
